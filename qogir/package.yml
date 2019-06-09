@@ -1,0 +1,16 @@
+name       : qogir-theme
+version    : 2019.05.17
+release    : 2
+source     :
+    - https://github.com/vinceliuice/Qogir-theme/archive/2019-05-03.tar.gz : f21a5d8c02eafa5c897e972fdcc816ab61fa505ae30d90e20389f7f0d3c4c63b
+license    : GPL-3.0-only
+summary    : Qogir GTK Theme
+description: "Qogir is a flat design theme for GTK \n"
+component  : desktop.theme
+rundeps    :
+    - gtk2-engine-murrine
+    - gtk-engines
+install    : |
+    install -dm00755 $installdir/usr/share/themes
+    ./Install --dest $installdir/usr/share/themes
+    rm -rf $installdir/usr/share/themes/*/{cinnamon,xfwm4}
