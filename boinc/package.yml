@@ -15,13 +15,26 @@ builddeps  :
     - wxwidgets2.8-devel
     - wxwidgets-devel
     - pkgconfig(openssl)
-    - kgconfig(sqlite3)
+    - pkgconfig(sqlite3)
     - pkgconfig(libcurl)
     - pkgconfig(freeglut)
 
 setup      : |
-    %configure
+    # %configure
+    ./_autosetup
+    ./configure \
+    --disable-silent-rules \
+    --enable-dynamic-client-linkage \
+    --disable-server \
+    --disable-fcgi \
+    --enable-unicode \
+    --with-wx-config=/usr/bin/wx-config-3.0 \
+    --with-ssl \
+    --with-x \
+    STRIP=: \
+    DOCBOOK2X_MAN=/usr/bin/db2x_docbook2man \
+    "CXXFLAGS=$(pkg-config gtk+-x11-3.0 --cflags --libs) -DNDEBUG"
 build      : |
     %make
 install    : |
-    %make_install
+    %make_install PREFIX=/usr
