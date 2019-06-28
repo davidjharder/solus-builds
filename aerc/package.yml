@@ -8,10 +8,18 @@ component  : network.mail
 summary    : aerc is an email client for your terminal.
 description: |
     aerc is an email client for your terminal.
+    # networking : yes
 builddeps  :
     - golang
-    - scdoc
+    - pkgconfig(scdoc)
+    - git
+rundeps    :
+    - libvterm
+    - w3m
+    - python3-colorama
+environment: |
+    export GOPATH=$workdir \
 build      : |
-    %make
+    %make PREFIX=/usr
 install    : |
-    %make_install
+    %make_install PREFIX=/usr
