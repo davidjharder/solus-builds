@@ -1,8 +1,8 @@
 name       : boinc-client
-version    : 7.14.2
-release    : 1
+version    : 7.16.3
+release    : 2
 source     :
-    - https://github.com/BOINC/boinc/archive/client_release/7.14/7.14.2.tar.gz : 970aedb9e25afa20be67f125ab05435df8eb2e66a3ac30ad316c54085e397c88
+    - https://github.com/BOINC/boinc/archive/client_release/7.16/7.16.3.tar.gz : 622ce3335a01ef30add4813c0cc7b65cffcaa5500a7f58f77748d0dbc80e6b06
 license    : GPL-3.0-only
 component  : office.scientific
 summary    : BOINC client
@@ -20,9 +20,7 @@ builddeps  :
     - pkgconfig(freeglut)
 
 setup      : |
-    # %configure
-    ./_autosetup
-    ./configure \
+    %configure
     --disable-silent-rules \
     --enable-dynamic-client-linkage \
     --disable-server \
