@@ -1,0 +1,18 @@
+name       : verilator
+version    : '4.026'
+release    : 11
+source     :
+    - https://www.veripool.org/ftp/verilator-4.026.tgz : 6afb8ab04ab4e29e36f4b4cb04bb2c711e0af11843e41028ee1ea0d31eef9fac
+license    :
+    - LGPL-3.0-only
+    - Artistic-2.0
+component  : programming.tools
+summary    : Verilator converts synthesizable (generally not behavioral) Verilog code into C++ or SystemC code.
+description: |
+    Verilator converts synthesizable (generally not behavioral) Verilog code into C++ or SystemC code. It is not a complete simulator, just a translator.
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
