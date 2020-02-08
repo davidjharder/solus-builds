@@ -1,0 +1,16 @@
+name       : python-setuptools-scm-git-archive
+version    : 1.1
+release    : 1
+source     :
+    - https://github.com/Changaco/setuptools_scm_git_archive/archive/1.1.tar.gz : aadbbb454d81e0e4837dd538a031a378542cf34fd11e4554441fc2e6cacdaa7c
+license    : MIT
+component  : programming.python
+summary    : python-setuptools-scm plugin for git archives 
+description: |
+    python-setuptools-scm plugin for git archives 
+builddeps  :
+    - python-setuptools
+build      : |
+    %python3_build
+install    : |
+    %python3_install

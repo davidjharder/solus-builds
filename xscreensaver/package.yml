@@ -1,0 +1,18 @@
+name       : xscreensaver
+version    : 5.43
+release    : 1
+source     :
+    - https://www.jwz.org/xscreensaver/xscreensaver-5.43.tar.gz : 158f381d687e8360a6debb0d3af0148d279e853666244f02d628a5a482bce194
+license    : GPL-2.0-or-later # CHECK ME
+component  : PLEASE FILL ME IN
+summary    : PLEASE FILL ME IN
+description: |
+    PLEASE FILL ME IN
+builddeps  :
+    - pkgconfig(x11)
+setup      : |
+    %configure
+build      : |
+    %make PREFIX=/usr
+install    : |
+    %make_install PREFIX=/usr

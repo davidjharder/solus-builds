@@ -1,0 +1,66 @@
+<PISI>
+    <Source>
+        <Name>flxmlrpc</Name>
+        <Packager>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>PLEASE FILL ME IN</PartOf>
+        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+#builddeps  :
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>flxmlrpc</Name>
+        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+#builddeps  :
+</Description>
+        <PartOf>PLEASE FILL ME IN</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/libflxmlrpc.so.1</Path>
+            <Path fileType="library">/usr/lib64/libflxmlrpc.so.1.0.0</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>flxmlrpc-devel</Name>
+        <Summary xml:lang="en">Development files for flxmlrpc</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+#builddeps  :
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">flxmlrpc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpc.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcBase64.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcClient.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcDispatch.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcException.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcMutex.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcServer.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcServerConnection.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcServerMethod.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcSocket.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcSource.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcUtil.h</Path>
+            <Path fileType="header">/usr/include/flxmlrpc/XmlRpcValue.h</Path>
+            <Path fileType="library">/usr/lib64/libflxmlrpc.a</Path>
+            <Path fileType="library">/usr/lib64/libflxmlrpc.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/flxmlrpc.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-02-08</Date>
+            <Version>0.1.4</Version>
+            <Comment>Packaging update</Comment>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Update>
+    </History>
+</PISI>

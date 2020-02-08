@@ -26,13 +26,16 @@ setup      : |
     --disable-server \
     --disable-fcgi \
     --enable-unicode \
-    --with-wx-config=/usr/bin/wx-config-3.0 \
+    --with-wx-config=/usr/bin/wx-config-2.8 \
     --with-ssl \
     --with-x \
     STRIP=: \
     DOCBOOK2X_MAN=/usr/bin/db2x_docbook2man \
-    "CXXFLAGS=$(pkg-config gtk+-x11-3.0 --cflags --libs) -DNDEBUG"
+    CXXFLAGS=$(pkg-config gtk+-x11-3.0 --cflags --libs) -DNDEBUG
 build      : |
-    %make
+    %make PREFIX=/usr
 install    : |
     %make_install PREFIX=/usr
+
+
+    <BS>https://git.archlinux.org/svntogit/community.git/tree/trunk/PKGBUILD?h=packages/boinc
