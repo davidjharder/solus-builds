@@ -1,0 +1,37 @@
+<PISI>
+    <Source>
+        <Name>tmatrix</Name>
+        <Packager>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Packager>
+        <License>GPL-2.0-only</License>
+        <PartOf>desktop</PartOf>
+        <Summary xml:lang="en">Terminal based replica of the digital rain from The Matrix</Summary>
+        <Description xml:lang="en">Terminal based replica of the digital rain from The Matrix
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>tmatrix</Name>
+        <Summary xml:lang="en">Terminal based replica of the digital rain from The Matrix</Summary>
+        <Description xml:lang="en">Terminal based replica of the digital rain from The Matrix
+</Description>
+        <PartOf>desktop</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/tmatrix</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/tmatrix</Path>
+            <Path fileType="man">/usr/share/man/man6/tmatrix.6.gz</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_tmatrix</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-06-11</Date>
+            <Version>1.3</Version>
+            <Comment>Packaging update</Comment>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Update>
+    </History>
+</PISI>
