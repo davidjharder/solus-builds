@@ -1,0 +1,25 @@
+name       : pdfsam
+version    : 4.1.3
+release    : 6
+source     :
+    - https://github.com/torakiki/pdfsam/archive/v4.1.3.tar.gz : e9a305d52885bdc3f8cac412bb0174479fceea82c84811030245c75ecd2a6010
+license    : AGPL-3.0-only
+component  : office
+summary    : PDFsam Basic, a free, open source, multi-platform software designed to split, merge, extract pages, mix and rotate PDF files.
+description: |
+    PDFsam Basic, a free, open source, multi-platform software designed to split, merge, extract pages, mix and rotate PDF files.
+builddeps  :
+    - apache-maven
+rundeps    :
+    - openjdk-11
+networking : yes
+setup      : |
+    sed 's|http://|https://|' -i pom.xml
+build      : |
+    export MAVEN_OPTS="-Dmaven.repo.local=./m2"
+    mvn -DskipTests=true -Pbasic-release package
+install    : |
+    install -Dm00644 pdfsam-basic/target/pdfsam-basic-$version.jar $installdir/usr/share/pdfsam/pdfsam.jar
+    install -Dm00644 pdfsam-basic/src/deb/icon.svg $installdir/usr/share/icons/hicolor/scalable/apps/pdfsam.svg
+    install -Dm00755 $pkgfiles/pdfsam.sh $installdir/usr/bin/pdfsam
+    install -Dm00644 $pkgfiles/pdfsam.desktop -t $installdir/usr/share/applications
