@@ -1,8 +1,8 @@
 name       : boinc-client
-version    : 7.14.2
-release    : 1
+version    : 7.16.7
+release    : 2
 source     :
-    - https://github.com/BOINC/boinc/archive/client_release/7.14/7.14.2.tar.gz : 970aedb9e25afa20be67f125ab05435df8eb2e66a3ac30ad316c54085e397c88
+    - https://github.com/BOINC/boinc/archive/client_release/7.16/7.16.7.tar.gz : 38130d532031e75701eee910da64b9eb837e5bfeff9979dbb200c37146be3fed
 license    : GPL-3.0-only
 component  : office.scientific
 summary    : BOINC client
@@ -16,24 +16,33 @@ builddeps  :
     - pkgconfig(openssl)
     - pkgconfig(sqlite3)
     - pkgconfig(libcurl)
-    - pkgconfig(gtk+-x11-3.0)
-    - pkgconfig(freeglut)
+#   - pkgconfig(gtk+-x11-3.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(glut)
+    - docbook2x
+    - docbook-xml
 
-rundeps    : 
+rundeps    :
     - wxwidgets
 
 setup      : |
-    %configure \
+    %patch -p1 < $pkgfiles/0001-Fixup-for-newer-wxWidgets.patch
+    %reconfigure \
+    --prefix=/usr \
+    --disable-static \
     --disable-silent-rules \
     --enable-dynamic-client-linkage \
     --disable-server \
     --disable-fcgi \
     --enable-unicode \
-    --with-wx-config=/usr/bin/wx-config \
     --with-ssl \
     --with-x \
-    DOCBOOK2X_MAN='/usr/bin/db2x_xsltproc -s man $< -o $(patsubst %.xml,%.mxml,$<); db2x_manxml $(patsubst %.xml,%.mxml,$<); echo' \
+    --with-wxdir=/usr/lib \
+    --with-wx-config=/usr/bin/wx-config \
+    DOCBOOK2X_MAN='/usr/bin/db2x_xsltproc -s man $< -o $(patsubst %.xml,%.mxml,$<); db2x_manxml $(patsubst %.xml,%.mxml,$<); echo'
+
 build      : |
     %make PREFIX=/usr
 install    : |
     %make_install PREFIX=/usr
+    install -D -m 00644 $pckfiles/boinc-manager.desktop $installdir/usr/share/applications/boinc-manager.desktop

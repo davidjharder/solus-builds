@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Exec=boincmgr
+Path=/var/lib/boinc
+Icon=boincmgr
+Categories=System;Monitor;GTK;
+Keywords=computation;science;
+Name=BOINC Manager
+GenericName=BOINC monitor and control utility
