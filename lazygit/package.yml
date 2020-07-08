@@ -8,16 +8,15 @@ component  : programming.tools
 summary    : A simple terminal UI for git commands, written in Go with the gocui library.
 description: |
     A simple terminal UI for git commands, written in Go with the gocui library.
+networking : yes
 builddeps  :
     - golang
+    - go-md2man
 build      : |
-    go build \
-    -ldflags "\
-    -X main.commit=v$version \
-    -X main.date=$(date -u +%Y-%m-%d) \
-    -X main.buildSource=binaryRelease \
-    -X main.version=$version \
-    " \
-    -o "lazygit"
+    go build -ldflags "-X main.version=$version" -o lazygit
+
+    # Make a man page
+    go-md2man -in README.md -out lazygit.1
 install    : |
     install -Dm00755 $workdir/lazygit $installdir/usr/bin/lazygit
+    install -Dm00644 $workdir/lazygit.1 $installdir/usr/man/man1/lazygit.1
