@@ -1,0 +1,32 @@
+name       : mullvadvpn-app
+version    : 2020.5
+release    : 1
+source     :
+    - https://github.com/mullvad/mullvadvpn-app/archive/2020.5.tar.gz : cc2e276e8e21504ccb10df03217e4c845d95fd5a648849e4258446542aa9c823
+license    : GPL-3.0-or-later
+component  : network.clients
+summary    : The Mullvad VPN client app for desktop
+description: |
+    The Mullvad VPN client app for desktop
+builddeps  :
+    - pkgconfig(appindicator3-0.1)
+    - pkgconfig(libnotify)
+    - pkgconfig(nss)
+    - pkgconfig(xscrnsaver)
+    - golang
+    - nodejs
+    - python
+    - rust
+
+networking : yes
+setup      : |
+    
+    # Disable building of rpm
+    sed -i "s/'deb', 'rpm'/'deb'/g" gui/tasks/distribution.js
+    
+    mkdir -p dist-assets/shell-completions
+    mkdir -p "../../build/lib/$arch-unknown-linux-gnu"
+build      : |
+    cd wireguard/lib-wg
+install    : |
+    %make_install
