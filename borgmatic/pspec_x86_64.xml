@@ -1,0 +1,138 @@
+<PISI>
+    <Source>
+        <Name>borgmatic</Name>
+        <Homepage>https://torsion.org/borgmatic</Homepage>
+        <Packager>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Packager>
+        <License>GPL-3.0-or-later</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">Simple, configuration-driven backup software for servers and workstations</Summary>
+        <Description xml:lang="en">borgmatic is simple, configuration-driven backup software for servers and workstations. Protect your files with client-side encryption. Backup your databases too. Monitor it all with integrated third-party services.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>borgmatic</Name>
+        <Summary xml:lang="en">Simple, configuration-driven backup software for servers and workstations</Summary>
+        <Description xml:lang="en">borgmatic is simple, configuration-driven backup software for servers and workstations. Protect your files with client-side encryption. Backup your databases too. Monitor it all with integrated third-party services.
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="config">/etc/systemd/system/borgmatic.service</Path>
+            <Path fileType="config">/etc/systemd/system/borgmatic.timer</Path>
+            <Path fileType="executable">/usr/bin/borgmatic</Path>
+            <Path fileType="executable">/usr/bin/generate-borgmatic-config</Path>
+            <Path fileType="executable">/usr/bin/upgrade-borgmatic-config</Path>
+            <Path fileType="executable">/usr/bin/validate-borgmatic-config</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic-1.5.9-py3.7.egg-info/PKG-INFO</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic-1.5.9-py3.7.egg-info/SOURCES.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic-1.5.9-py3.7.egg-info/dependency_links.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic-1.5.9-py3.7.egg-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic-1.5.9-py3.7.egg-info/requires.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic-1.5.9-py3.7.egg-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/__pycache__/__init__.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/__pycache__/execute.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/__pycache__/logger.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/__pycache__/signals.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/__pycache__/verbosity.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/__init__.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/check.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/create.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/environment.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/export_tar.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/extract.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/flags.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/info.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/init.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/list.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/mount.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/prune.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/__pycache__/umount.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/check.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/create.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/environment.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/export_tar.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/extract.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/flags.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/info.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/init.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/list.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/mount.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/prune.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/borg/umount.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/__pycache__/__init__.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/__pycache__/arguments.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/__pycache__/borgmatic.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/__pycache__/convert_config.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/__pycache__/generate_config.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/__pycache__/validate_config.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/arguments.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/borgmatic.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/convert_config.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/generate_config.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/commands/validate_config.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/__init__.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/checks.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/collect.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/convert.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/generate.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/legacy.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/load.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/normalize.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/override.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/__pycache__/validate.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/checks.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/collect.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/convert.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/generate.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/legacy.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/load.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/normalize.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/override.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/schema.yaml</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/config/validate.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/execute.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/__init__.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/command.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/cronhub.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/cronitor.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/dispatch.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/dump.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/healthchecks.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/monitor.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/mysql.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/pagerduty.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/__pycache__/postgresql.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/command.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/cronhub.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/cronitor.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/dispatch.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/dump.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/healthchecks.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/monitor.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/mysql.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/pagerduty.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/hooks/postgresql.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/logger.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/signals.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/borgmatic/verbosity.py</Path>
+            <Path fileType="doc">/usr/share/doc/borgmatic/sample/cron/borgmatic</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-08-15</Date>
+            <Version>1.5.9</Version>
+            <Comment>Packaging update</Comment>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,98 @@
+<PISI>
+    <Source>
+        <Name>python-ruamel-yaml</Name>
+        <Homepage>https://sourceforge.net/projects/ruamel-yaml/</Homepage>
+        <Packager>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">ruamel.yaml is a YAML 1.2 loader/dumper package for Python.</Summary>
+        <Description xml:lang="en">ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-ruamel-yaml</Name>
+        <Summary xml:lang="en">ruamel.yaml is a YAML 1.2 loader/dumper package for Python.</Summary>
+        <Description xml:lang="en">ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel.yaml-0.16.10-py3.7-nspkg.pth</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel.yaml-0.16.10-py3.7.egg-info/PKG-INFO</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel.yaml-0.16.10-py3.7.egg-info/SOURCES.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel.yaml-0.16.10-py3.7.egg-info/dependency_links.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel.yaml-0.16.10-py3.7.egg-info/namespace_packages.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel.yaml-0.16.10-py3.7.egg-info/requires.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel.yaml-0.16.10-py3.7.egg-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/__init__.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/anchor.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/comments.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/compat.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/composer.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/configobjwalker.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/constructor.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/cyaml.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/dumper.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/emitter.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/error.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/events.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/loader.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/main.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/nodes.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/parser.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/reader.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/representer.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/resolver.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/scalarbool.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/scalarfloat.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/scalarint.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/scalarstring.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/scanner.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/serializer.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/timestamp.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/tokens.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/__pycache__/util.cpython-37.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/anchor.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/comments.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/compat.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/composer.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/configobjwalker.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/constructor.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/cyaml.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/dumper.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/emitter.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/error.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/events.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/loader.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/main.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/nodes.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/parser.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/py.typed</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/reader.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/representer.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/resolver.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/scalarbool.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/scalarfloat.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/scalarint.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/scalarstring.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/scanner.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/serializer.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/timestamp.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/tokens.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/ruamel/yaml/util.py</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-08-15</Date>
+            <Version>0.16.10</Version>
+            <Comment>Packaging update</Comment>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,26 @@
+name       : borgmatic
+version    : 1.5.9
+release    : 1
+source     :
+    - https://projects.torsion.org/witten/borgmatic/archive/1.5.9.tar.gz : 383b6e993bd4a64b93e92bc44707a7132ce95bdcbdd801bec7d9bab1b36339e2
+homepage   : https://torsion.org/borgmatic
+license    : GPL-3.0-or-later
+component  : system.utils
+summary    : Simple, configuration-driven backup software for servers and workstations
+description: |
+    borgmatic is simple, configuration-driven backup software for servers and workstations. Protect your files with client-side encryption. Backup your databases too. Monitor it all with integrated third-party services.
+rundeps    :
+    - borg
+    - python-colorama
+    - python-pykwalify
+    - python-requests
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
+    
+    install -dm00644 $installdir/etc/systemd/system
+    install -dm00644 $installdir/usr/share/doc/borgmatic/sample/cron
+    
+    install -Dm00644 sample/cron/borgmatic $installdir/usr/share/doc/borgmatic/sample/cron
+    install -Dm00644 sample/systemd/borgmatic* $installdir/etc/systemd/system
