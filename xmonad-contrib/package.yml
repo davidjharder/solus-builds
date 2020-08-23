@@ -1,0 +1,30 @@
+name       : xmonad-contrib
+version    : '0.16'
+release    : 3
+source     :
+    - https://hackage.haskell.org/package/xmonad-contrib-0.16/xmonad-contrib-0.16.tar.gz : ad72c38de1bf4f9e176bd0da7ee62a6153b03c9087313b3d4782f365f77caddd
+license    : BSD-3-Clause
+component  : programming.haskell
+summary    : Third party tiling algorithms, configurations and scripts to xmonad, a tiling window manager for X.
+description: |
+    Third party tiling algorithms, configurations and scripts to xmonad, a tiling window manager for X.
+networking : yes
+builddeps  :
+    - pkgconfig(xft)
+    - pkgconfig(xinerama)
+    - pkgconfig(xrandr)
+    - pkgconfig(xscrnsaver)
+    - haskell-cabal-install
+    - haskell-old-time
+    - haskell-random
+    - haskell-x11-xft
+    - xmonad
+    - bind-utils
+    - haskell-semigroups
+setup      : |
+    %cabal_configure
+build      : |
+    %cabal_build
+install    : |
+    %cabal_install
+    %cabal_register
