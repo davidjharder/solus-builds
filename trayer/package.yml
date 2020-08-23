@@ -1,0 +1,19 @@
+name       : trayer
+version    : 1.1.8
+release    : 1
+source     :
+    - https://github.com/sargon/trayer-srg/archive/trayer-1.1.8.tar.gz : c62e5a700618511f2e51c225d3536945eeb60d4680f2b66fde30e64788dcefaa
+license    : MIT
+component  : desktop
+summary    : trayer-srg is a lightweight GTK2-based systray for UNIX desktop
+description: |
+    trayer is small program designed to provide systray functionality present in GNOME/KDE desktop enviroments for window managers which doesn't support that function. It's similar to other applications such as  'peksystray' and 'docker'.
+builddeps  :
+    - pkgconfig(gtk+-2.0) 
+setup      : |
+    %configure
+build      : |
+    %make PREFIX=/usr
+install    : |
+    %make_install
+    install -Dm 00644 man/trayer.1 $installdir/usr/share/man/man1/trayer.1
