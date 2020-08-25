@@ -9,10 +9,10 @@ summary    : LGI is gobject-introspection based dynamic Lua binding to GObject b
 description: |
     LGI is gobject-introspection based dynamic Lua binding to GObject based libraries. It allows using GObject-based libraries directly from Lua.
 builddeps  :
-    - lua-devel
-#setup      : |
-#    %configure
+    - pkgconfig(lua-5.3)
+setup      : |
+    %patch -p1 < $pkgfiles/0001-fix-ver-and-prefix.patch
 build      : |
     %make
 install    : |
-    %make_install PREFIX=/usr
+    %make_install

@@ -19,45 +19,45 @@
 </Description>
         <PartOf>programming.library</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/lua/5.1/lgi/corelgilua51.so</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/class.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/component.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/core.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/enum.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/ffi.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/init.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/log.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/namespace.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/Clutter.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GLib-Bytes.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GLib-Error.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GLib-Markup.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GLib-Source.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GLib-Timer.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GLib-Variant.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GLib.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GObject-Closure.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GObject-Object.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GObject-Type.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GObject-Value.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/Gdk.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/Gio-DBus.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/Gio.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/GooCanvas.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/Gst.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/Gtk.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/Pango.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/PangoCairo.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/override/cairo.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/package.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/record.lua</Path>
-            <Path fileType="data">/usr/share/lua/5.1/lgi/version.lua</Path>
+            <Path fileType="library">/usr/lib/lua/5.3/lgi/corelgilua51.so</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/class.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/component.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/core.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/enum.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/ffi.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/init.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/log.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/namespace.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/Clutter.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GLib-Bytes.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GLib-Error.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GLib-Markup.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GLib-Source.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GLib-Timer.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GLib-Variant.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GLib.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GObject-Closure.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GObject-Object.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GObject-Type.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GObject-Value.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/Gdk.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/Gio-DBus.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/Gio.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/GooCanvas.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/Gst.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/Gtk.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/Pango.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/PangoCairo.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/override/cairo.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/package.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/record.lua</Path>
+            <Path fileType="data">/usr/share/lua/5.3/lgi/version.lua</Path>
         </Files>
     </Package>
     <History>
         <Update release="1">
-            <Date>2020-08-24</Date>
+            <Date>2020-08-25</Date>
             <Version>0.9.2</Version>
             <Comment>Packaging update</Comment>
             <Name>David Harder</Name>
