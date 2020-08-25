@@ -1,0 +1,32 @@
+name       : awesome
+version    : 4.3
+release    : 1
+source     :
+    - https://github.com/awesomeWM/awesome/releases/download/v4.3/awesome-4.3.tar.xz : 78264d6f012350b371e339127aca485260bc0aa935eff578ba75ce1a00e11753
+license    : GPL-2.0-or-later
+component  : desktop
+summary    : Awesome is a highly configurable, next generation framework window manager for X.
+description: |
+    Awesome is a highly configurable, next generation framework window manager for X.
+builddeps  :
+    - lua-lgi #local
+    - pkgconfig(ImageMagick)
+    - pkgconfig(cairo)
+    - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(libstartup-notification-1.0)
+    - pkgconfig(libxdg-basedir)
+    - pkgconfig(lua-5.3)
+    - pkgconfig(pango)
+    - pkgconfig(xcb)
+    - pkgconfig(xcb-cursor)
+    - pkgconfig(xcb-icccm)
+    - pkgconfig(xcb-keysyms)
+    - pkgconfig(xcb-util)
+    - pkgconfig(xcb-xrm)
+    - pkgconfig(xkbcommon-x11)
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
