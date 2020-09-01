@@ -24,6 +24,8 @@ builddeps  :
     - pkgconfig(xcb-util)
     - pkgconfig(xcb-xrm)
     - pkgconfig(xkbcommon-x11)
+rundeps    :
+    - lua-lgi
 setup      : |
     %cmake_ninja
 build      : |
