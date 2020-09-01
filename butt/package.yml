@@ -30,3 +30,4 @@ setup      : |
 build      : |
     %make 
 install    : |
+    %make_install
