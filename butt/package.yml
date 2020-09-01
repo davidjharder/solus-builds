@@ -1,0 +1,33 @@
+name       : butt
+version    : 0.1.22
+release    : 1
+source     :
+    - http://sourceforge.net/projects/butt/files/butt/butt-0.1.22/butt-0.1.22.tar.gz : 71e7fcd89d97f803f05197caa743de4fcf8ab67ec3f3af0a54c2e895d660f62c
+license    : GPL-2.0-or-later
+component  : multimedia.audio
+summary    : butt (broadcast using this tool) is an easy to use audio streaming tool.
+description: |
+    butt (broadcast using this tool) is an easy to use audio streaming tool.
+builddeps  :
+    - pkgconfig(bdw-gc)
+    - pkgconfig(dbus-1)
+    - pkgconfig(fdk-aac)
+    - pkgconfig(flac)
+    - pkgconfig(fontconfig)
+    - pkgconfig(libpng)
+    - pkgconfig(opus)
+    - pkgconfig(portaudio-2.0)
+    - pkgconfig(samplerate)
+    - pkgconfig(vorbis)
+    - pkgconfig(x11)
+    - pkgconfig(xext)
+    - pkgconfig(xfixes)
+    - pkgconfig(xft)
+    - fltk-devel
+    - lame-devel
+setup      : |
+    %configure
+build      : |
+    %make 
+install    : |
+    %make_install
