@@ -1,0 +1,24 @@
+name       : volumeicon
+version    : 0.5.1
+release    : 1
+source     :
+    - https://github.com/Maato/volumeicon/archive/0.5.1.tar.gz : 607979f316e6837eb7c65837c71b213a7dc6a2091153504f7b177a1d67f3da71
+license    : GPL-3.0-or-later
+component  : desktop.multimedia
+summary    : A lightweight volume control applet with support for global keybindings
+description: |
+    A lightweight volume control applet with support for global keybindings
+builddeps  :
+    - pkgconfig(alsa)
+    - pkgconfig(gtk+-x11-3.0)
+    - pkgconfig(libnotify)
+setup      : |
+    %patch -p1 < $pkgfiles/0001-add-missing-space.patch
+    ./autogen.sh
+    %configure PREFIX=/usr --enable-notify
+build      : |
+    %make
+install    : |
+    %make_install
+    install -Dm00644 $pkgfiles/volumeicon.desktop $installdir/usr/share/applications/volumeicon.desktop
+
