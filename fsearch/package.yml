@@ -1,0 +1,22 @@
+name       : fsearch
+version    : 0.1.4
+release    : 1
+source     :
+    - https://github.com/cboxdoerfer/fsearch/archive/v0.1beta4.tar.gz : a8664990194e476f7349c68e7c74c3eb56b5091fd6ef4a9f6581c3e408900464
+license    : GPL-2.0-or-later
+component  : desktop
+summary    : FSearch is a fast file search utility, inspired by Everything Search Engine. It is written in C and based on GTK+3.
+description: |
+    FSearch is a fast file search utility, inspired by Everything Search Engine. It is written in C and based on GTK+3.
+builddeps  :
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gio-2.0)
+    - pkgconfig(libpcre)
+    - autoconf-archive
+setup      : |
+    %autogen
+build      : |
+    %make
+install    : |
+    %make_install
