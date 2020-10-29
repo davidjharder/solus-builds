@@ -1,0 +1,34 @@
+<PISI>
+    <Source>
+        <Name>wlsunset</Name>
+        <Packager>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>desktop</PartOf>
+        <Summary xml:lang="en">Day/night gamma adjustments for Wayland compositors supporting wlr-gamma-control-unstable-v1</Summary>
+        <Description xml:lang="en">Day/night gamma adjustments for Wayland compositors supporting wlr-gamma-control-unstable-v1.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>wlsunset</Name>
+        <Summary xml:lang="en">Day/night gamma adjustments for Wayland compositors supporting wlr-gamma-control-unstable-v1</Summary>
+        <Description xml:lang="en">Day/night gamma adjustments for Wayland compositors supporting wlr-gamma-control-unstable-v1.
+</Description>
+        <PartOf>desktop</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/wlsunset</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-10-29</Date>
+            <Version>0.1.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Update>
+    </History>
+</PISI>
