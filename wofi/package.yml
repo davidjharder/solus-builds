@@ -1,0 +1,21 @@
+name       : wofi
+version    : 1.2.2
+release    : 1
+source     :
+    - https://hg.sr.ht/~scoopta/wofi/archive/v1.2.2.tar.gz : 7ee9584ed55175ec7be86a6f10d96862f2b45c4f2de65942d3155755a37ffd48
+license    : GPL-3.0-or-later
+component  : desktop
+summary    : Wofi is a launcher/menu program for wlroots based wayland compositors such as sway
+description: |
+    Wofi is a launcher/menu program for wlroots based wayland compositors such as sway
+builddeps  :
+
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(gtk+-wayland-3.0)
+
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_install
+install    : |
+    %ninja_install
