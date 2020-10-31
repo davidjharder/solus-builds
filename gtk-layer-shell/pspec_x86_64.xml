@@ -1,0 +1,52 @@
+<PISI>
+    <Source>
+        <Name>gtk-layer-shell</Name>
+        <Packager>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Packager>
+        <License>GPL-3.0-or-later</License>
+        <PartOf>desktop</PartOf>
+        <Summary xml:lang="en">A library to write GTK applications that use Layer Shell. Layer Shell is a Wayland protocol for desktop shell components.</Summary>
+        <Description xml:lang="en">A library to write GTK applications that use Layer Shell. Layer Shell is a Wayland protocol for desktop shell components.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>gtk-layer-shell</Name>
+        <Summary xml:lang="en">A library to write GTK applications that use Layer Shell. Layer Shell is a Wayland protocol for desktop shell components.</Summary>
+        <Description xml:lang="en">A library to write GTK applications that use Layer Shell. Layer Shell is a Wayland protocol for desktop shell components.
+</Description>
+        <PartOf>desktop</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/girepository-1.0/GtkLayerShell-0.1.typelib</Path>
+            <Path fileType="library">/usr/lib64/libgtk-layer-shell.so.0</Path>
+            <Path fileType="library">/usr/lib64/libgtk-layer-shell.so.0.5.0</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GtkLayerShell-0.1.gir</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gtk-layer-shell-devel</Name>
+        <Summary xml:lang="en">Development files for gtk-layer-shell</Summary>
+        <Description xml:lang="en">A library to write GTK applications that use Layer Shell. Layer Shell is a Wayland protocol for desktop shell components.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">gtk-layer-shell</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/gtk-layer-shell/gtk-layer-shell.h</Path>
+            <Path fileType="library">/usr/lib64/libgtk-layer-shell.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/gtk-layer-shell-0.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-10-31</Date>
+            <Version>0.5.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Update>
+    </History>
+</PISI>
