@@ -1,0 +1,38 @@
+name       : swaybar
+version    : 0.9.4
+release    : 1
+source     :
+    - https://github.com/Alexays/Waybar/archive/0.9.4.tar.gz : d49c09ee253ca9cc9688d1b4d8602adc9bdae613b02e2fa1a2e7277ddc9e82e8
+license    : MIT
+component  : desktop
+summary    : Highly customizable Wayland bar for Sway and Wlroots based compositors
+description: |
+    Highly customizable Wayland bar for Sway and Wlroots based compositors
+nwteorking : yes
+builddeps  :
+    - pkgconfig(gtkmm-3.0)
+    - pkgconfig(jsoncpp)
+    - pkgconfig(sigc++-2.0)
+    - pkgconfig(fmt)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(wayland-client)
+    - pkgconfig(spdlog)
+    - pkgconfig(gtk+-wayland-3.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(libpulse)
+    - pkgconfig(libnl-3.0)
+    - git
+    - pkgconfig(appindicator3-0.1)
+    - pkgconfig(dbusmenu-gtk3-0.4)
+    - pkgconfig(libmpdclient)
+    - sndio-devel
+    - pkgconfig(gtk-layer-shell-0)
+
+
+
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
