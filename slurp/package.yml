@@ -1,0 +1,22 @@
+name       : slurp
+version    : 1.3.0
+release    : 1
+source     :
+    - https://github.com/emersion/slurp/archive/v1.3.0.tar.gz : 07715ca3021e983c0630e1d901b18495c154e630bf5151fdbaf0aaba658573c3
+license    : MIT
+component  : desktop
+summary    : Select a region in a Wayland compositor and print it to the standard output. Works well with grim.
+description: |
+    Select a region in a Wayland compositor and print it to the standard output. Works well with grim.
+builddeps  :
+    - pkgconfig(cairo)
+    - pkgconfig(scdoc)
+    - pkgconfig(wayland-client)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(xkbcommon)
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
