@@ -12,7 +12,6 @@ builddeps  :
     - pkgconfig(scdoc) 
     - pkgconfig(wayland-client)
 setup      : |
-    %patch -p1 < $pkgfiles/0001-remove-scdoc-native.patch
     %meson_configure
 build      : |
     %ninja_build
