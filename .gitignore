@@ -1,2 +1,4 @@
 common/
 *.eopkg
+scdoc/
+verialator/
