@@ -1,0 +1,17 @@
+name       : ox
+version    : 0.2.5
+release    : 1
+source     :
+    - https://github.com/curlpipe/ox/archive/0.2.5.tar.gz : 873eb447029508bc3fd1d7dda8803d79a7b107a7a903399947f4eac6ae671176
+license    : GPL-2.0-or-later
+component  : editor
+summary    : Ox is a terminal text editor with IDE-like features written in Rust
+description: |
+    Ox is a terminal text editor with IDE-like features written in Rust
+networking: yes
+builddeps  :
+    - cargo
+build      : |
+    cargo build
+install    : |
+    install -Dm00755 $workdir/target/debug/ox $installdir/usr/bin/ox
