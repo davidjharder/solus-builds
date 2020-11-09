@@ -8,31 +8,47 @@ component  : desktop
 summary    : Highly customizable Wayland bar for Sway and Wlroots based compositors
 description: |
     Highly customizable Wayland bar for Sway and Wlroots based compositors
-nwteorking : yes
+networking : yes
+#clang      : yes
 builddeps  :
+    - git
+    - pkgconfig(dbusmenu-gtk3-0.4)
+    - pkgconfig(fmt)
+    - pkgconfig(appindicator3-0.1)
+    - pkgconfig(gtk-layer-shell-0)
     - pkgconfig(gtkmm-3.0)
     - pkgconfig(jsoncpp)
-    - pkgconfig(sigc++-2.0)
-    - pkgconfig(fmt)
-    - pkgconfig(wayland-protocols)
-    - pkgconfig(wayland-client)
-    - pkgconfig(spdlog)
-    - pkgconfig(gtk+-wayland-3.0)
-    - pkgconfig(gobject-introspection-1.0)
-    - pkgconfig(libpulse)
-    - pkgconfig(libnl-3.0)
-    - git
-    - pkgconfig(appindicator3-0.1)
-    - pkgconfig(dbusmenu-gtk3-0.4)
     - pkgconfig(libmpdclient)
+    - pkgconfig(libnl-3.0)
+    - pkgconfig(libpulse)
+    - pkgconfig(scdoc)
+    - pkgconfig(sigc++-2.0)
+    - pkgconfig(spdlog)
+    - pkgconfig(wayland-client)
+    - pkgconfig(wayland-protocols)
     - sndio-devel
-    - pkgconfig(gtk-layer-shell-0)
+    - pkgconfig(libinput)
+    - pkgconfig(libudev)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(gio-unix-2.0)
+#    - llvm-clang
 
+rundeps    :
+    - font-awesome-ttf
 
 
 setup      : |
+    %patch -p1 < $pkgfiles/0001-network-module-fix.patch
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+# pulled by gtk-layer-shell
+#    - pkgconfig(gobject-introspection-1.0)
+#    - pkgconfig(gtk+-wayland-3.0)
+# used by fedora build
+#    - pkgconfig(libinput)
+#    - pkgconfig(libudev)
+#    - pkgconfig(gio-unix-2.0)
+#    - pkgconfig(gio-unix-2.0)
