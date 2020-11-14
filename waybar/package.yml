@@ -38,6 +38,7 @@ rundeps    :
 
 
 setup      : |
+    %patch -p1 < $pkgfiles/0001-network-module-fix.patch
     %meson_configure
 build      : |
     %ninja_build
@@ -53,5 +54,5 @@ install    : |
 #    - pkgconfig(gio-unix-2.0)
 
 # other notes: 
-# - had to update libnl and spdlog
-# - libnl update may not be needed with the patch
+# - had to update spdlog
+
