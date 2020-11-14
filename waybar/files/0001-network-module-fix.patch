@@ -1,0 +1,13 @@
+diff --git a/src/modules/network.cpp b/src/modules/network.cpp
+index 74ae913..f5e2000 100644
+--- a/src/modules/network.cpp
++++ b/src/modules/network.cpp
+@@ -746,7 +746,7 @@ void waybar::modules::Network::parseEssid(struct nlattr **bss) {
+ void waybar::modules::Network::parseSignal(struct nlattr **bss) {
+   if (bss[NL80211_BSS_SIGNAL_MBM] != nullptr) {
+     // signalstrength in dBm from mBm
+-    signal_strength_dbm_ = nla_get_s32(bss[NL80211_BSS_SIGNAL_MBM]) / 100;
++    signal_strength_dbm_ = nla_get_u32(bss[NL80211_BSS_SIGNAL_MBM]) / 100;
+ 
+     // WiFi-hardware usually operates in the range -90 to -20dBm.
+     const int hardwareMax = -20;
