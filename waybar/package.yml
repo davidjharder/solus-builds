@@ -9,7 +9,6 @@ summary    : Highly customizable Wayland bar for Sway and Wlroots based composit
 description: |
     Highly customizable Wayland bar for Sway and Wlroots based compositors
 networking : yes
-#clang      : yes
 builddeps  :
     - git
     - pkgconfig(dbusmenu-gtk3-0.4)
@@ -31,12 +30,9 @@ builddeps  :
     - pkgconfig(libudev)
     - pkgconfig(gio-unix-2.0)
     - pkgconfig(gio-unix-2.0)
-#    - llvm-clang
 
 rundeps    :
     - font-awesome-ttf
-
-
 setup      : |
     %patch -p1 < $pkgfiles/0001-network-module-fix.patch
     %meson_configure
