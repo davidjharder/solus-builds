@@ -12,11 +12,12 @@ networking : yes
 builddeps  :
     - pkgconfig(scdoc)
     - golang
+    - notmuch-devel
 rundeps    :
     - libvterm
-    - w3m
     - python-colorama
+    - w3m
 build      : |
-    %make PREFIX=/usr
+    %make PREFIX=/usr GOFLAGS=-tags=notmuch
 install    : |
     %make_install PREFIX=/usr
