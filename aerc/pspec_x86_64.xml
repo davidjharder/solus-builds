@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>aerc</Name>
+        <Packager>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>network.mail</PartOf>
+        <Summary xml:lang="en">aerc is an email client for your terminal.</Summary>
+        <Description xml:lang="en">aerc is an email client for your terminal.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>aerc</Name>
+        <Summary xml:lang="en">aerc is an email client for your terminal.</Summary>
+        <Description xml:lang="en">aerc is an email client for your terminal.
+</Description>
+        <PartOf>network.mail</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/aerc</Path>
+            <Path fileType="data">/usr/share/aerc/accounts.conf</Path>
+            <Path fileType="data">/usr/share/aerc/aerc.conf</Path>
+            <Path fileType="data">/usr/share/aerc/binds.conf</Path>
+            <Path fileType="data">/usr/share/aerc/filters/hldiff</Path>
+            <Path fileType="data">/usr/share/aerc/filters/html</Path>
+            <Path fileType="data">/usr/share/aerc/filters/plaintext</Path>
+            <Path fileType="data">/usr/share/aerc/stylesets/default</Path>
+            <Path fileType="data">/usr/share/aerc/templates/forward_as_body</Path>
+            <Path fileType="data">/usr/share/aerc/templates/quoted_reply</Path>
+            <Path fileType="man">/usr/share/man/man1/aerc-search.1</Path>
+            <Path fileType="man">/usr/share/man/man1/aerc.1</Path>
+            <Path fileType="man">/usr/share/man/man5/aerc-config.5</Path>
+            <Path fileType="man">/usr/share/man/man5/aerc-imap.5</Path>
+            <Path fileType="man">/usr/share/man/man5/aerc-maildir.5</Path>
+            <Path fileType="man">/usr/share/man/man5/aerc-notmuch.5</Path>
+            <Path fileType="man">/usr/share/man/man5/aerc-sendmail.5</Path>
+            <Path fileType="man">/usr/share/man/man5/aerc-smtp.5</Path>
+            <Path fileType="man">/usr/share/man/man7/aerc-stylesets.7</Path>
+            <Path fileType="man">/usr/share/man/man7/aerc-templates.7</Path>
+            <Path fileType="man">/usr/share/man/man7/aerc-tutorial.7</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="5">
+            <Date>2020-11-16</Date>
+            <Version>0.5.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Update>
+    </History>
+</PISI>

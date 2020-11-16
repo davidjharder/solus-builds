@@ -1,23 +1,21 @@
 name       : aerc
-version    : '0.30'
-release    : 4
+version    : 0.5.2
+release    : 5
 source     :
-    - https://git.sr.ht/~sircmpwn/aerc/archive/0.3.0.tar.gz : 44d5ab0d5f1195166b351ec59680cc8f4c0eb45da4d44263b138be0a91a512a1
+    - https://git.sr.ht/~sircmpwn/aerc/archive/0.5.2.tar.gz : 87b922440e53b99f260d2332996537decb452c838c774e9340b633296f9f68ee
 license    : MIT
 component  : network.mail
 summary    : aerc is an email client for your terminal.
 description: |
     aerc is an email client for your terminal.
+networking : yes
 builddeps  :
     - pkgconfig(scdoc)
     - golang
 rundeps    :
     - libvterm
     - w3m
-    - python3-colorama
-environment: |
-    export GOPATH=`pwd`
-networking : yes
+    - python-colorama
 build      : |
     %make PREFIX=/usr
 install    : |
