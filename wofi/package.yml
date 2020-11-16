@@ -1,5 +1,5 @@
 name       : wofi
-version    : 1.2.4
+version    : 1.2.3
 release    : 2
 source     :
     - https://github.com/davidjharder/solus-builds/raw/master/wofi/files/v1.2.3.tar.gz : c93371c38cddfa794594d85bc097a03585c28ef8e47c0fd0f820231ee628a64b
