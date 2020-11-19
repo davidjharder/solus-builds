@@ -1,0 +1,24 @@
+name       : wayland-mako
+version    : 1.4.1
+release    : 1
+source     :
+    - https://github.com/emersion/mako/archive/v1.4.1.tar.gz : 27ab63264a74389de2119393fe64fd578a4c1d04c8409990ef7cfbb6eb9309bb
+license    : GPL-2.0-or-later
+component  : desktop
+summary    : Lightweight Wayland notification daemon
+description: |
+    Lightweight Wayland notification daemon
+builddeps  :
+    - pkgconfig(cairo)
+    - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(libsystemd)
+    - pkgconfig(pango)
+    - pkgconfig(wayland-client)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(scdoc)
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
