@@ -1,4 +1,8 @@
 common/
 *.eopkg
+*.xml
 scdoc/
 verialator/
+nnn
+nano
+
