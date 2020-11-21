@@ -1,8 +1,8 @@
 name       : zerotier-one
-version    : 1.4.6
-release    : 1
+version    : 1.6.0
+release    : 2
 source     :
-    - https://github.com/zerotier/ZeroTierOne/archive/1.4.6.tar.gz : d1a0eeb03acfa446f67adf5901902d17de14b4648c21e160024acf476e3d4fba
+    - https://github.com/zerotier/ZeroTierOne/archive/1.6.0.tar.gz : bf4c1f9e000de55411de791c3374d34eb3e698aac8c62ce17a78010268a2b012
 license    : Business Source License 1.1
 component  : network.clients
 summary    : Zerotier is an open source, cross-platform virtual LAN
@@ -12,6 +12,6 @@ build      : |
     %make
     make selftest
     ./zerotier-selftest
-install    : |
+install    : |-
     %make_install
     install -D -m 00644 $workdir/debian/zerotier-one.service $installdir/usr/lib/systemd/system/zerotier-one.service
