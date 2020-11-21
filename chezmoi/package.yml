@@ -1,0 +1,17 @@
+name       : chezmoi
+version    : 1.8.9
+release    : 1
+source     :
+    - https://github.com/twpayne/chezmoi/archive/v1.8.9.tar.gz : 6e9d341672bc375ad2e9594a689c0c8ae8ebad0c964d699dfbd408fc93058b93
+license    : MIT
+component  : security
+summary    : chezmoi helps you manage your personal configuration files across multiple machines.
+description: |
+    chezmoi helps you manage your personal configuration files across multiple machines.
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    go build
+install    : |
+    install -Dm00644 chezmoi $installdir/usr/bin/chezmoi
