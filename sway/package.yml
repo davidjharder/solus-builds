@@ -1,0 +1,29 @@
+name       : sway
+version    : 1.5.1
+release    : 18
+source     :
+    - https://github.com/swaywm/sway/releases/download/1.5.1/sway-1.5.1.tar.gz : 095f983c9a5f80d761bc2fb19df8166839b9290124ccd47f3e74119a1335490f
+license    : MIT
+component  : desktop
+summary    : sway is an i3-compatible Wayland compositor
+description: |
+    sway is an i3-compatible Wayland compositor
+builddeps  :
+    - pkgconfig(ImageMagick)
+    - pkgconfig(cairo)
+    - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(json-c)
+    - pkgconfig(libavcodec)
+    - pkgconfig(libevdev)
+    - pkgconfig(libcap)
+    - pkgconfig(pango)
+    - pkgconfig(scdoc)
+    - pkgconfig(wlroots)
+rundeps    :
+    - swaylock
+setup      : |
+    %meson_configure -Dgdk-pixbuf=enabled -Dxwayland=enabled
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
