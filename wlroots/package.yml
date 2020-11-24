@@ -1,0 +1,28 @@
+name       : wlroots
+version    : 0.12.0
+release    : 5
+source     :
+    - https://github.com/swaywm/wlroots/releases/download/0.12.0/wlroots-0.12.0.tar.gz : c9e9f4f6d2f526d0b2886daf3ec37e64831773059aa669fb98a88522a1626bdb
+license    : MIT
+component  : desktop.library
+summary    : A modular Wayland compositor library
+description: |
+    Pluggable, composable, unopinionated modules for building a Wayland compositor
+builddeps  :
+    - pkgconfig(gbm)
+    - pkgconfig(libavcodec)
+    - pkgconfig(libdrm)
+    - pkgconfig(libinput)
+    - pkgconfig(libpng)
+    - pkgconfig(pixman-1)
+    - pkgconfig(wayland-egl)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(x11)
+    - pkgconfig(xkbcommon)
+    - pkgconfig(xcb-icccm)
+setup      : |
+    %meson_configure -Dx11-backend=enabled
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
