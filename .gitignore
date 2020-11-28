@@ -2,7 +2,7 @@ common/
 *.eopkg
 *.xml
 scdoc/
-verialator/
+verilator/
 nnn
 nano
 
