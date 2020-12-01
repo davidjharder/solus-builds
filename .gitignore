@@ -3,6 +3,7 @@ common/
 *.xml
 scdoc/
 verilator/
+guayadeque/
 nnn
 nano
 
