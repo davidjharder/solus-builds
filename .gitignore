@@ -1,9 +1,11 @@
-common/
 *.eopkg
 *.xml
+bat
+common/
+guayadeque/
+luarocks
+nano
+nnn
 scdoc/
 verilator/
-guayadeque/
-nnn
-nano
 vis

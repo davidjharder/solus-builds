@@ -1,0 +1,17 @@
+name       : 
+version    : v1.3.0
+release    : 1
+source     :
+    - https://github.com/evilsocket/opensnitch/archive/v1.3.0.tar.gz : 37d17d034c775831a111e520b799d672512d62173a4cffb129fd112c7e7aecff
+license    : GPL-2.0-or-later # CHECK ME
+component  : PLEASE FILL ME IN
+summary    : PLEASE FILL ME IN
+description: |
+    PLEASE FILL ME IN
+builddeps  :
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
