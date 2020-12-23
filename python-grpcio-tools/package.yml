@@ -1,0 +1,19 @@
+name       : python-grpcio-tools
+version    : 1.27.2
+# This version should match python-grcpio
+release    : 1
+source     :
+    - https://files.pythonhosted.org/packages/34/81/08f956aab9a2f28ea01e29c1935a67f48627a595bdc78c2a401467ae06c0/grpcio-tools-1.27.2.tar.gz : 845a51305af9fc7f9e2078edaec9a759153195f6cf1fbb12b1fa6f077e56b260
+license    : Apache-2.0
+component  : programming.python
+summary    : Python protobuf generator for GRPC
+description: |
+    Python protobuf generator for GRPC
+builddeps  :
+    - pkgconfig(python3)
+    - python-grpcio
+    - python-protobuf
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
