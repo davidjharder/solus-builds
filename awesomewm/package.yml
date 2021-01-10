@@ -26,9 +26,22 @@ builddeps  :
     - pkgconfig(xkbcommon-x11)
 rundeps    :
     - lua-lgi
+    - alacritty # made this the default terminal
+    - librsvg # optional
+    - libgtk-3 # optional for themes
+    - dbus # optional
 setup      : |
-    %cmake_ninja
+    %cmake_ninja -DSYSCONFDIR=/usr/share
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    sed -i 's/xterm/alacritty/g' $installdir/usr/share/xdg/awesome/rc.lua
+
+
+# Notes
+# https://src.fedoraproject.org/rpms/awesome/blob/master/f/awesome.spec
+# cleanups: librsvg yanks in a lot of other deps, probably true of gtk-3
+# gtk-3: not a dep after building. Will this dep casue issues on Plasma?
+# change the default terminal to alacrity
+
