@@ -1,0 +1,17 @@
+name       : eopkg-graph 
+version    : 0
+release    : 1
+source     :
+    - git|https://github.com/guillotjulien/eopkg-graph.git : 6170f75d93268e77ea793e302ed5ce9f91cb277f
+license    : MIT
+component  : programming.tools
+summary    : A CLI utility to generate the runtime dependency graph of a package from its eopkg metadata.
+description: |
+    A CLI utility to generate the runtime dependency graph of a package from its eopkg metadata.
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    %make
+install    : |
+    install -Dm00755 $workdir/build/eopkg-graph $installdir/usr/bin/eopkg-graph
