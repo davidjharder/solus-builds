@@ -1,0 +1,18 @@
+name       : bit
+version    : 1.0.1
+release    : 1
+source     :
+    - https://github.com/chriswalz/bit/archive/v1.0.1.tar.gz : 5ad1ee17ba015aa542c0794d9317045068963048203c8323eda528f419b1d470
+license    : Apache-2.0
+component  : programming.tools
+homepage   : https://github.com/chriswalz/bit
+summary    : bit is an experimental modernized git CLI built on top of git that provides happy defaults and other niceties
+description: |
+    bit is an experimental modernized git CLI built on top of git that provides happy defaults and other niceties
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    go build -ldflags "-X main.version=$version" -o bit
+install    : |
+    install -Dm00755 $workdir/bit $installdir/usr/bin/bit
