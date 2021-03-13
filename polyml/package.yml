@@ -9,7 +9,7 @@ summary    : Poly/ML is a Standard ML implementation originally written in an ex
 description: |
     Poly/ML is a Standard ML implementation originally written in an experimental language called Poly.
 setup      : |
-    %configure --enable-shared --disable-static --with-system-libffi 
+    %configure --with-system-libffi --enable-shared --disable-static
 build      : |
     %make
 install    : |
