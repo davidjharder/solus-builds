@@ -1,8 +1,8 @@
 name       : wlroots
 version    : 0.12.0
-release    : 5
+release    : 6
 source     :
-    - https://github.com/swaywm/wlroots/releases/download/0.12.0/wlroots-0.12.0.tar.gz : c9e9f4f6d2f526d0b2886daf3ec37e64831773059aa669fb98a88522a1626bdb
+    - git|https://github.com/swaywm/wlroots.git : c740fccc9dd0913908c0632c10f8c6d10b2b1ca4
 license    : MIT
 component  : desktop.library
 summary    : A modular Wayland compositor library
