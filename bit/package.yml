@@ -1,8 +1,8 @@
 name       : bit
-version    : 1.0.3
-release    : 2
+version    : 1.0.5
+release    : 3
 source     :
-    - https://github.com/chriswalz/bit/archive/v1.0.3.tar.gz : 4557779eea05183e3e2efed3233db56ec2fa27bc82002134a83f0ba1dcfef374
+    - https://github.com/chriswalz/bit/archive/refs/tags/v1.0.5.tar.gz : e51648df68ef2d4e7628bb266ab43f9c75d851d28788b5111255aa338b94ce1f
 license    : Apache-2.0
 component  : programming.tools
 homepage   : https://github.com/chriswalz/bit
