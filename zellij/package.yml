@@ -1,0 +1,22 @@
+name       : zellij
+version    : 0.5.0
+release    : 1
+source     :
+    - https://github.com/zellij-org/zellij/archive/refs/tags/v0.5.0-beta.tar.gz : 2e2c078ad3d5fbac1bdec56d2c84832dd225879aa314750ee66ee317e2717792
+license    : MIT
+homepage   : https://zellij.dev
+component  : system.utils
+summary    : Terminal multiplexer written in Rust
+description: |
+    Terminal multiplexer written in Rustbuilddeps
+networking : yes
+builddeps  :
+    - cargo
+build      : |
+    cargo build --release
+install    : |
+    install -Dm00755 $workdir/target/release/zellij $installdir/usr/bin/zellij
+    install -Dm00755 $workdir/target/release/tldr $installdir/usr/bin/tldr
+    install -Dm00644 $workdir/assets/completions/zellij.bash $installdir/usr/share/bash-completion/completions/zellij
+    install -Dm00644 $workdir/assets/completions/zellij.fish $installdir/usr/share/fish/vendor_completions.d/zellij.fish
+    install -Dm00644 $workdir/assets/completions/_zellij $installdir/usr/share/zsh/site-functions/_zellij
