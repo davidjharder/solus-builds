@@ -1,0 +1,45 @@
+name       : megasync
+version    : 4.3.8.0
+release    : 21
+source     :
+    - https://github.com/meganz/MEGAsync/archive/v4.3.8.0_Win.tar.gz : 1c32dec96f069d09eefa6691dba99a13652af35da4fdb80afdc05a3eac061d7c    
+    - https://github.com/meganz/sdk/archive/v3.7.3f.tar.gz : 82bc1b53846743f0fcaca029647009970824e65c512be3474f0cf287ea0ff1bd
+license    : MEGA LIMITED CODE REVIEW LICENCE
+component  : network.clients
+summary    : Sync your files to your Mega account.
+description: |
+    Easy automated syncing between your computers and your MEGA Cloud Drive.
+builddeps  :
+    - pkgconfig(libcares)
+    - pkgconfig(libcryptopp)
+    - pkgconfig(libcurl)
+    - pkgconfig(libmediainfo)
+    - pkgconfig(libraw)
+    - pkgconfig(libsodium)
+    - pkgconfig(libuv)
+    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt5Svg)
+    - pkgconfig(Qt5UiTools)
+    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(sqlite3)
+    - pkgconfig(xcb)
+    - bzip2-devel
+    - freeimage-devel
+setup      : |
+    cd $workdir/src/MEGASync/mega
+    tar -xf $sources/v3.7.3f.tar.gz --strip 1 -C .
+    %autogen
+    cd $workdir/src
+    %configure
+build      : |
+    cd $workdir/src
+    %qmake MEGA.pro
+    lrelease MEGASync/MEGASync.pro
+    %make
+install    : |
+    install -Dm 755 $workdir/src/MEGASync/megasync $installdir/usr/bin/megasync
+    install -Dm 644 $workdir/src/MEGASync/platform/linux/data/megasync.desktop $installdir/usr/share/applications/megasync.desktop
+    for size in 16x16 32x32 48x48 128x128 256x256
+    do
+    install -Dm 644 $workdir/src/MEGASync/platform/linux/data/icons/hicolor/$size/apps/mega.png $installdir/usr/share/icons/hicolor/$size/apps/mega.png
+    done
