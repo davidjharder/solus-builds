@@ -1,8 +1,8 @@
 name       : sway
-version    : 1.5.1
-release    : 18
+version    : 1.6.1
+release    : 20
 source     :
-    - https://github.com/swaywm/sway/releases/download/1.5.1/sway-1.5.1.tar.gz : 095f983c9a5f80d761bc2fb19df8166839b9290124ccd47f3e74119a1335490f
+    - https://github.com/swaywm/sway/archive/refs/tags/1.6.1.tar.gz : 8b138867cd83217de07138144b1279fe58e0421eb10c91122aa33c8770fe7391
 license    : MIT
 component  : desktop
 summary    : sway is an i3-compatible Wayland compositor
@@ -18,6 +18,7 @@ builddeps  :
     - pkgconfig(libcap)
     - pkgconfig(pango)
     - pkgconfig(scdoc)
+    - pkgconfig(wayland-protocols)
     - pkgconfig(wlroots)
 rundeps    :
     - swaylock
@@ -27,3 +28,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    install -Dm00644 $pkgfiles/sway.desktop $installdir/usr/share/xsessions/sway.desktop
