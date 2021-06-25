@@ -1,8 +1,8 @@
 name       : waybar
-version    : 0.9.4
-release    : 1
+version    : 0.9.7
+release    : 2
 source     :
-    - https://github.com/Alexays/Waybar/archive/0.9.4.tar.gz : d49c09ee253ca9cc9688d1b4d8602adc9bdae613b02e2fa1a2e7277ddc9e82e8
+    - https://github.com/Alexays/Waybar/archive/refs/tags/0.9.7.tar.gz : 0d23573e0f6ce6e3f3eb4d1d7313848b924429268f3becd81649a391ae7703e7
 license    : MIT
 component  : desktop
 summary    : Highly customizable Wayland bar for Sway and Wlroots based compositors

@@ -1,3 +1,6 @@
+libgtk-layer-shell.so.0:__bss_start
+libgtk-layer-shell.so.0:_edata
+libgtk-layer-shell.so.0:_end
 libgtk-layer-shell.so.0:custom_shell_surface_get_gtk_window
 libgtk-layer-shell.so.0:custom_shell_surface_get_layer_surface
 libgtk-layer-shell.so.0:custom_shell_surface_get_window_geom
@@ -756,6 +759,13 @@ libgtk-layer-shell.so.0:layer_surface_set_layer
 libgtk-layer-shell.so.0:layer_surface_set_margin
 libgtk-layer-shell.so.0:layer_surface_set_monitor
 libgtk-layer-shell.so.0:layer_surface_set_name_space
+libgtk-layer-shell.so.0:xdg_popup_interface
 libgtk-layer-shell.so.0:xdg_popup_surface_new
 libgtk-layer-shell.so.0:xdg_popup_surface_update_position
+libgtk-layer-shell.so.0:xdg_positioner_interface
+libgtk-layer-shell.so.0:xdg_surface_interface
+libgtk-layer-shell.so.0:xdg_toplevel_interface
 libgtk-layer-shell.so.0:xdg_toplevel_surface_new
+libgtk-layer-shell.so.0:xdg_wm_base_interface
+libgtk-layer-shell.so.0:zwlr_layer_shell_v1_interface
+libgtk-layer-shell.so.0:zwlr_layer_surface_v1_interface

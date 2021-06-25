@@ -1,8 +1,8 @@
 name       : spdlog
-version    : 1.8.1
-release    : 2
+version    : 1.8.5
+release    : 3
 source     :
-    - https://github.com/gabime/spdlog/archive/v1.8.1.tar.gz : 5197b3147cfcfaa67dd564db7b878e4a4b3d9f3443801722b3915cdeced656cb
+    - https://github.com/gabime/spdlog/archive/refs/tags/v1.8.5.tar.gz : 944d0bd7c763ac721398dca2bb0f3b5ed16f67cef36810ede5061f35a543b4b8
 license    : MIT
 homepage   : https://github.com/gabime/spdlog
 component  : programming.library
