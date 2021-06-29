@@ -436,6 +436,8 @@ libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_fixed_size_height_or_ab
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_fixed_size_height_supported
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_fixed_size_width_or_abort
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_fixed_size_width_supported
+libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_frame_callback_surfaces_or_abort
+libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_frame_callback_surfaces_supported
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_geometry_hints_ptr
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_geometry_mask_ptr
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_grab_input_seat
@@ -484,6 +486,8 @@ libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_subsurface_x_or_abort
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_subsurface_x_supported
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_subsurface_y_or_abort
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_subsurface_y_supported
+libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_surface_callback_or_abort
+libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_surface_callback_supported
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_title
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_transient_for
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_get_unconfigured_height_or_abort
@@ -527,6 +531,7 @@ libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_exported_idle_source_id
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_exported_user_data_or_abort
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_fixed_size_height_or_abort
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_fixed_size_width_or_abort
+libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_frame_callback_surfaces_or_abort
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_grab_input_seat
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_imported_transient_for
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_initial_configure_received
@@ -558,6 +563,7 @@ libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_staged_updates_region
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_staging_cairo_surface
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_subsurface_x_or_abort
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_subsurface_y_or_abort
+libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_surface_callback_or_abort
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_title
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_transient_for
 libgtk-layer-shell.so.0:gdk_window_impl_wayland_priv_set_unconfigured_height_or_abort
@@ -712,11 +718,13 @@ libgtk-layer-shell.so.0:gdk_window_priv_set_visual
 libgtk-layer-shell.so.0:gdk_window_priv_set_width
 libgtk-layer-shell.so.0:gdk_window_priv_set_x
 libgtk-layer-shell.so.0:gdk_window_priv_set_y
+libgtk-layer-shell.so.0:gdk_window_set_priv_mapped
 libgtk-layer-shell.so.0:gtk_layer_auto_exclusive_zone_enable
 libgtk-layer-shell.so.0:gtk_layer_auto_exclusive_zone_is_enabled
 libgtk-layer-shell.so.0:gtk_layer_get_anchor
 libgtk-layer-shell.so.0:gtk_layer_get_exclusive_zone
 libgtk-layer-shell.so.0:gtk_layer_get_keyboard_interactivity
+libgtk-layer-shell.so.0:gtk_layer_get_keyboard_mode
 libgtk-layer-shell.so.0:gtk_layer_get_layer
 libgtk-layer-shell.so.0:gtk_layer_get_major_version
 libgtk-layer-shell.so.0:gtk_layer_get_margin
@@ -724,6 +732,7 @@ libgtk-layer-shell.so.0:gtk_layer_get_micro_version
 libgtk-layer-shell.so.0:gtk_layer_get_minor_version
 libgtk-layer-shell.so.0:gtk_layer_get_monitor
 libgtk-layer-shell.so.0:gtk_layer_get_namespace
+libgtk-layer-shell.so.0:gtk_layer_get_protocol_version
 libgtk-layer-shell.so.0:gtk_layer_get_zwlr_layer_surface_v1
 libgtk-layer-shell.so.0:gtk_layer_init_for_window
 libgtk-layer-shell.so.0:gtk_layer_is_layer_window
@@ -731,6 +740,7 @@ libgtk-layer-shell.so.0:gtk_layer_is_supported
 libgtk-layer-shell.so.0:gtk_layer_set_anchor
 libgtk-layer-shell.so.0:gtk_layer_set_exclusive_zone
 libgtk-layer-shell.so.0:gtk_layer_set_keyboard_interactivity
+libgtk-layer-shell.so.0:gtk_layer_set_keyboard_mode
 libgtk-layer-shell.so.0:gtk_layer_set_layer
 libgtk-layer-shell.so.0:gtk_layer_set_margin
 libgtk-layer-shell.so.0:gtk_layer_set_monitor
@@ -755,6 +765,7 @@ libgtk-layer-shell.so.0:layer_surface_new
 libgtk-layer-shell.so.0:layer_surface_set_anchor
 libgtk-layer-shell.so.0:layer_surface_set_exclusive_zone
 libgtk-layer-shell.so.0:layer_surface_set_keyboard_interactivity
+libgtk-layer-shell.so.0:layer_surface_set_keyboard_mode
 libgtk-layer-shell.so.0:layer_surface_set_layer
 libgtk-layer-shell.so.0:layer_surface_set_margin
 libgtk-layer-shell.so.0:layer_surface_set_monitor

@@ -1,12 +1,11 @@
 name       : gtk-layer-shell
-version    : 0.5.0
-release    : 2
+version    : 0.6.0
+release    : 3
 source     :
-    - https://github.com/wmww/gtk-layer-shell/archive/v0.5.0.tar.gz : 198ea7acabaf8a78ebf1ce7a97ca929895f4d71730de2479665cb2f23daa978f
+    - https://github.com/wmww/gtk-layer-shell/archive/refs/tags/v0.6.0.tar.gz : 9a0ba72cea90e092d6b10ba47e627cd873271d287d9af80a6f66ab131fb34cac
 license    : GPL-3.0-or-later
 component  : desktop
-summary    : A library to write GTK applications that use Layer Shell. Layer Shell
-    is a Wayland protocol for desktop shell components.
+summary    : A library to write GTK applications that use Layer Shell. Layer Shell is a Wayland protocol for desktop shell components.
 description: |
     A library to write GTK applications that use Layer Shell. Layer Shell is a Wayland protocol for desktop shell components.
 builddeps  :
