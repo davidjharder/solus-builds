@@ -1,6 +1,6 @@
 name       : fmt
 version    : 7.1.0
-release    : 5
+release    : 6
 source     :
     - https://github.com/fmtlib/fmt/archive/7.1.0.tar.gz : a53bce7e3b7ee8c7374723262a43356afff176b1684b86061748409e6f8b56c5
 license    : BSD-2-Clause

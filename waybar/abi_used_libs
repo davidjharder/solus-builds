@@ -14,7 +14,7 @@ libgobject-2.0.so.0
 libgtk-3.so.0
 libgtk-layer-shell.so.0
 libgtkmm-3.0.so.1
-libjsoncpp.so.20
+libjsoncpp.so.24
 libm.so.6
 libmpdclient.so.2
 libnl-3.so.200
@@ -22,6 +22,7 @@ libnl-genl-3.so.200
 libpthread.so.0
 libpulse.so.0
 libsigc-2.0.so.0
+libsndio.so.7
 libspdlog.so.1
 libstdc++.so.6
 libudev.so.1

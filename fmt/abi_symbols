@@ -13,6 +13,7 @@ libfmt.so.7:_ZN3fmt2v713buffered_fileD1Ev
 libfmt.so.7:_ZN3fmt2v713buffered_fileD2Ev
 libfmt.so.7:_ZN3fmt2v719format_system_errorERNS0_6detail6bufferIcEEiNS0_17basic_string_viewIcEE
 libfmt.so.7:_ZN3fmt2v719report_system_errorEiNS0_17basic_string_viewIcEE
+libfmt.so.7:_ZN3fmt2v724instantiate_format_floatE
 libfmt.so.7:_ZN3fmt2v74file3dupEi
 libfmt.so.7:_ZN3fmt2v74file4dup2Ei
 libfmt.so.7:_ZN3fmt2v74file4dup2EiRNS0_10error_codeE

@@ -8,7 +8,9 @@ component  : desktop
 summary    : Highly customizable Wayland bar for Sway and Wlroots based compositors
 description: |
     Highly customizable Wayland bar for Sway and Wlroots based compositors
+networking : no
 builddeps  :
+    - git
     - pkgconfig(dbusmenu-gtk3-0.4)
     - pkgconfig(fmt)
     - pkgconfig(appindicator3-0.1)
@@ -28,12 +30,12 @@ builddeps  :
     - pkgconfig(libudev)
     - pkgconfig(gio-unix-2.0)
     - pkgconfig(gio-unix-2.0)
-    - date-devel
+    - chrono-date-devel
 
 rundeps    :
     - font-awesome-ttf
 setup      : |
-    %patch -p1 < $pkgfiles/0001-network-module-fix.patch
+#    %patch -p1 < $pkgfiles/0001-network-module-fix.patch
     %meson_configure
 build      : |
     %ninja_build
@@ -50,4 +52,4 @@ install    : |
 
 # other notes: 
 # - had to update spdlog
-# - fmt requires version 7, not 8 https://github.com/Alexays/Waybar/issues/1143
+
