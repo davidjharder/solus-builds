@@ -20,6 +20,7 @@ builddeps  :
     - pkgconfig(scdoc)
     - pkgconfig(wayland-protocols)
     - pkgconfig(wlroots)
+    - pkgconfig(libseat)
 rundeps    :
     - swaylock
 setup      : |
