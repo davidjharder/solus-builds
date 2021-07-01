@@ -759,12 +759,10 @@ libgtk-layer-shell.so.0:gtk_wayland_init_if_needed
 libgtk-layer-shell.so.0:gtk_wayland_setup_window_as_custom_popup
 libgtk-layer-shell.so.0:gtk_window_get_custom_shell_surface
 libgtk-layer-shell.so.0:layer_surface_auto_exclusive_zone_enable
-libgtk-layer-shell.so.0:layer_surface_get_get_zwlr_layer_surface_v1
 libgtk-layer-shell.so.0:layer_surface_get_namespace
 libgtk-layer-shell.so.0:layer_surface_new
 libgtk-layer-shell.so.0:layer_surface_set_anchor
 libgtk-layer-shell.so.0:layer_surface_set_exclusive_zone
-libgtk-layer-shell.so.0:layer_surface_set_keyboard_interactivity
 libgtk-layer-shell.so.0:layer_surface_set_keyboard_mode
 libgtk-layer-shell.so.0:layer_surface_set_layer
 libgtk-layer-shell.so.0:layer_surface_set_margin
