@@ -2,7 +2,7 @@ name       : wofi
 version    : 1.2.4
 release    : 3
 source     :
-    - https://hg.sr.ht/~scoopta/wofi/archive/v1.2.4.tar.gz : f71cfa92a8e68c5170fae16ca3e6f3f7b9c5f4391c3fed5115bfc774be8ade38
+    - https://github.com/davidjharder/solus-builds/raw/master/wofi/files/v1.2.3.tar.gz : c93371c38cddfa794594d85bc097a03585c28ef8e47c0fd0f820231ee628a64b
 license    : GPL-3.0-or-later
 component  : desktop
 summary    : Wofi is a launcher/menu program for wlroots based wayland compositors such as sway
