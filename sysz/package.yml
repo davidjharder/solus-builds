@@ -1,0 +1,16 @@
+name       : sysz
+version    : 1.2.2
+release    : 1
+source     :
+    - https://github.com/joehillen/sysz/archive/refs/tags/1.2.2.tar.gz : 7b6c4210d829973ace491d017a9ab1c54ab3bdee014f503acc44f9c3e5a1a064
+license    : Unlicense
+component  : system.util
+summary    : A fzf terminal UI for systemctl
+description: |
+    A fzf terminal UI for systemctl
+rundeps    :
+    - fzf
+build      : |
+    %make
+install    : |
+    install -Dm00755 $workdir/sysz $installdir/usr/bin/sysz
