@@ -1,0 +1,18 @@
+name       : kickoff
+version    : 0.4.5
+release    : 1
+source     :
+    - https://github.com/j0ru/kickoff/archive/refs/tags/v0.4.5.tar.gz : 5f8f42943dd27d80b852a4ef10bee603686e418bf9ecad9c1e4e6d3e9cbbedb6
+license    : GPL-3.0-or-later
+component  : desktop
+summary    : Minimalistic program launche for Wayland, heavily inspired by rofi
+description: |
+    Minimalistic program launche for Wayland, heavily inspired by rofi
+networking : yes
+builddeps  :
+    - pkgconfig(freetype2)
+    - cargo
+build      : |
+    cargo build --release
+install    : |
+    install -Dm00755 $workdir/target/release/kickoff $installdir/usr/bin/kickoff
