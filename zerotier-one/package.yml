@@ -12,6 +12,6 @@ build      : |
     %make
     make selftest
     ./zerotier-selftest
-install    : |-
+install    : |
     %make_install
     install -D -m 00644 $workdir/debian/zerotier-one.service $installdir/usr/lib/systemd/system/zerotier-one.service
