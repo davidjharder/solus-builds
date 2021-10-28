@@ -52,6 +52,7 @@ libc.so.6:inet_addr
 libc.so.6:inet_ntop
 libc.so.6:inet_pton
 libc.so.6:ioctl
+libc.so.6:isalnum
 libc.so.6:lchown
 libc.so.6:listen
 libc.so.6:localeconv
@@ -120,6 +121,7 @@ libpthread.so.0:close
 libpthread.so.0:connect
 libpthread.so.0:open
 libpthread.so.0:pthread_attr_setstacksize
+libpthread.so.0:pthread_cond_clockwait
 libpthread.so.0:pthread_create
 libpthread.so.0:pthread_join
 libpthread.so.0:pthread_setattr_default_np
@@ -212,6 +214,8 @@ libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignER
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9push_backEc
+libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EPKcRKS3_
+libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1ERKS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEOS4_
 libstdc++.so.6:_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm
