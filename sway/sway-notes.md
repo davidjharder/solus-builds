@@ -10,22 +10,22 @@
 
 Build the following:
 
-- grim
-- slurp *grim and slurp are for screenshots, package requests pending*
-- network-manager *build with nmtui enabled. Optional for a network TUI, nmcli also availablebuild with nmtui enabled, must keep ahead of official releases and therefore not reccomended*
-- wlsunset *Nightlight*
-- wofi *Launcher, no longer maintained, but still commonly used*
+- **grim**
+- **slurp** *grim and slurp are for screenshots, package requests pending*
+- **network-manager** *build with nmtui enabled. Optional for a network TUI, nmcli also available, must keep ahead of official releases and therefore not reccomended*
+- **wlsunset** *Nightlight*
+- **wofi** *Launcher, no longer maintained, but still commonly used*
 
 ## Install
 
 Install the following from the repository. Here *optional* means Sway will function without the package, but this guide assumes you will have it
 
-- alacritty *Terminal with good wayland support out of the box*
-- dmenu *default launcher, optional*
-- sway *duh*
-- swaybg *sets backgrounds, optional*
-- swayidle *idle manager, optional*
-- waybar *menubar, optional, others available, replaces the default swaybar*
+- **alacritty** *Terminal with good wayland support out of the box*
+- **dmenu** *default launcher, optional*
+- **sway** *duh*
+- **swaybg** *sets backgrounds, optional*
+- **swayidle** *idle manager, optional*
+- **waybar** *menubar, optional, others available, replaces the default swaybar*
 - Your preferred terminal file manager e.g. ranger, nnn, lf *optional*
 
 ## Initial Setup
@@ -37,13 +37,13 @@ Install the following from the repository. Here *optional* means Sway will funct
 ## Surviving in Sway: A Crash Course:
 
 - Mod key is "Windows" key by default (Mod4)
-- Mod+ + enter - terminal *alacritty by default*
-- Mod + d - launcher *dmenu by default*
-- Mod + Shift + q - quit a window
-- Mod + Shift + c - reload sway
-- Mod + Shift + e - exit sway
-- Move between tiles with hjkl
-- Move between work spaces with number keys
+- **Mod+ + enter** - terminal *alacritty by default*
+- **Mod + d** - launcher *dmenu by default*
+- **Mod + Shift + q** - quit a window
+- **Mod + Shift** + c - reload sway
+- **Mod + Shift** + e - exit sway
+- Move between tiles with **h j k l**
+- Move between work spaces with **number keys**
 - For some incomprehensible reason, the best cheatsheet for default keybindings is in this reddit thread: https://old.reddit.com/r/swaywm/comments/he9imx/what_are_the_keyboard_shortcuts_for_sway/
 
 ## Config Notes
