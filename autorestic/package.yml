@@ -1,0 +1,20 @@
+name       : autorestic
+version    : 1.4.1
+release    : 1
+source     :
+    - https://github.com/cupcakearmy/autorestic/archive/refs/tags/v1.4.1.tar.gz : 889a15beac1c1bc1e50c437a493501e7f37afbacf4f23edf9e8d89feef547c59
+license    : Apache-2.0
+homepage   : https://autorestic.vercel.app/
+component  : system.utils
+summary    : Config driven, easy backup cli for restic
+description: |
+    Config driven, easy backup cli for restic
+networking : yes
+builddeps  :
+    - golang
+rundeps    :
+    - restic
+build      : |
+    go build -ldflags "-X main.version=$version" -o autorestic
+install    : |
+    install -Dm00755 $workdir/autorestic $installdir/usr/bin/autorestic
