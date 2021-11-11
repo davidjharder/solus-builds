@@ -186,7 +186,6 @@ libstdc++.so.6:_ZNSt15basic_streambufIcSt11char_traitsIcEE9showmanycEv
 libstdc++.so.6:_ZNSt15basic_streambufIcSt11char_traitsIcEE9underflowEv
 libstdc++.so.6:_ZNSt18condition_variable10notify_allEv
 libstdc++.so.6:_ZNSt18condition_variable10notify_oneEv
-libstdc++.so.6:_ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE
 libstdc++.so.6:_ZNSt18condition_variableC1Ev
 libstdc++.so.6:_ZNSt18condition_variableD1Ev
 libstdc++.so.6:_ZNSt5ctypeIcE2idE
@@ -204,7 +203,6 @@ libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constru
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE14_M_replace_auxEmmmc
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4swapERS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKc
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKcm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEPKc
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6resizeEmc
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7reserveEm
@@ -223,8 +221,6 @@ libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1Ev
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev
 libstdc++.so.6:_ZNSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev
 libstdc++.so.6:_ZNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev
-libstdc++.so.6:_ZNSt8__detail15_List_node_base11_M_transferEPS0_S1_
-libstdc++.so.6:_ZNSt8__detail15_List_node_base4swapERS0_S1_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base7_M_hookEPS0_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base9_M_unhookEv
 libstdc++.so.6:_ZNSt8ios_base4InitC1Ev
