@@ -124,6 +124,10 @@ libpthread.so.0:pthread_attr_setstacksize
 libpthread.so.0:pthread_cond_clockwait
 libpthread.so.0:pthread_create
 libpthread.so.0:pthread_join
+libpthread.so.0:pthread_mutex_destroy
+libpthread.so.0:pthread_mutex_init
+libpthread.so.0:pthread_mutex_lock
+libpthread.so.0:pthread_mutex_unlock
 libpthread.so.0:pthread_setattr_default_np
 libpthread.so.0:read
 libpthread.so.0:recv
