@@ -1,3 +1,6 @@
+UNKNOWN:xcb_cursor_context_free
+UNKNOWN:xcb_cursor_context_new
+UNKNOWN:xcb_cursor_load_cursor
 UNKNOWN:xcb_xrm_database_from_default
 UNKNOWN:xcb_xrm_database_from_string
 UNKNOWN:xcb_xrm_resource_get_string
@@ -258,9 +261,6 @@ libstartup-notification-1.so.0:sn_startup_sequence_ref
 libstartup-notification-1.so.0:sn_startup_sequence_unref
 libstartup-notification-1.so.0:sn_xcb_display_new
 libstartup-notification-1.so.0:sn_xcb_display_process_event
-libxcb-cursor.so.0:xcb_cursor_context_free
-libxcb-cursor.so.0:xcb_cursor_context_new
-libxcb-cursor.so.0:xcb_cursor_load_cursor
 libxcb-icccm.so.4:xcb_icccm_get_text_property
 libxcb-icccm.so.4:xcb_icccm_get_text_property_reply
 libxcb-icccm.so.4:xcb_icccm_get_text_property_reply_wipe

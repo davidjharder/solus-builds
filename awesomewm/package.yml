@@ -9,6 +9,7 @@ summary    : Awesome is a highly configurable, next generation framework window 
 description: |
     Awesome is a highly configurable, next generation framework window manager for X.
 builddeps  :
+    - asciidoctor
     - lua-lgi #local
     - pkgconfig(ImageMagick)
     - pkgconfig(cairo)
@@ -31,12 +32,14 @@ rundeps    :
     - libgtk-3 # optional for themes
     - dbus # optional
 setup      : |
+    %apply_patches
     %cmake_ninja -DSYSCONFDIR=/usr/share
 build      : |
     %ninja_build
 install    : |
     %ninja_install
     sed -i 's/xterm/alacritty/g' $installdir/usr/share/xdg/awesome/rc.lua
+    rm -r $installdir/usr/share/doc
 
 
 # Notes
