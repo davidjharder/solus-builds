@@ -31,6 +31,8 @@ rundeps    :
     - librsvg # optional
     - libgtk-3 # optional for themes
     - dbus # optional
+    - dmenu
+    - polybar
 setup      : |
     %apply_patches
     %cmake_ninja -DSYSCONFDIR=/usr/share
