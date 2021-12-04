@@ -1,7 +1,8 @@
 *.eopkg
 *.xml
-birdtray
 bat
+birdtray
+byobu
 common
 guayadeque
 kakoune
@@ -11,12 +12,11 @@ luarocks
 mdbook
 nano
 nnn
-scdoc
-verilator
-vis
 ox
+scdoc
+solaar
 swaybg
 swayidle
 swaylock
-byobu
-
+verilator
+vis
