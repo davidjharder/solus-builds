@@ -1,0 +1,23 @@
+#!/bin/bash
+help='eis-new filename-here "Title here"'
+
+if [ -z "$1" ]
+  then
+    echo $help
+    exit 1
+fi
+
+if [ $1 = "-h" ]
+  then
+      echo $help
+      exit 1
+fi
+
+cat <<EOF > $1.md
+---
+title: "$2"
+author: "David Harder"
+date: "$(date --iso-8601)"
+...
+
+EOF

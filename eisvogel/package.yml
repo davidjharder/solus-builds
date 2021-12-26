@@ -1,0 +1,17 @@
+name       : eisvogel
+version    : 2.0.0
+release    : 1
+source     :
+    - https://github.com/Wandmalfarbe/pandoc-latex-template/archive/refs/tags/v2.0.0.tar.gz : 01f4814d5d31b2c0139155905e44137d994be8d30c1c86ee0f03591023c12a69
+license    : BSD-3-Clause
+component  : office
+summary    : Eisvogel LaTeX template + a directory watcher script
+description: |
+    Eisvogel LaTex template + a directory watcher script
+rundeps    :
+    - pandoc
+    - texlive-all
+install    : |
+    install -Dm00644 $workdir/eisvogel.tex $installdir/usr/share/eisvogel/eisvogel.tex
+    install -Dm00755 $pkgfiles/eis $installdir/usr/bin/eis
+    install -Dm00755 $pkgfiles/eis-new $installdir/usr/bin/eis-new

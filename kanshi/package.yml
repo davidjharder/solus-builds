@@ -1,9 +1,10 @@
 name       : kanshi
 version    : 1.2.0
-release    : 2
+release    : 3
 source     :
-    - https://github.com/emersion/kanshi/archive/refs/tags/v1.2.0.tar.gz : 144428b9e79209b853c4b38a5efb6f16d581a2b9cb96e419b3b0a0f5914bcad4
+    - https://git.sr.ht/~emersion/kanshi/refs/download/v1.2.0/kanshi-1.2.0.tar.gz : 144428b9e79209b853c4b38a5efb6f16d581a2b9cb96e419b3b0a0f5914bcad4
 license    : MIT
+homepage   : https://wayland.emersion.fr/kanshi/
 component  : desktop
 summary    : kanshi allows you to define output profiles for sway that are automatically enabled and disabled on hotplug. For instance, this can be used to turn a laptop's internal screen off when docked.
 description: |

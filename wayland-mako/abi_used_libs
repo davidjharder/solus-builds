@@ -8,3 +8,4 @@ libpangocairo-1.0.so.0
 librt.so.1
 libsystemd.so.0
 libwayland-client.so.0
+libwayland-cursor.so.0
