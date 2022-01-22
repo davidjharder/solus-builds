@@ -1,0 +1,18 @@
+name       : yaf
+version    : 0.0.1
+release    : 1
+source     :
+    - https://github.com/deepjyoti30/yaf/archive/refs/tags/0.0.1.tar.gz : 84c5c24ae0a16b73d576fc25276751066f783f9f239c7753aa4c67e428e3eab5
+license    : MIT
+homepage   : https://github.com/deepjyoti30/yaf
+component  : system.utils
+summary    : Yet another system fetch that is minimal and customizable
+description: |
+    Yet another system fetch that is minimal and customizable
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    go build -ldflags "-X main.version=$version" -o yaf
+install    : |
+    install -Dm00755 $workdir/yaf $installdir/usr/bin/yaf
