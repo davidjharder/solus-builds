@@ -1,8 +1,8 @@
 name       : autorestic
-version    : 1.5.1
-release    : 2
+version    : 1.6.2
+release    : 3
 source     :
-    - https://github.com/cupcakearmy/autorestic/archive/refs/tags/v1.5.1.tar.gz : f0ad322b51408d5a47435923b9cc4858c4ba030bc0e7ad192ec40c5e7cc80e67
+    - https://github.com/cupcakearmy/autorestic/archive/refs/tags/v1.6.2.tar.gz : 3ad6e2e9bb7ad8b48c1f4405995ed757cb3d6707ec141e12969b2f14e8240459
 license    : Apache-2.0
 homepage   : https://autorestic.vercel.app/
 component  : system.utils
