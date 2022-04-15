@@ -1,0 +1,18 @@
+name       : helix
+version    : 22.03
+release    : 1
+source     :
+    - https://github.com/helix-editor/helix/archive/refs/tags/22.03.tar.gz : a21f4d7b6390930a89b59567909ad7c613a1eeeafc813167ff7bc3be603997f4
+license    : MPL-2.0
+homepage   : https://helix-editor.com
+component  : editor
+summary    : A post-modern modal text editor
+description: |
+    A post-modern modal text editor
+networking : yes
+builddeps  :
+    - cargo
+build      : |
+    cargo build --release --all-features
+install    : |
+   install -Dm00755 $workdir/target/release/hx $installdir/usr/bin/hx
