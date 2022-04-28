@@ -1,17 +1,27 @@
 name       : zerotier-one
-version    : 1.8.3
-release    : 10
+version    : 1.8.9
+release    : 11
 source     :
-    - https://github.com/zerotier/ZeroTierOne/archive/refs/tags/1.8.3.tar.gz : f0813900c812910db2751bfb43d22a06f11dbcfbe4515e6b24fcad90ca46f665
+    - https://github.com/zerotier/ZeroTierOne/archive/refs/tags/1.8.9.tar.gz : 78fc0dda08d022b4fff9b88449d21a62016452304e930d4ee8393fe2930e65a8
 license    : Business Source License 1.1
 component  : network.clients
 summary    : Zerotier is an open source, cross-platform virtual LAN
 description: |
     Zerotier is an open source, cross-platform virtual LAN
+clang      : yes
+#networking : yes
+#builddeps  :
+#    - cargo
+#    - git
+configure  :
+    sed -i 'ZT_SSO_SUPPORTED=1'/'ZT_SSO_SUPPORTED=0'/g %pkgfiles/make-linux.mk
+    # https://github.com/zerotier/ZeroTierOne/issues/1582
+    # because setting the flag seems to get overridden
 build      : |
-    %make
-    make selftest
-    ./zerotier-selftest
+    %make ZT_SSO_SUPPORTED=0
+    # make selftest
+    # ./zerotier-selftest
+    # same issue as above
 install    : |
     %make_install
     install -D -m 00644 $workdir/debian/zerotier-one.service $installdir/usr/lib/systemd/system/zerotier-one.service
