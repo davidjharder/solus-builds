@@ -43,6 +43,7 @@ libc.so.6:pthread_sigmask
 libc.so.6:pthread_timedjoin_np
 libc.so.6:quick_exit
 libc.so.6:raise
+libc.so.6:sched_yield
 libc.so.6:setbuf
 libc.so.6:setenv
 libc.so.6:seteuid
@@ -104,6 +105,7 @@ libstdc++.so.6:_ZNSi4peekEv
 libstdc++.so.6:_ZNSi6ignoreEl
 libstdc++.so.6:_ZNSi6ignoreEli
 libstdc++.so.6:_ZNSi6ignoreEv
+libstdc++.so.6:_ZNSiC2Ev
 libstdc++.so.6:_ZNSirsERi
 libstdc++.so.6:_ZNSo3putEc
 libstdc++.so.6:_ZNSo5flushEv
