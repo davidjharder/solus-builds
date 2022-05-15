@@ -25,14 +25,11 @@ setup      : |
     %cmake_ninja \
     -DCMAKE_BUILD_TYPE='Release' \
     -DCMAKE_INSTALL_PREFIX='/usr/' \
-    -DQTROOT=./qt
 build      : |
     %ninja_build 
          
 install    : |
     unzip %sources%/dist.zip
     cp -r %workdir%/dist %workdir%/solusBuildDir
-    ls
-    pwd
     %ninja_install
     
