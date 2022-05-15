@@ -1,0 +1,38 @@
+name       : jellyfin-media-player
+version    : 1.6.1
+release    : 1
+source     :
+    - https://github.com/jellyfin/jellyfin-media-player/archive/refs/tags/v1.6.1.tar.gz : 3c3c91c96c0905ae5984f6d0c86f823807cfe7f1c6b3360350aa5afe8b84f8b0 
+    - https://github.com/iwalton3/jellyfin-web-jmp/releases/download/jwc-10.7.6/dist.zip : eff3928a20e8123d35233ce82d2ef53e504004b767d98fe3b54e89ee83a2a5c6
+license    : GPL-2.0-or-later
+component  : multimedia.video
+summary    : Jellyfin Desktop Client based on Plex Media Player
+description: |
+    Jellyfin Desktop Client based on Plex Media Player
+networking : yes
+builddeps  :
+    - pkgconfig(libcec)
+    - pkgconfig(mpv)
+    - pkgconfig(protobuf)
+    - pkgconfig(Qt5WebEngine)
+    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(sdl2)
+    - pkgconfig(x11)
+    - pkgconfig(xcb)
+rundeps    :
+    - qt5-quickcontrols
+setup      : |
+    %cmake_ninja \
+    -DCMAKE_BUILD_TYPE='Release' \
+    -DCMAKE_INSTALL_PREFIX='/usr/' \
+    -DQTROOT=./qt
+build      : |
+    %ninja_build 
+         
+install    : |
+    unzip %sources%/dist.zip
+    cp -r %workdir%/dist %workdir%/solusBuildDir
+    ls
+    pwd
+    %ninja_install
+    
