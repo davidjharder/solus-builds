@@ -68,6 +68,7 @@ libstdc++.so.6:_ZNKSt5ctypeIcE13_M_widen_initEv
 libstdc++.so.6:_ZNKSt8__detail20_Prime_rehash_policy14_M_need_rehashEmmm
 libstdc++.so.6:_ZNSi5tellgEv
 libstdc++.so.6:_ZNSo5flushEv
+libstdc++.so.6:_ZNSo9_M_insertIPKvEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertIlEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertImEERSoT_
 libstdc++.so.6:_ZNSolsEi
