@@ -1,0 +1,20 @@
+name       : activate-linux
+version    : 0.0.1
+release    : 1
+source     :
+    - https://github.com/MrGlockenspiel/activate-linux/archive/refs/tags/v0.0.1.tar.gz : 378ca7c1cbe03542a597910f2753ac4f13df3288273bafdad59c1e5b05a2408e
+license    : based
+component  : desktop
+summary    : The "Activate Windows" watermark ported to Linux 
+clang      : yes
+description: |
+    The "Activate Windows" watermark ported to Linux 
+builddeps  :
+    - pkgconfig(cairo)
+    - pkgconfig(x11)
+    - pkgconfig(xi)
+    - pkgconfig(xinerama)
+build      : |
+    %make 
+install    : |
+    install  -Dm0755 $workdir/bin/activate-linux $installdir/usr/bin/activate-linux
