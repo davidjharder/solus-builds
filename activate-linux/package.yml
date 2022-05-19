@@ -1,11 +1,11 @@
 name       : activate-linux
-version    : 0.0.1
-release    : 1
+version    : 0.0.2
+release    : 2
 source     :
-    - https://github.com/MrGlockenspiel/activate-linux/archive/refs/tags/v0.0.1.tar.gz : 378ca7c1cbe03542a597910f2753ac4f13df3288273bafdad59c1e5b05a2408e
-license    : based
+    - https://github.com/MrGlockenspiel/activate-linux/archive/refs/tags/v0.0.2.tar.gz : d6235b9d13bd896a130a83cc6d882da677fb19edb5a76735453b866aa0e7690d
+license    : GPL-3.0-or-later
 component  : desktop
-summary    : The "Activate Windows" watermark ported to Linux 
+summary    : The "Activate Windows" watermark ported to Linux
 clang      : yes
 description: |
     The "Activate Windows" watermark ported to Linux 
@@ -17,4 +17,4 @@ builddeps  :
 build      : |
     %make 
 install    : |
-    install  -Dm0755 $workdir/bin/activate-linux $installdir/usr/bin/activate-linux
+    %make_install PREFIX=/usr/
