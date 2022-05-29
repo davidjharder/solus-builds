@@ -4,10 +4,6 @@ libc.so.6:__libc_single_threaded
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
 libc.so.6:__vsnprintf_chk
-libc.so.6:__wmemcpy_chk
-libc.so.6:__wmemmove_chk
-libc.so.6:__wmemset_chk
-libc.so.6:abort
 libc.so.6:access
 libc.so.6:exit
 libc.so.6:free
@@ -31,7 +27,6 @@ libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:memset
 libc.so.6:nanosleep
-libc.so.6:printf
 libc.so.6:pthread_cancel
 libc.so.6:pthread_create
 libc.so.6:pthread_exit
@@ -71,10 +66,10 @@ libc.so.6:tolower
 libc.so.6:toupper
 libc.so.6:ttyname
 libc.so.6:vsnprintf
+libc.so.6:wmemcpy
+libc.so.6:wmemset
 libgcc_s.so.1:_Unwind_Resume
 libgcc_s.so.1:__gcc_personality_v0
-libm.so.6:ceil
-libm.so.6:floor
 libm.so.6:round
 libm.so.6:roundf
 libstdc++.so.6:_ZNKSt10filesystem7__cxx1118directory_iteratordeEv
@@ -105,7 +100,6 @@ libstdc++.so.6:_ZNSi4peekEv
 libstdc++.so.6:_ZNSi6ignoreEl
 libstdc++.so.6:_ZNSi6ignoreEli
 libstdc++.so.6:_ZNSi6ignoreEv
-libstdc++.so.6:_ZNSiC2Ev
 libstdc++.so.6:_ZNSirsERi
 libstdc++.so.6:_ZNSo3putEc
 libstdc++.so.6:_ZNSo5flushEv
@@ -188,6 +182,7 @@ libstdc++.so.6:_ZSt19__throw_regex_errorNSt15regex_constants10error_typeE
 libstdc++.so.6:_ZSt20__throw_length_errorPKc
 libstdc++.so.6:_ZSt20__throw_out_of_rangePKc
 libstdc++.so.6:_ZSt20__throw_system_errori
+libstdc++.so.6:_ZSt21__glibcxx_assert_failPKciS0_S0_
 libstdc++.so.6:_ZSt24__throw_invalid_argumentPKc
 libstdc++.so.6:_ZSt24__throw_out_of_range_fmtPKcz
 libstdc++.so.6:_ZSt25__throw_bad_function_callv
