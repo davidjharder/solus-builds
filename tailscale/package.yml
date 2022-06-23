@@ -1,0 +1,24 @@
+name       : tailscale
+version    : 1.26.1
+release    : 1
+source     :
+    - https://github.com/tailscale/tailscale/archive/refs/tags/v1.26.1.tar.gz : 69fb95840bd0fc9d2f39300c984db0d504f6af180f839d31b2f26034092077cc
+license    : BSD-3-Clause
+component  : network.clients
+summary    : Private WireGuard networks made easy
+description: |
+    Private WireGuard networks made easy
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    cd cmd/tailscale
+    export GOPATH=$(pwd)
+    go build
+    cd ../tailscaled
+    export GOPATH=$(pwd)
+    go build
+install    : |
+    install -Dm00755 cmd/tailscale/tailscale $installdir/usr/bin/tailscale
+    install -Dm00755 cmd/tailscaled/tailscaled $installdir/usr/bin/tailscaled
+    install -Dm00644 cmd/tailscaled/tailscaled.service $installdir/usr/lib/systemd/system/tailscaled.service
