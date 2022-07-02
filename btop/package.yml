@@ -1,8 +1,8 @@
 name       : btop
-version    : 1.2.7
-release    : 4
+version    : 1.2.8
+release    : 5
 source     :
-    - https://github.com/aristocratos/btop/archive/refs/tags/v1.2.7.tar.gz : 60075824ca4e14c1ca920b76ffb101fc2340c5342f3ba600b5c280389b69bbbf
+    - https://github.com/aristocratos/btop/archive/refs/tags/v1.2.8.tar.gz : 7944b06e3181cc1080064adf1e9eb4f466af0b84a127df6697430736756a89ac
 license    : Apache-2.0
 component  : system.utils
 summary    : Terminal resource monitor that shows usage and stats for processor, memory, disks, network and processes
