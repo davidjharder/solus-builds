@@ -21,5 +21,5 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-    install -Dm00644 $workdir/systemctl/et.service $installdir/usr/lib/et/et.service
+    install -Dm00644 $workdir/systemctl/et.service $installdir/usr/lib/systemd/system/et.service
     install -Dm00644 $workdir/etc/et.cfg $installdir/etc/et/et.cfg
