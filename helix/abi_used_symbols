@@ -5,7 +5,9 @@ libc.so.6:__cxa_atexit
 libc.so.6:__environ
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
+libc.so.6:__libc_current_sigrtmax
 libc.so.6:__libc_start_main
+libc.so.6:__printf_chk
 libc.so.6:__snprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:__xpg_strerror_r
@@ -42,7 +44,6 @@ libc.so.6:fdopendir
 libc.so.6:fork
 libc.so.6:fputc
 libc.so.6:free
-libc.so.6:fstat
 libc.so.6:fstat64
 libc.so.6:fstatat64
 libc.so.6:fwrite
@@ -56,17 +57,19 @@ libc.so.6:getsockopt
 libc.so.6:getuid
 libc.so.6:gnu_get_libc_version
 libc.so.6:ioctl
+libc.so.6:isalnum
+libc.so.6:isalpha
 libc.so.6:isatty
 libc.so.6:iswalnum
 libc.so.6:iswalpha
 libc.so.6:iswdigit
 libc.so.6:iswlower
 libc.so.6:iswspace
+libc.so.6:iswupper
 libc.so.6:iswxdigit
 libc.so.6:isxdigit
 libc.so.6:kill
 libc.so.6:listen
-libc.so.6:localtime_r
 libc.so.6:lseek64
 libc.so.6:lstat64
 libc.so.6:malloc
@@ -94,6 +97,7 @@ libc.so.6:posix_spawn_file_actions_init
 libc.so.6:posix_spawnattr_destroy
 libc.so.6:posix_spawnattr_init
 libc.so.6:posix_spawnattr_setflags
+libc.so.6:posix_spawnattr_setpgroup
 libc.so.6:posix_spawnattr_setsigdefault
 libc.so.6:posix_spawnattr_setsigmask
 libc.so.6:posix_spawnp
@@ -146,6 +150,7 @@ libc.so.6:sched_yield
 libc.so.6:send
 libc.so.6:setgid
 libc.so.6:setgroups
+libc.so.6:setpgid
 libc.so.6:setsockopt
 libc.so.6:setuid
 libc.so.6:shutdown
@@ -160,6 +165,7 @@ libc.so.6:socket
 libc.so.6:socketpair
 libc.so.6:stat64
 libc.so.6:stderr
+libc.so.6:strcmp
 libc.so.6:strlen
 libc.so.6:strncmp
 libc.so.6:strncpy
@@ -168,6 +174,7 @@ libc.so.6:syscall
 libc.so.6:sysconf
 libc.so.6:tcgetattr
 libc.so.6:tcsetattr
+libc.so.6:tolower
 libc.so.6:towupper
 libc.so.6:unlink
 libc.so.6:unlinkat

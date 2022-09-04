@@ -1,8 +1,8 @@
 name       : helix
-version    : 22.03
-release    : 1
+version    : 22.08.1
+release    : 2
 source     :
-    - https://github.com/helix-editor/helix/archive/refs/tags/22.03.tar.gz : a21f4d7b6390930a89b59567909ad7c613a1eeeafc813167ff7bc3be603997f4
+    - https://github.com/helix-editor/helix/archive/refs/tags/22.08.1.tar.gz : c9b184d53bab51e7a9fe81dc8c191a853177abba67ea408e968937f31b50b45a
 license    : MPL-2.0
 homepage   : https://helix-editor.com
 component  : editor
@@ -16,13 +16,13 @@ builddeps  :
 build      : |
     cargo build --release
 install    : |
-   install -Dm00755 $workdir/target/release/hx $installdir/usr/bin/hx-bin
-   install -Dm00755 $pkgfiles/helix.sh $installdir/usr/bin/hx 
-   install -dm00644 $installdir/var/lib/helix/runtime
-   install -dm00644 $installdir/var/lib/helix/runtime/grammars
-   install -Dm00644 $workdir/runtime/tutor.txt $installdir/var/lib/helix/runtime
-   cp -r $workdir/runtime/queries $installdir/var/lib/helix/runtime
-   cp -r $workdir/runtime/themes  $installdir/var/lib/helix/runtime
-   find $workdir/runtime/grammars -type f -name '*.so' -exec \
-     install -Dm00755 {} $installdir/var/lib/helix/runtime/grammars \;
-   # https://github.com/archlinux/svntogit-community/blob/packages/helix/trunk/PKGBUILD
+    install -Dm00755 $workdir/target/release/hx $installdir/usr/bin/hx-bin
+    install -Dm00755 $pkgfiles/helix.sh $installdir/usr/bin/hx 
+    install -dm00644 $installdir/var/lib/helix/runtime
+    install -dm00644 $installdir/var/lib/helix/runtime/grammars
+    install -Dm00644 $workdir/runtime/tutor.txt $installdir/var/lib/helix/runtime
+    cp -r $workdir/runtime/queries $installdir/var/lib/helix/runtime
+    cp -r $workdir/runtime/themes  $installdir/var/lib/helix/runtime
+    find $workdir/runtime/grammars -type f -name '*.so' -exec \
+      install -Dm00755 {} $installdir/var/lib/helix/runtime/grammars \;
+    # https://github.com/archlinux/svntogit-community/blob/packages/helix/trunk/PKGBUILD
