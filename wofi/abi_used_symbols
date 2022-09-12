@@ -1,5 +1,6 @@
 libc.so.6:__ctype_b_loc
 libc.so.6:__ctype_tolower_loc
+libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
 libc.so.6:__getdelim
 libc.so.6:__libc_start_main
@@ -11,6 +12,8 @@ libc.so.6:access
 libc.so.6:calloc
 libc.so.6:closedir
 libc.so.6:dirname
+libc.so.6:dlopen
+libc.so.6:dlsym
 libc.so.6:execl
 libc.so.6:execlp
 libc.so.6:execvp
@@ -35,9 +38,12 @@ libc.so.6:mkdir
 libc.so.6:nanosleep
 libc.so.6:opendir
 libc.so.6:optarg
+libc.so.6:pthread_create
+libc.so.6:pthread_join
 libc.so.6:readdir64
 libc.so.6:realpath
 libc.so.6:setenv
+libc.so.6:sigaction
 libc.so.6:stat64
 libc.so.6:stderr
 libc.so.6:stdin
@@ -50,13 +56,12 @@ libc.so.6:strcmp
 libc.so.6:strcpy
 libc.so.6:strdup
 libc.so.6:strlen
+libc.so.6:strncmp
 libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtok_r
 libc.so.6:strtol
 libcairo.so.2:cairo_surface_destroy
-libdl.so.2:dlopen
-libdl.so.2:dlsym
 libgdk-3.so.0:gdk_cairo_surface_create_from_pixbuf
 libgdk-3.so.0:gdk_display_get_default
 libgdk-3.so.0:gdk_display_get_monitor_at_window
@@ -218,10 +223,6 @@ libgtk-3.so.0:gtk_window_set_default_size
 libgtk-3.so.0:gtk_window_set_resizable
 libgtk-3.so.0:gtk_window_set_title
 libpango-1.0.so.0:pango_parse_markup
-libpthread.so.0:__errno_location
-libpthread.so.0:pthread_create
-libpthread.so.0:pthread_join
-libpthread.so.0:sigaction
 libwayland-client.so.0:wl_display_roundtrip
 libwayland-client.so.0:wl_list_empty
 libwayland-client.so.0:wl_list_init
@@ -230,9 +231,10 @@ libwayland-client.so.0:wl_list_length
 libwayland-client.so.0:wl_list_remove
 libwayland-client.so.0:wl_output_interface
 libwayland-client.so.0:wl_proxy_add_listener
+libwayland-client.so.0:wl_proxy_get_version
 libwayland-client.so.0:wl_proxy_marshal
 libwayland-client.so.0:wl_proxy_marshal_constructor
-libwayland-client.so.0:wl_proxy_marshal_constructor_versioned
+libwayland-client.so.0:wl_proxy_marshal_flags
 libwayland-client.so.0:wl_registry_interface
 libwayland-client.so.0:wl_seat_interface
 libwayland-client.so.0:wl_surface_interface
