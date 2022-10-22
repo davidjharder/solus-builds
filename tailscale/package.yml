@@ -1,8 +1,8 @@
 name       : tailscale
-version    : 1.26.1
-release    : 1
+version    : 1.32.1
+release    : 2
 source     :
-    - https://github.com/tailscale/tailscale/archive/refs/tags/v1.26.1.tar.gz : 69fb95840bd0fc9d2f39300c984db0d504f6af180f839d31b2f26034092077cc
+    - https://github.com/tailscale/tailscale/archive/refs/tags/v1.32.1.tar.gz : c854e4af9b0b7ac4682942bed6ffe364d3126826f9d8c083a169a6aff12a2f3d
 license    : BSD-3-Clause
 component  : network.clients
 summary    : Private WireGuard networks made easy
