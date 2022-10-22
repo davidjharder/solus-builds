@@ -20,5 +20,6 @@ build      : |
     go build
 install    : |
     install -Dm00755 cmd/tailscale/tailscale $installdir/usr/bin/tailscale
-    install -Dm00755 cmd/tailscaled/tailscaled $installdir/usr/bin/tailscaled
+    install -Dm00755 cmd/tailscaled/tailscaled $installdir/usr/sbin/tailscaled
     install -Dm00644 cmd/tailscaled/tailscaled.service $installdir/usr/lib/systemd/system/tailscaled.service
+    install -Dm00644 cmd/tailscaled/tailscaled.defaults $installdir/etc/default/tailscaled
