@@ -134,9 +134,7 @@ libc.so.6:unlink
 libc.so.6:usleep
 libc.so.6:write
 libgcc_s.so.1:_Unwind_Resume
-libm.so.6:ceilf
 libm.so.6:expf
-libm.so.6:roundf
 libm.so.6:sqrt
 libm.so.6:sqrtf
 libstdc++.so.6:_ZNKSt13runtime_error4whatEv
