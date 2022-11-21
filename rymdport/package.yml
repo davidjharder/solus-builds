@@ -1,8 +1,8 @@
-name       : wormhole-gui
-version    : 2.2.0
-release    : 1
+name       : rymdport
+version    : 3.2.0
+release    : 2
 source     :
-    - https://github.com/Jacalz/wormhole-gui/archive/refs/tags/v2.2.0.tar.gz : 3f81b045dd8804f610395f028a91ea4eab0fb743ae40c4a82421792424a9c7c1
+    - https://github.com/Jacalz/rymdport/archive/refs/tags/v3.2.0.tar.gz : a630946f5bac0f8eb8dadd4f839e1cef52605b3d0224fc2c9b21b165655fa593
 license    : GPL-3.0-or-later
 homepage   : https://github.com/Jacalz/wormhole-gui
 component  : network.client
@@ -20,6 +20,11 @@ builddeps  :
     - pkgconfig(xxf86vm)
     - golang
 build      : |
-    %make
+    # something with ldflags is not working, so skip them
+    go build -o rymdport
 install    : |
     %make_install
+    # Correct icon location, thanks Archbros
+    install -Dm00644 "$installdir/usr/share/icons/hicolor/512x512/io.github.jacalz.rymdport.png" "$installdir/usr/share/pixmaps/io.github.jacalz.rymdport.png"   
+    install -Dm00644 "$installdir/usr/share/icons/hicolor/scalable/io.github.jacalz.rymdport.svg" "$installdir/usr/share/pixmaps/io.github.jacalz.rymdport.svg"
+    rm -rf "$installdir/usr/share/icons"
