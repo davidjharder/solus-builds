@@ -1,8 +1,8 @@
 name       : vtm
-version    : 9.6e
-release    : 6
+version    : 9.6j
+release    : 7
 source     :
-    - https://github.com/netxs-group/vtm/archive/refs/tags/v0.9.6e.tar.gz : 8f1cb49c0ecb0254c2dcff352424047095206d0ba5d0f9f95662bd6a6eefab59
+    - https://github.com/netxs-group/vtm/archive/refs/tags/v0.9.6j.tar.gz : 7578bd132c33b61d8770f9e25b06a0c515fbdd2b737762e3f62f12e3bfae0762
 license    : MIT
 component  : system.utils
 summary    : Terminal multiplexer with window manager and session sharing
