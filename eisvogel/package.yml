@@ -1,8 +1,8 @@
 name       : eisvogel
-version    : 2.0.0
-release    : 1
+version    : 2.1.0
+release    : 2
 source     :
-    - https://github.com/Wandmalfarbe/pandoc-latex-template/archive/refs/tags/v2.0.0.tar.gz : 01f4814d5d31b2c0139155905e44137d994be8d30c1c86ee0f03591023c12a69
+    - https://github.com/Wandmalfarbe/pandoc-latex-template/archive/refs/tags/v2.1.0.tar.gz : 74174ce388a3561ef50f0363061e25856f5a23be39787ee07c883f2cee31c2f4
 license    : BSD-3-Clause
 component  : office
 summary    : Eisvogel LaTeX template + a directory watcher script
