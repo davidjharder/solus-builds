@@ -1,8 +1,8 @@
 name       : lazydocker
-version    : 0.12
-release    : 1
+version    : 0.20.0
+release    : 2
 source     :
-    - https://github.com/jesseduffield/lazydocker/archive/refs/tags/v0.12.tar.gz : 0509fdfffe78a0155cb54f8bbec1c3f9f3791ea5cbf397fb50fa5278954b2fcb
+    - https://github.com/jesseduffield/lazydocker/archive/refs/tags/v0.20.0.tar.gz : 570ce8127b148bc99c2faa1d4a3530504e81d531d3546dd1f29a7258c4d9d9ea
 license    : MIT
 component  : programming.tools
 summary    : A simple terminal UI for both docker and docker-compose
@@ -11,7 +11,6 @@ description: |
 networking : yes
 builddeps  :
     - golang
-build      : |
 build      : |
     go build -ldflags "-X main.version=$version" -o lazydocker
 
