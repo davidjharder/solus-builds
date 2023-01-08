@@ -1,15 +1,15 @@
-name       : lapace 
-version    : 0.2.0
-release    : 1
+name       : lapce
+version    : 0.2.5
+release    : 2
 source     :
-    - https://github.com/lapce/lapce/archive/refs/tags/v0.2.0.tar.gz : 163102244c6586530bc0f0736219d38a44797b2a6d97ad37d5f6553ffc8f1a04
+    - https://github.com/lapce/lapce/archive/refs/tags/v0.2.5.tar.gz : 3b8357653eda77b2c85306ba9f7202e539987ada4a7b5be2018b142bb23be7e4
 license    : Apache-2.0
 homepage   : https://lapce.dev/
 component  : editor
-summary    : Lightning-fast and Powerful Code Editor written in Rust 
+summary    : Lightning-fast and Powerful Code Editor written in Rust
 description: |
     Lightning-fast and Powerful Code Editor written in Rust
-networking: yes
+networking : yes
 builddeps  :
     - cargo
     #- pkgconfig(cairo 
@@ -17,8 +17,8 @@ builddeps  :
     - pkgconfig(atk)
     - pkgconfig(gdk-pixbuf-2.0)
     - pkgconfig(pango)
-    
+
 build      : |
     cargo build --release
 install    : |
-    install -Dm00755 $workdir/target/release/lapace $installdir/usr/bin/lapace
+    install -Dm00755 $workdir/target/release/lapce $installdir/usr/bin/lapce
