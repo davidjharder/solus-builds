@@ -1,8 +1,8 @@
 name       : yofi
-version    : 0.1.4
-release    : 1
+version    : 0.2.0
+release    : 2
 source     :
-    - git|https://github.com/l4l/yofi : a8fc9d3a03cd09e0cee14bebd454a92ae8198eed
+    - https://github.com/l4l/yofi/archive/refs/tags/0.2.0.tar.gz : 343541731f5fe771e47e4516eb95dd057e7d3c0837f7ba7e529fc663f77ba074
 license    : MIT
 homepage   : https://github.com/l4l/yofi
 component  : desktop
@@ -11,6 +11,7 @@ description: |
     yofi is a minimalistic menu for Wayland-based compositors
 networking : yes
 builddeps  :
+    - pkgconfig(freetype2)
     - cargo
 build      : |
     cargo build --release
