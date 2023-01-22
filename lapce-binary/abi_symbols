@@ -1,0 +1,5 @@
+lapce:__bss_start
+lapce:_edata
+lapce:_end
+lapce:_fini
+lapce:_init

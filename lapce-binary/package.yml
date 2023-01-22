@@ -1,0 +1,15 @@
+name       : lapce-binary
+version    : 0.2.5
+release    : 3
+source     :
+    - https://github.com/lapce/lapce/releases/download/v0.2.5/Lapce-linux.tar.gz : 5353ed27ddcb6018e01922caa44a4e6d6d2c94d56297000170e5211630ae3a1a
+license    : Apache-2.0
+homepage   : https://lapce.dev/
+component  : editor
+summary    : Lightning-fast and Powerful Code Editor written in Rust
+description: |
+    Lightning-fast and Powerful Code Editor written in Rust
+install    : |
+    install -Dm00755 $workdir/lapce $installdir/usr/bin/lapce
+    install -Dm00755 $pkgfiles/lapce.desktop $installdir/usr/share/applications/dev.lapce.lapce.desktop
+    install -Dm0644 $pkgfiles/logo.png  $installdir/usr/share/pixmaps/dev.lapce.lapce.png
