@@ -17,6 +17,8 @@ wofi:map_init_void
 wofi:map_put
 wofi:map_put_void
 wofi:map_size
+wofi:match_for_matching_mode
+wofi:sort_for_matching_mode
 wofi:utils_concat
 wofi:utils_distance
 wofi:utils_g_pixbuf_from_base64
@@ -68,7 +70,9 @@ wofi:wofi_widget_builder_get_idx
 wofi:wofi_widget_builder_get_widget
 wofi:wofi_widget_builder_init
 wofi:wofi_widget_builder_insert_image
+wofi:wofi_widget_builder_insert_image_with_list
 wofi:wofi_widget_builder_insert_text
+wofi:wofi_widget_builder_insert_text_with_list
 wofi:wofi_widget_builder_set_action
 wofi:wofi_widget_builder_set_search_text
 wofi:wofi_write_cache
