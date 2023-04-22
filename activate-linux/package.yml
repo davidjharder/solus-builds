@@ -1,8 +1,8 @@
 name       : activate-linux
-version    : 0.0.2
-release    : 2
+version    : 1.1.0
+release    : 3
 source     :
-    - https://github.com/MrGlockenspiel/activate-linux/archive/refs/tags/v0.0.2.tar.gz : d6235b9d13bd896a130a83cc6d882da677fb19edb5a76735453b866aa0e7690d
+    - https://github.com/MrGlockenspiel/activate-linux/archive/refs/tags/v1.1.0.tar.gz : cf892c90a57bf6026f777715207aa7066fc7c4940da39d62a6c24b51a726786d
 license    : GPL-3.0-or-later
 component  : desktop
 summary    : The "Activate Windows" watermark ported to Linux
@@ -11,10 +11,17 @@ description: |
     The "Activate Windows" watermark ported to Linux 
 builddeps  :
     - pkgconfig(cairo)
+    - pkgconfig(wayland-client)
+    - pkgconfig(wayland-protocols)
     - pkgconfig(x11)
     - pkgconfig(xi)
     - pkgconfig(xinerama)
+    - pkgconfig(xrandr)
+setup      : |
+    sed -i 's:sudo::g' Makefile
+    sed -i 's:MANDIR ?= $(PREFIX):MANDIR ?= $(DESTDIR)$(PREFIX):g' Makefile
+    sed -i 's:mandb -q::g' Makefile
 build      : |
     %make 
 install    : |
-    %make_install PREFIX=/usr/
+    %make_install PREFIX=/usr
