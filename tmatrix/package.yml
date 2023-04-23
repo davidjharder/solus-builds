@@ -4,17 +4,16 @@ release    : 2
 source     :
     - https://github.com/M4444/TMatrix/archive/refs/tags/v1.4.tar.gz : 99591915fa83ceb98c31a97b5686a2df0d667c5d62f3e82837f76e5f9243710e
 license    : GPL-2.0-only
-component  : desktop
+homepage   : https://github.com/M4444/TMatrix
+component  : system.utils
 summary    : Terminal based replica of the digital rain from The Matrix
 description: |
     Terminal based replica of the digital rain from The Matrix
 builddeps  :
     - pkgconfig(ncursesw)
+setup      : |
+    %cmake_ninja
 build      : |
-    mkdir -p build && cd build
-    cmake ..
-    %make
-
+    %ninja_build
 install    : |
-    cd build
-    %make_install
+    %ninja_install
