@@ -1,0 +1,22 @@
+name       : clipman
+version    : 1.6.2
+release    : 1
+source     :
+    - https://github.com/yory8/clipman/archive/refs/tags/v1.6.2.tar.gz : 6a94df2317e798a086dcb2b7f3cc4a6fa84189f648bac875d1789ce544cf6bc2
+license    : GPL-3.0-or-later
+homepage   : https://github.com/yory8/clipman
+component  : desktop
+summary    : A simple clipboard manager for Wayland
+description: |
+    A basic clipboard manager for Wayland, with support for persisting copy buffers after an application exits
+networking : yes
+builddeps  :
+    - golang
+rundeps    :
+    - wl-clipboard
+
+build      : |
+    go build
+install    : |
+    install -Dm00755 $workdir/clipman $installdir/usr/bin/clipman
+    install -Dm00644 $workdir/docs/clipman.1 $installdir/usr/share/man/man1/clipman.1
