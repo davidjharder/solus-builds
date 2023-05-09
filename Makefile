@@ -1,1 +1,1 @@
-include ../Makefile.common
+common/Makefile.toplevel
