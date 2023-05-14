@@ -1,0 +1,18 @@
+name       : solus-onboard
+version    : 0.1
+release    : 1
+source     :
+    - https://github.com/davidjharder/solus-onboard/archive/refs/tags/v0.1.tar.gz : 64c701a7cbe2f204b1a84d13fcaa30155d0a3b73cfc69703b272609208301779
+license    : MIT
+component  : programming.tools
+summary    : An experiment for on-boarding
+description: |
+    An experiment for on-boarding
+rundeps  :
+    - arcanist
+    - git
+    - solbuild-config-local-unstable
+#    -  system.devel
+
+install    : |
+    install -Dm00755 $workdir/onboard-me.sh $installdir/usr/bin/onboard-me
