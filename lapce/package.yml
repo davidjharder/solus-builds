@@ -1,8 +1,8 @@
 name       : lapce
-version    : 0.2.5
-release    : 2
+version    : 0.2.7
+release    : 3
 source     :
-    - https://github.com/lapce/lapce/archive/refs/tags/v0.2.5.tar.gz : 3b8357653eda77b2c85306ba9f7202e539987ada4a7b5be2018b142bb23be7e4
+    - https://github.com/lapce/lapce/archive/refs/tags/v0.2.7.tar.gz : c4e0668bf98e83a8c451fe69173c51d8345511a1bd580c412750f3b940531c27
 license    : Apache-2.0
 homepage   : https://lapce.dev/
 component  : editor
@@ -12,7 +12,6 @@ description: |
 networking : yes
 builddeps  :
     - cargo
-    #- pkgconfig(cairo 
     - perl-cairo-gobject
     - pkgconfig(atk)
     - pkgconfig(gdk-pixbuf-2.0)
@@ -22,3 +21,5 @@ build      : |
     cargo build --release
 install    : |
     install -Dm00755 $workdir/target/release/lapce $installdir/usr/bin/lapce
+
+# This is slow to build with all the fetching involved, use the binary
