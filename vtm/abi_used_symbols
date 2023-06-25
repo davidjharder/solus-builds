@@ -79,6 +79,7 @@ libstdc++.so.6:_ZNSi5tellgEv
 libstdc++.so.6:_ZNSo3putEc
 libstdc++.so.6:_ZNSo5flushEv
 libstdc++.so.6:_ZNSo9_M_insertIPKvEERSoT_
+libstdc++.so.6:_ZNSo9_M_insertIbEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertImEERSoT_
 libstdc++.so.6:_ZNSolsEi
 libstdc++.so.6:_ZNSt10filesystem12current_pathERKNS_7__cxx114pathERSt10error_code
@@ -90,7 +91,6 @@ libstdc++.so.6:_ZNSt10filesystem7__cxx114path5_ListC1ERKS2_
 libstdc++.so.6:_ZNSt10filesystem7__cxx114path5_ListC1Ev
 libstdc++.so.6:_ZNSt10filesystem7__cxx114pathdVERKS1_
 libstdc++.so.6:_ZNSt12bad_weak_ptrD1Ev
-libstdc++.so.6:_ZNSt13basic_filebufIcSt11char_traitsIcEED2Ev
 libstdc++.so.6:_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode
 libstdc++.so.6:_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev
 libstdc++.so.6:_ZNSt18condition_variable10notify_allEv
@@ -104,7 +104,6 @@ libstdc++.so.6:_ZNSt6localeD1Ev
 libstdc++.so.6:_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE
 libstdc++.so.6:_ZNSt6thread4joinEv
 libstdc++.so.6:_ZNSt6thread6_StateD2Ev
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructEmc
 libstdc++.so.6:_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1Ev
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev
@@ -139,7 +138,6 @@ libstdc++.so.6:_ZTINSt6thread6_StateE
 libstdc++.so.6:_ZTISt12bad_weak_ptr
 libstdc++.so.6:_ZTISt9exception
 libstdc++.so.6:_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE
-libstdc++.so.6:_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE
 libstdc++.so.6:_ZTVN10__cxxabiv117__class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv119__pointer_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__function_type_infoE
