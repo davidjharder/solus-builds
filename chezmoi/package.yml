@@ -5,7 +5,7 @@ source     :
     - https://github.com/twpayne/chezmoi/archive/refs/tags/v2.34.2.tar.gz : fc47d6e4cbe1b8f4762c204be28e30d9e9f3bcfa8c51ac276cbd1864804b2dc8
 license    : MIT
 homepage   : https://www.chezmoi.io
-component  : security
+component  : programming.tools
 summary    : chezmoi helps you manage your personal configuration files across multiple machines.
 description: |
     chezmoi helps you manage your personal configuration files across multiple machines.
