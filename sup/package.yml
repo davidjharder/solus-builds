@@ -1,0 +1,18 @@
+name       : sup
+version    : 1.0.1
+release    : 1
+source     :
+    - https://github.com/DataDrake/sup/archive/refs/tags/v1.0.1.tar.gz : 38fde9d9490fd256550fb67d37a0e232b972260e343d0d3901e65ba9c1240327
+license    : apache-2.0
+homepage   : https://github.com/DataDrake/sup
+component  : system.utils
+summary    : Go PS1 Status Updater
+description: |
+    Go PS1 Status Updater
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    %make
+install    : |
+    %make_install
