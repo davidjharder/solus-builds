@@ -3,6 +3,7 @@ version    : 9.33
 release    : 1
 source     :
     - https://cpan.metacpan.org/authors/id/S/SR/SRI/Mojolicious-9.33.tar.gz : 0d149a28067410e45244149a1bef0067b0ea70082746a1004660aa511e475f98
+homepage   : https://mojolicious.org/
 license    : Artistic-2.0
 component  : programming.perl
 summary    : Perl real-time web framework
