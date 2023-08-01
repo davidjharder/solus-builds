@@ -1,0 +1,16 @@
+name       : perl-mojolicious
+version    : 9.33
+release    : 1
+source     :
+    - https://cpan.metacpan.org/authors/id/S/SR/SRI/Mojolicious-9.33.tar.gz : 0d149a28067410e45244149a1bef0067b0ea70082746a1004660aa511e475f98
+license    : Artistic-2.0
+component  : programming.perl
+summary    : Perl real-time web framework
+description: |
+    Perl real-time web framework 
+setup      : |
+    %perl_setup
+build      : |
+    %perl_build
+install    : |
+    %perl_install
