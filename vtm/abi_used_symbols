@@ -18,6 +18,7 @@ libc.so.6:execvp
 libc.so.6:exit
 libc.so.6:fork
 libc.so.6:free
+libc.so.6:fstat
 libc.so.6:getenv
 libc.so.6:geteuid
 libc.so.6:getpid
