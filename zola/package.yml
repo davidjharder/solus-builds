@@ -1,0 +1,18 @@
+name       : zola
+version    : 0.17.2
+release    : 1
+source     :
+    - https://github.com/getzola/zola/archive/refs/tags/v0.17.2.tar.gz : 471238f38076803cb2af1c53cf418280ae51694fbcc2e547da3f6715a718c750
+license    : MIT
+homepage   : https://www.getzola.org/
+component  : programming
+summary    : A fast static site generator in a single binary with everything built-in.
+description: |
+    A fast static site generator in a single binary with everything built-in.
+networking : yes
+builddeps  :
+    - cargo
+build      : |
+    cargo build --release
+install    : |
+    install -Dm00755 $workdir/target/release/zola $installdir/usr/bin/zola
