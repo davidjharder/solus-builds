@@ -1,0 +1,34 @@
+A list of packages I maintain or have updated regularly in the past.
+
+bat
+birdtray
+byobu
+common
+guayadeque
+hugo
+kakoune
+lazygit
+lf
+luarocks
+mdbook
+nano
+nnn
+ox
+qbittorrent
+rymdport
+scdoc
+solaar
+sway
+swaybg
+swayidle
+swaylock
+verilator
+vis
+wlroots
+
+
+Personal packages that should be checked periodically
+
+eisvogel
+zerotier
+zola
