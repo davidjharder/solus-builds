@@ -1,8 +1,8 @@
 name       : zerotier-one
-version    : 1.12.0
-release    : 15
+version    : 1.12.1
+release    : 16
 source     :
-    - https://github.com/zerotier/ZeroTierOne/archive/refs/tags/1.12.0.tar.gz : ba78cc71fd3c6f69c3bfb2b257fd0270ee72d19f54d98e1a13e945a9ad6d482b
+    - https://github.com/zerotier/ZeroTierOne/archive/refs/tags/1.12.1.tar.gz : c6758a04f161bba1c0ef11fce991029a645ede381ae3862a25a2f5145aaffca8
 license    : Business Source License 1.1
 component  : network.clients
 summary    : Zerotier is an open source, cross-platform virtual LAN
