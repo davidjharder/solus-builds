@@ -1,0 +1,24 @@
+name       : obs-studio-droidcam 
+version    : 2.1.0
+release    : 1
+source     :
+    - https://github.com/dev47apps/droidcam-obs-plugin/archive/refs/tags/2.1.0.tar.gz : 846f91b741facedaaf289a4f825b64d598177bdb061dc5e92826adbeaf8b8d4e
+homepage   : https://www.dev47apps.com/obs/
+license    : GPL-2.0-or-later
+component  : multimedia.video
+summary    : DroidCam Plugin for OBS Studio
+description: |
+    DroidCam Plugin for OBS Studio
+builddeps  :
+    - pkgconfig(libavcodec)
+    - pkgconfig(libimobiledevice-1.0)
+    - pkgconfig(libobs)
+    - pkgconfig(libturbojpeg)
+rundeps    :
+   - obs-studio
+setup      : |
+    %patch -p1 -i $pkgfiles/fix-makefile-libimobiledevice.patch
+build      : |
+    %make ALLOW_STATIC=no
+install    : |
+    %make_install
