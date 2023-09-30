@@ -1,8 +1,8 @@
 name       : vtm
-version    : 0.9.9t
-release    : 12
+version    : 0.9.9u
+release    : 13
 source     :
-    - https://github.com/netxs-group/vtm/archive/refs/tags/v0.9.9t.tar.gz : 23d6ea2703297f403886332c5aab37e9b28fc1659d9973eee9601609d62c4453
+    - https://github.com/netxs-group/vtm/archive/refs/tags/v0.9.9u.tar.gz : c0d8d47b7dd9e722264b2a8af237fad888734d893081147d06585b9e14df3e33
 homepage   : https://github.com/netxs-group/vtm
 license    : MIT
 component  : system.utils
@@ -11,11 +11,8 @@ clang      : yes
 description: |
     Terminal multiplexer with window manager and session sharing
 setup      : |
-    cd src
     %cmake_ninja -DCMAKE_BUILD_TYPE=Release
 build      : |
-    cd src
     %ninja_build
 install    : |
-    cd src
     %ninja_install
