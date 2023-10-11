@@ -1,8 +1,8 @@
 name       : zellij
-version    : 0.5.0
-release    : 1
+version    : 0.38.2
+release    : 2
 source     :
-    - https://github.com/zellij-org/zellij/archive/refs/tags/v0.5.0-beta.tar.gz : 2e2c078ad3d5fbac1bdec56d2c84832dd225879aa314750ee66ee317e2717792
+    - https://github.com/zellij-org/zellij/archive/refs/tags/v0.38.2.tar.gz : 18e8ae9fa2ad995af5f6c64b3c0713143d260cdc6c1a978831313bfaf305ad5e
 license    : MIT
 homepage   : https://zellij.dev
 component  : system.utils
@@ -13,10 +13,12 @@ networking : yes
 builddeps  :
     - cargo
 build      : |
-    cargo build --release
+    cargo build --release --locked
 install    : |
     install -Dm00755 $workdir/target/release/zellij $installdir/usr/bin/zellij
-    install -Dm00755 $workdir/target/release/tldr $installdir/usr/bin/tldr
-    install -Dm00644 $workdir/assets/completions/zellij.bash $installdir/usr/share/bash-completion/completions/zellij
-    install -Dm00644 $workdir/assets/completions/zellij.fish $installdir/usr/share/fish/vendor_completions.d/zellij.fish
-    install -Dm00644 $workdir/assets/completions/_zellij $installdir/usr/share/zsh/site-functions/_zellij
+    ./target/release/zellij setup --generate-completion bash > zellij.bash
+    ./target/release/zellij setup --generate-completion fish > zellij.fish
+    ./target/release/zellij setup --generate-completion zsh > zellij.zsh
+    install -Dm00644 $workdir/zellij.bash $installdir/usr/share/bash-completion/completions/zellij
+    install -Dm00644 $workdir/zellij.fish $installdir/usr/share/fish/vendor_completions.d/zellij.fish
+    install -Dm00644 $workdir/zellij.zsh $installdir/usr/share/zsh/site-functions/_zellij
