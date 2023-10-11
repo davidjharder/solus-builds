@@ -8,7 +8,7 @@ homepage   : https://zellij.dev
 component  : system.utils
 summary    : Terminal multiplexer written in Rust
 description: |
-    Terminal multiplexer written in Rustbuilddeps
+    Terminal multiplexer written in Rust
 networking : yes
 builddeps  :
     - cargo
