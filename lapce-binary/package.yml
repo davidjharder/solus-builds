@@ -1,8 +1,8 @@
 name       : lapce-binary
-version    : 0.2.7
-release    : 4
+version    : 0.3.0
+release    : 5
 source     :
-    - https://github.com/lapce/lapce/releases/download/v0.2.7/Lapce-linux.tar.gz : a94d0b5d1cefebbaae7c961032632b9813ec50bc015609c8e2c41a729e0f7239
+    - https://github.com/lapce/lapce/releases/download/v0.3.0/Lapce-linux.tar.gz : 42544244dd897f94f921046ad3af64da1a6a1c6eabc5739fbe409ff9147abd17
 license    : Apache-2.0
 homepage   : https://lapce.dev/
 component  : editor
