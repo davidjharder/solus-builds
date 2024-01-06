@@ -13,6 +13,7 @@ libc.so.6:bind
 libc.so.6:cfmakeraw
 libc.so.6:close
 libc.so.6:connect
+libc.so.6:cuserid
 libc.so.6:dup2
 libc.so.6:environ
 libc.so.6:execvp
@@ -22,6 +23,7 @@ libc.so.6:free
 libc.so.6:fstat
 libc.so.6:getenv
 libc.so.6:geteuid
+libc.so.6:gethostname
 libc.so.6:getpid
 libc.so.6:getsockopt
 libc.so.6:getuid
@@ -74,7 +76,6 @@ libc.so.6:wmemset
 libc.so.6:write
 libgcc_s.so.1:_Unwind_Resume
 libm.so.6:round
-libm.so.6:sqrt
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List13_Impl_deleterclEPNS2_5_ImplE
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List3endEv
 libstdc++.so.6:_ZNKSt19__codecvt_utf8_baseIwE10do_unshiftER11__mbstate_tPcS3_RS3_
@@ -92,6 +93,7 @@ libstdc++.so.6:_ZNSi5tellgEv
 libstdc++.so.6:_ZNSo3putEc
 libstdc++.so.6:_ZNSo9_M_insertIPKvEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertIbEERSoT_
+libstdc++.so.6:_ZNSo9_M_insertIlEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertImEERSoT_
 libstdc++.so.6:_ZNSolsEi
 libstdc++.so.6:_ZNSt10filesystem10equivalentERKNS_7__cxx114pathES3_RSt10error_code
