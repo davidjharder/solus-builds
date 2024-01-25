@@ -1,0 +1,23 @@
+name       : fortune-mod
+version    : 3.20.0
+release    : 1
+source     :
+    - https://github.com/shlomif/fortune-mod/archive/refs/tags/fortune-mod-3.20.0.tar.gz : d81689dc31533c1276d1c6c546c53b877007050b5d3d9e5db95851c464df9a62
+homepage   : PLEASE FILL ME IN
+license    : GPL-2.0-or-later # CHECK ME
+component  : PLEASE FILL ME IN
+summary    : PLEASE FILL ME IN
+description: |
+    PLEASE FILL ME IN
+networking : yes
+builddeps  :
+    - pkgconfig(librinutils)
+setup      : |
+    cd fortune-mod
+    %cmake_ninja
+build      : |
+    cd fortune-mod
+    %ninja_build
+install    : |
+    cd fortune-mod
+    %ninja_install
