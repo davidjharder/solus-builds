@@ -1,25 +1,26 @@
 name       : lapce
-version    : 0.2.7
-release    : 3
+version    : 0.3.1
+release    : 4
 source     :
-    - https://github.com/lapce/lapce/archive/refs/tags/v0.2.7.tar.gz : c4e0668bf98e83a8c451fe69173c51d8345511a1bd580c412750f3b940531c27
-license    : Apache-2.0
+    - https://github.com/lapce/lapce/archive/refs/tags/v0.3.1.tar.gz : 82407a0b0ae8a5660ff2192ca336c9b0e361424f0fd509e0a0a73ad55071f13d
 homepage   : https://lapce.dev/
+license    : Apache-2.0
 component  : editor
 summary    : Lightning-fast and Powerful Code Editor written in Rust
 description: |
-    Lightning-fast and Powerful Code Editor written in Rust
+    Lapce (IPA: /læps/) is written in pure Rust with a UI in Floem. It is designed with Rope Science from the Xi-Editor which makes for lightning-fast computation, and leverages Wgpu for rendering. More information about the features of Lapce can be found on the main website and user documentation can be found on GitBook.
 networking : yes
+clang      : yes
 builddeps  :
     - cargo
-    - perl-cairo-gobject
-    - pkgconfig(atk)
-    - pkgconfig(gdk-pixbuf-2.0)
-    - pkgconfig(pango)
-
+setup      : |
+    cargo fetch --locked --target "x86_64-unknown-linux-gnu"
 build      : |
-    cargo build --release
+    cargo build --frozen --profile release-lto --all-features
 install    : |
-    install -Dm00755 $workdir/target/release/lapce $installdir/usr/bin/lapce
-
-# This is slow to build with all the fetching involved, use the binary
+    install -Dm00755 -t $installdir/usr/bin/ target/release-lto/lapce{,-proxy}
+    install -Dm00644 -t $installdir/usr/share/applications/ extra/linux/dev.lapce.lapce.desktop
+    install -Dm00644 -t $installdir/usr/share/metainfo/ extra/linux/dev.lapce.lapce.metainfo.xml
+    install -Dm00644 extra/images/logo_app.svg $installdir/usr/share/icons/hicolor/scalable/apps/dev.lapce.lapce.svg
+check      : |
+    cargo test --release --locked
