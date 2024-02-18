@@ -11,6 +11,7 @@ libc.so.6:_exit
 libc.so.6:accept
 libc.so.6:bind
 libc.so.6:cfmakeraw
+libc.so.6:chmod
 libc.so.6:close
 libc.so.6:connect
 libc.so.6:cuserid
@@ -78,6 +79,7 @@ libgcc_s.so.1:_Unwind_Resume
 libm.so.6:round
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List13_Impl_deleterclEPNS2_5_ImplE
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List3endEv
+libstdc++.so.6:_ZNKSt10filesystem7__cxx114path7compareERKS1_
 libstdc++.so.6:_ZNKSt19__codecvt_utf8_baseIwE10do_unshiftER11__mbstate_tPcS3_RS3_
 libstdc++.so.6:_ZNKSt19__codecvt_utf8_baseIwE11do_encodingEv
 libstdc++.so.6:_ZNKSt19__codecvt_utf8_baseIwE13do_max_lengthEv
@@ -97,12 +99,11 @@ libstdc++.so.6:_ZNSo9_M_insertIlEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertImEERSoT_
 libstdc++.so.6:_ZNSolsEi
 libstdc++.so.6:_ZNSt10filesystem10equivalentERKNS_7__cxx114pathES3_RSt10error_code
+libstdc++.so.6:_ZNSt10filesystem12current_pathB5cxx11ERSt10error_code
 libstdc++.so.6:_ZNSt10filesystem12current_pathERKNS_7__cxx114pathERSt10error_code
-libstdc++.so.6:_ZNSt10filesystem14symlink_statusERKNS_7__cxx114pathE
 libstdc++.so.6:_ZNSt10filesystem14symlink_statusERKNS_7__cxx114pathERSt10error_code
 libstdc++.so.6:_ZNSt10filesystem6removeERKNS_7__cxx114pathERSt10error_code
 libstdc++.so.6:_ZNSt10filesystem6renameERKNS_7__cxx114pathES3_RSt10error_code
-libstdc++.so.6:_ZNSt10filesystem6statusERKNS_7__cxx114pathE
 libstdc++.so.6:_ZNSt10filesystem6statusERKNS_7__cxx114pathERSt10error_code
 libstdc++.so.6:_ZNSt10filesystem7__cxx1116filesystem_errorC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt10error_code
 libstdc++.so.6:_ZNSt10filesystem7__cxx1116filesystem_errorD1Ev
