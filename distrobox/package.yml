@@ -1,0 +1,16 @@
+name       : distrobox
+version    : 1.7.0.1
+release    : 1
+source     :
+    - https://github.com/89luca89/distrobox/archive/refs/tags/1.7.0.1.tar.gz : 40a366955385efbf79c170e92bb14d4e2ae66b253bafa0ddb49ec39c4bd2b616
+homepage   : https://distrobox.it/
+license    : GPL-3.0-or-later
+component  : virt
+summary    : Use any linux distribution inside your terminal
+description: |
+    Use any linux distribution inside your terminal
+rundeps    :
+    - imagemagick
+    - podman
+install    : |
+    ./install -P $installdir/usr
