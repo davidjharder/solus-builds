@@ -1,0 +1,63 @@
+name       : vscode-bin
+version    : 1.87.2
+release    : 1
+source     :
+    - https://update.code.visualstudio.com/1.87.2/linux-x64/stable : c2e97cdc63ff1bcbfbb10c227b5398623d21f21e487108fa1d740dabe7d37985
+homepage   : https://code.visualstudio.com/
+license    :
+    - GPL-3.0-or-later # Icon (from Papirus)
+    - MIT # VS Code
+component  : programming.ide
+summary    : Visual Studio Code (open source version) is a new type of tool that combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle.
+description: |
+    Visual Studio Code (open source version) is a new type of tool that combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle.
+networking : yes
+builddeps  :
+    - pkgconfig(alsa)
+    - pkgconfig(gbm)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(krb5-gssapi)
+    - pkgconfig(libdrm)
+    - pkgconfig(libsecret-1)
+    - pkgconfig(xcomposite)
+    - pkgconfig(xcursor)
+    - pkgconfig(xkbfile)
+    - pkgconfig(xrandr)
+    - pkgconfig(xscrnsaver)
+    - pkgconfig(xshmfence)
+    - pkgconfig(xtst)
+    - jq
+    - yarn
+    - yq
+rundeps    :
+    - git
+    - libxscrnsaver
+    - nodejs
+replaces   :
+    - vscode-ms
+install    : |
+    export vsdir=/usr/share/vscode
+    install -dm00755 $installdir/$vsdir
+    cp -R $workdir/* $installdir/$vsdir/
+    install -Dm00755 $pkgfiles/vscode.sh $installdir/usr/bin/code
+
+    install -Dm00644 $pkgfiles/code.desktop $installdir/usr/share/applications/code.desktop
+    install -Dm00644 $pkgfiles/code-url-handler.desktop $installdir/usr/share/applications/code-url-handler.desktop
+    install -Dm00644 $pkgfiles/visual-studio-code.svg $installdir/usr/share/icons/hicolor/scalable/apps/visual-studio-code.svg
+    install -Dm00755 $pkgfiles/code $installdir/$vsdir/bin/code
+
+    # Shell completions
+    install -dm00755 $installdir/usr/share/bash-completion/completions
+    install -dm00755 $installdir/usr/share/zsh/site-functions
+    ln -s ../../vscode/resources/completions/bash/code $installdir/usr/share/bash-completion/completions/code
+    ln -s ../../vscode/resources/completions/zsh/_code $installdir/usr/share/zsh/site-functions/_code
+
+    # Fix Wayland/Xorg window associations
+    package_json=$installdir/$vsdir/resources/app/package.json
+    tmp=$(mktemp)
+    jq ".desktopName = \"code.desktop\"" $package_json > "$tmp" && mv "$tmp" $package_json
+    chmod 644 $package_json
+
+    # Appdata/MIME
+    install -Dm00644 $pkgfiles/code.appdata.xml $installdir/usr/share/metainfo/code.appdata.xml
+    install -Dm00644 $pkgfiles/code-workspace.mime $installdir/usr/share/mime/packages/code-workspace.xml
