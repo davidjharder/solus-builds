@@ -1,0 +1,18 @@
+name       : transifex-cli
+version    : 1.6.10
+release    : 1
+source     :
+    - https://github.com/transifex/cli/archive/refs/tags/v1.6.10.tar.gz : 0256e68ac9a6b9c963c8db9fdb5b7a6b5c7445c0c0d31884477fbde36fd3025b
+homepage   : https://github.com/transifex/cli
+license    : Apache-2.0
+component  : sytem.utils
+summary    : The Transifex command-line client
+description: |
+    The Transifex command-line client
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    %make
+install    : |
+    install -Dm00755 $workdir/bin/tx $installdir/usr/bin/tx
