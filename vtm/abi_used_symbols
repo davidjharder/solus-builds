@@ -72,11 +72,14 @@ libc.so.6:tcsetattr
 libc.so.6:ttyname_r
 libc.so.6:unlockpt
 libc.so.6:unsetenv
+libc.so.6:vsnprintf
 libc.so.6:waitpid
 libc.so.6:wmemset
 libc.so.6:write
 libgcc_s.so.1:_Unwind_Resume
+libm.so.6:pow
 libm.so.6:round
+libm.so.6:roundf
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List13_Impl_deleterclEPNS2_5_ImplE
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List3endEv
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path7compareERKS1_
