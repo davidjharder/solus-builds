@@ -1,0 +1,19 @@
+name       : diff-so-fancy
+version    : 1.4.4
+release    : 1
+source     :
+    - https://github.com/so-fancy/diff-so-fancy/archive/refs/tags/v1.4.4.tar.gz : 3eac2cfb3b1de9d14b6a712941985d6b240b7f3726c94a5e337317c7161e869d
+homepage   : https://github.com/so-fancy/diff-so-fancy
+license    : MIT
+component  : programming.tools
+summary    : Good-lookin' diffs. Actually… nah… The best-lookin' diffs
+description: |
+    Good-lookin' diffs. Actually… nah… The best-lookin' diffs
+rundeps    :
+    - perl
+setup      : |
+    # Thanks AUR
+    sed -i 's|^use lib .*$|use lib "/usr/share/diff-so-fancy";|' "diff-so-fancy"
+install    : |
+    install -Dm00755 $workdir/diff-so-fancy $installdir/usr/bin/diff-so-fancy
+    install -Dm00755 $workdir/lib/DiffHighlight.pm $installdir/usr/share/diff-so-fancy/DiffHighlight.pm
