@@ -1,0 +1,25 @@
+name       : dillo
+version    : 3.1.0
+release    : 1
+source     :
+    - https://github.com/dillo-browser/dillo/archive/refs/tags/v3.1.0.tar.gz : 3aa2a686648b383417a0c1f575c3d5431d6a2d53f35c2e11bf579cb25b2b45e7
+homepage   : https://dillo-browser.github.io/
+license    : GPL-3.0-or-later
+component  : network.web.browser
+summary    : Multi-platform graphical web browser
+description: |
+    Multi-platform graphical web browser, known for its speed and small footprint, that is developed with a focus on personal security and privacy
+builddeps  :
+    - pkgconfig(fontconfig)
+    - pkgconfig(x11)
+    - pkgconfig(xext)
+    - pkgconfig(xfixes)
+    - pkgconfig(xft)
+    - pkgconfig(xrender)
+    - fltk-devel
+setup      : |
+    %autogen
+build      : |
+    %make
+install    : |
+    %make_install
