@@ -1,8 +1,8 @@
 name       : chezmoi
-version    : 2.48.0
-release    : 7
+version    : 2.48.1
+release    : 8
 source     :
-    - https://github.com/twpayne/chezmoi/archive/refs/tags/v2.48.0.tar.gz : 3034a37ddc21fd19e9a37297dd98a6edbf85e68f112cafef721d2512fbac13e5
+    - https://github.com/twpayne/chezmoi/archive/refs/tags/v2.48.1.tar.gz : 6c7647bd42dcda7370a85c3f744018667e4a122a227ac368373443dec694d6e9
 license    : MIT
 homepage   : https://www.chezmoi.io
 component  : programming.tools
