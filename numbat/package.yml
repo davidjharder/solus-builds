@@ -1,8 +1,8 @@
 name       : numbat
-version    : 1.11.0
-release    : 3
+version    : 1.12.0
+release    : 4
 source     :
-    - https://github.com/sharkdp/numbat/archive/refs/tags/v1.11.0.tar.gz : 9543f449e758b2db6d1299b4eee88dbeac1ba57a427580c7f45d3ee613b089a0
+    - https://github.com/sharkdp/numbat/archive/refs/tags/v1.12.0.tar.gz : 6e5f2d3e912d38c2b55d10e151498d9d7837541502243bdf1330a7b44cd9da24
 homepage   : https://numbat.dev/
 license    :
     - Apache-2.0
@@ -13,12 +13,12 @@ description: |
     A statically typed programming language for scientific computations with first class support for physical dimensions and units
 networking : yes
 builddeps  :
-    - cargo
+    - rust
 setup      : |
-    cargo fetch --locked
+    %cargo_fetch
 build      : |
-    cargo build --frozen --release
+   %cargo_build
 install    : |
-    install -Dm00755 target/release/numbat $installdir/usr/bin/numbat
+    %cargo_install
     mkdir -p $installdir/usr/share/numbat
     cp -r numbat/modules $installdir/usr/share/numbat
