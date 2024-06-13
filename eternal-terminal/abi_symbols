@@ -1,4 +1,0 @@
-crashpad_handler:memfd_create
-crashpad_handler:pthread_create
-et:memfd_create
-etserver:memfd_create
