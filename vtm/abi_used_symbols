@@ -78,10 +78,13 @@ libc.so.6:waitpid
 libc.so.6:wmemset
 libc.so.6:write
 libgcc_s.so.1:_Unwind_Resume
+libm.so.6:ceilf
 libm.so.6:floorf
 libm.so.6:pow
+libm.so.6:powf
 libm.so.6:round
 libm.so.6:roundf
+libm.so.6:sinf
 libm.so.6:sqrt
 libm.so.6:sqrtf
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List13_Impl_deleterclEPNS2_5_ImplE
@@ -142,6 +145,11 @@ libstdc++.so.6:_ZNSt28__atomic_futex_unsigned_base19_M_futex_wait_untilEPjjbNSt6
 libstdc++.so.6:_ZNSt28__atomic_futex_unsigned_base26_M_futex_wait_until_steadyEPjjbNSt6chrono8durationIlSt5ratioILl1ELl1EEEENS2_IlS3_ILl1ELl1000000000EEEE
 libstdc++.so.6:_ZNSt3_V215system_categoryEv
 libstdc++.so.6:_ZNSt3_V216generic_categoryEv
+libstdc++.so.6:_ZNSt3pmr20get_default_resourceEv
+libstdc++.so.6:_ZNSt3pmr25monotonic_buffer_resource18_M_release_buffersEv
+libstdc++.so.6:_ZNSt3pmr25monotonic_buffer_resourceD1Ev
+libstdc++.so.6:_ZNSt3pmr28unsynchronized_pool_resourceC2ERKNS_12pool_optionsEPNS_15memory_resourceE
+libstdc++.so.6:_ZNSt3pmr28unsynchronized_pool_resourceD1Ev
 libstdc++.so.6:_ZNSt6chrono3_V212steady_clock3nowEv
 libstdc++.so.6:_ZNSt6localeD1Ev
 libstdc++.so.6:_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE
@@ -197,6 +205,7 @@ libstdc++.so.6:_ZTVN10__cxxabiv119__pointer_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__function_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__si_class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv121__vmi_class_type_infoE
+libstdc++.so.6:_ZTVNSt3pmr25monotonic_buffer_resourceE
 libstdc++.so.6:_ZTVNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE
 libstdc++.so.6:_ZTVSt12bad_weak_ptr
 libstdc++.so.6:_ZTVSt12future_error
