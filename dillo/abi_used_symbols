@@ -184,6 +184,7 @@ libcrypto.so.3:OPENSSL_sk_value
 libcrypto.so.3:OpenSSL_version
 libcrypto.so.3:PEM_write_X509
 libcrypto.so.3:RAND_status
+libcrypto.so.3:X509_ALGOR_get0
 libcrypto.so.3:X509_LOOKUP_ctrl
 libcrypto.so.3:X509_LOOKUP_file
 libcrypto.so.3:X509_LOOKUP_hash_dir
