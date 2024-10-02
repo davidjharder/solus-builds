@@ -1,0 +1,20 @@
+name       : icebreaker
+version    : 2024.9.24
+release    : 1
+source     :
+    - git|https://github.com/hecrj/icebreaker.git : d8734cdd45fde647318bbd9d113a061d483768f3
+homepage   : https://github.com/hecrj/icebreaker
+license    : MIT
+component  : no.idea
+summary    : A local AI chat app powered by Rust, iced, Hugging Face, and llama.cpp
+description: |
+    A local AI chat app powered by Rust, iced, Hugging Face, and llama.cpp
+networking: yes
+builddeps  :
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build
+install    : |
+    %cargo_install
