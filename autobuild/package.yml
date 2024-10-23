@@ -1,0 +1,18 @@
+name       : autobuild
+version    : 2024.10.23
+release    : 1
+source     :
+    - git|https://github.com/GZGavinZhao/autobuild.git : a55788ab158ddca517f0acebdb00ecc34b1c59cc
+homepage   : https://github.com/GZGavinZhao/autobuild
+license    : none
+component  : devel
+summary    : Automatically query, build, and push Solus packages elegantly.
+description: |
+    Automatically query, build, and push Solus packages elegantly
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    go build -buildvcs .
+install    : |
+    install -Dm00755 $workdir/autobuild $installdir/usr/bin/autobuild
