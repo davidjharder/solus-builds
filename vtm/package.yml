@@ -1,8 +1,8 @@
 name       : vtm
-version    : 0.9.99.14
-release    : 27
+version    : 0.9.99.35
+release    : 28
 source     :
-    - https://github.com/directvt/vtm/archive/refs/tags/v0.9.99.14.tar.gz : 7dfe88a4176c18c3c57748e8af72a1e4786a40a92c533e323267add473345b59
+    - https://github.com/directvt/vtm/archive/refs/tags/v0.9.99.35.tar.gz : b6adff2a81fdedd45e1402c344ba8a1c7aca06bb29782fefdcb8a4242cc8d1c7
 homepage   : https://github.com/netxs-group/vtm
 license    : MIT
 component  : system.utils
