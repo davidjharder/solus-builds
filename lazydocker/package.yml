@@ -1,8 +1,9 @@
 name       : lazydocker
-version    : 0.23.0
-release    : 3
+version    : 0.23.3
+release    : 4
 source     :
-    - https://github.com/jesseduffield/lazydocker/archive/refs/tags/v0.23.0.tar.gz : 9c2647ec882100471dc0c4cb9bff7d241850ff47e65bd6b63e58477b1c15a6c2
+    - https://github.com/jesseduffield/lazydocker/archive/refs/tags/v0.23.3.tar.gz : 6ea52b69c3fb5cb371a01e55d1deeaf053b17fb240be069af577246c5169f4f1
+homepage   : https://github.com/jesseduffield/lazydocker
 license    : MIT
 component  : programming.tools
 summary    : A simple terminal UI for both docker and docker-compose
