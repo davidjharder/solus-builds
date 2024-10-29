@@ -1,8 +1,8 @@
 name       : lapce
-version    : 0.3.1
-release    : 4
+version    : 0.4.2
+release    : 5
 source     :
-    - https://github.com/lapce/lapce/archive/refs/tags/v0.3.1.tar.gz : 82407a0b0ae8a5660ff2192ca336c9b0e361424f0fd509e0a0a73ad55071f13d
+    - https://github.com/lapce/lapce/archive/refs/tags/v0.4.2.tar.gz : 1abf998ddaa95e2349691736fda88c16cc34ddf6e3cb2c5fa3dcb5f77c1d1b1c
 homepage   : https://lapce.dev/
 license    : Apache-2.0
 component  : editor
@@ -12,9 +12,9 @@ description: |
 networking : yes
 clang      : yes
 builddeps  :
-    - cargo
+    - rust
 setup      : |
-    cargo fetch --locked --target "x86_64-unknown-linux-gnu"
+    %cargo_fetch
 build      : |
     cargo build --frozen --profile release-lto --all-features
 install    : |
@@ -22,5 +22,5 @@ install    : |
     install -Dm00644 -t $installdir/usr/share/applications/ extra/linux/dev.lapce.lapce.desktop
     install -Dm00644 -t $installdir/usr/share/metainfo/ extra/linux/dev.lapce.lapce.metainfo.xml
     install -Dm00644 extra/images/logo_app.svg $installdir/usr/share/icons/hicolor/scalable/apps/dev.lapce.lapce.svg
-check      : |
-    cargo test --release --locked
+check      : |-
+    %cargo_test
