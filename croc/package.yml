@@ -1,8 +1,8 @@
 name       : croc
-version    : 10.0.13
-release    : 13
+version    : 10.1.0
+release    : 14
 source     :
-    - https://github.com/schollz/croc/archive/refs/tags/v10.0.13.tar.gz : 69a7e60811b97d3f6e2ceac4d24fc52596ec8982039811fb5894ef78f2dedc77
+    - https://github.com/schollz/croc/archive/refs/tags/v10.1.0.tar.gz : 0968f28c0d46ff181173ae1613aea5c55757384e3c1358917f78bf0ce595d151
 license    : MIT
 component  : networking.tools
 homepage   : https://schollz.com/tinker/croc6/
