@@ -12,7 +12,6 @@ description: |
 networking: yes
 builddeps  :
     - golang
-    - tree 
 build      : |
     go build -trimpath -buildmode=pie -ldflags "-X main.Version=%version -linkmode external -extldflags \"$LDFLAGS\"" -o . ./...
 check       : |
