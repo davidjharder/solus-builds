@@ -1,0 +1,33 @@
+name       : rage
+version    : 0.11.0
+release    : 1
+source     :
+    - https://github.com/str4d/rage/archive/refs/tags/v0.11.0.tar.gz : f5c37b27428ad2b9ed91f0c691612dd0f91044d17565edf177fb676be4af1d35
+homepage   : https://github.com/str4d/rage
+license    :
+    - Apache-2.0
+    - MIT
+component  : security
+summary    : A simple, secure and modern file encryption tool (and Rust library) with small explicit keys, no config options, and UNIX-style composability.
+description: |
+    A simple, secure and modern file encryption tool (and Rust library) with small explicit keys, no config options, and UNIX-style composability.
+networking: yes
+builddeps  :
+    - pkgconfig(fuse3)
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build --all-features
+install    : |
+    %cargo_install rage rage-keygen rage-mount
+    # Thanks archbros
+    cd target/release
+    for _binary in "rage" "rage-keygen" "rage-mount"; do
+        install -Dm644 "completions/$_binary.bash" "$installdir/usr/share/bash-completion/completions/$_binary"
+        install -Dm644 "completions/$_binary.fish" "$installdir/usr/share/fish/vendor_completions.d/$_binary.fish"
+        install -Dm644 "completions/_$_binary" "$installdir/usr/share/zsh/site-functions/_$_binary"
+        install -Dm644 "manpages/man1/$_binary.1.gz" "$installdir/usr/share/man/man1/$_binary.1.gz"
+    done
+check     : |
+    %cargo_test --all-features
