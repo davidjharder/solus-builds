@@ -1,0 +1,22 @@
+name       : age
+version    : 1.2.0
+release    : 1
+source     :
+    - https://github.com/FiloSottile/age/archive/refs/tags/v1.2.0.tar.gz : cefe9e956401939ad86a9c9d7dcf843a43b6bcdf4ee7d8e4508864f227a3f6f0
+homepage   : https://github.com/FiloSottile/age
+license    : BSD-3-Clause
+component  : security
+summary    : age is a simple, modern and secure file encryption tool, format, and Go library.
+description: |
+    age is a simple, modern and secure file encryption tool, format, and Go library.
+networking: yes
+builddeps  :
+    - golang
+    - tree 
+build      : |
+    go build -trimpath -buildmode=pie -ldflags "-X main.Version=%version -linkmode external -extldflags \"$LDFLAGS\"" -o . ./...
+check       : |
+    go test ./...
+install    : |
+    install -Dm00755 -t $installdir/usr/bin age age-keygen
+    install -Dm00644 -t $installdir/usr/share/man/man1 doc/{age.1,age-keygen.1}
