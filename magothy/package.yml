@@ -1,0 +1,21 @@
+name       : magothy
+version    : 2024.11.26
+release    : 1
+source     :
+    - git|https://codeberg.org/serebit/magothy.git : 9aa2d29d7117659fa773bb3729aa6dc829b31c56
+homepage   : https://codeberg.org/serebit/magothy
+license    : Apache-2.0
+component  : programming.tools
+summary    : A hardware profiling application for Linux
+description: |
+    A hardware profiling application for Linux
+networking : yes
+builddeps  :
+    - pkgconfig(lua-5.4)
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build
+install    : |
+    %cargo_install
