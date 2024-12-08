@@ -1,8 +1,8 @@
 name       : lazydocker
-version    : 0.23.3
-release    : 4
+version    : 0.24.1
+release    : 5
 source     :
-    - https://github.com/jesseduffield/lazydocker/archive/refs/tags/v0.23.3.tar.gz : 6ea52b69c3fb5cb371a01e55d1deeaf053b17fb240be069af577246c5169f4f1
+    - https://github.com/jesseduffield/lazydocker/archive/refs/tags/v0.24.1.tar.gz : f54197d333a28e658d2eb4d9b22461ae73721ec9e4106ba23ed177fc530c21f4
 homepage   : https://github.com/jesseduffield/lazydocker
 license    : MIT
 component  : programming.tools
