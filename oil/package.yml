@@ -1,8 +1,9 @@
 name       : oil
-version    : 0.8.12
-release    : 1
+version    : 0.24.0
+release    : 2
 source     :
-    - https://www.oilshell.org/download/oil-0.8.12.tar.gz : 7c70762614a047050dff0f103dc242ae9171452008f42f6c62547f6ddf67bbd2
+    - https://www.oilshell.org/download/oil-0.24.0.tar.gz : f199f5384e72c53eeb8a159ee7ac1b92819adc13a6dc5644ccae33e7ceaa9c72
+homepage   : https://www.oilshell.org
 license    : Apache-2.0
 component  : system.utils
 summary    : Oil is a new Unix shell. It is our upgrade path from bash to a better language and runtime
