@@ -1,8 +1,8 @@
 name       : numbat
-version    : 1.14.0
-release    : 6
+version    : 1.15.0
+release    : 7
 source     :
-    - https://github.com/sharkdp/numbat/archive/refs/tags/v1.14.0.tar.gz : 297c4ce1eca68a5f523a537b6d4a7334907f0cd4fbcf2162d1467d6d090c1445
+    - https://github.com/sharkdp/numbat/archive/refs/tags/v1.15.0.tar.gz : abf7a79db4c8eb0e6ddd7a67efafcaf7b9d8c109ad255c21207be2bb54a12ba2
 homepage   : https://numbat.dev/
 license    :
     - Apache-2.0
