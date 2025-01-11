@@ -1,9 +1,10 @@
 name       : eisvogel
-version    : 2.5.0
-release    : 5
+version    : 3.0.0
+release    : 6
 source     :
-    - https://github.com/Wandmalfarbe/pandoc-latex-template/archive/refs/tags/v2.5.0.tar.gz : acb5680544ee6da68d920d559797ab33e16c27f6f249bbc381d5e3640b0a68ce
+    - https://github.com/Wandmalfarbe/pandoc-latex-template/releases/download/v3.0.0/Eisvogel-3.0.0.tar.gz : e7a93afc9b95f17aeac4516a5ac07ffb2b68a5a548f2cfe10684458d8473dd31
 license    : BSD-3-Clause
+homepage   : https://github.com/Wandmalfarbe/pandoc-latex-template
 component  : office
 summary    : Eisvogel LaTeX template + a directory watcher script
 description: |
@@ -12,6 +13,6 @@ rundeps    :
     - pandoc
     - texlive-all
 install    : |
-    install -Dm00644 $workdir/eisvogel.tex $installdir/usr/share/eisvogel/eisvogel.tex
+    install -Dm00644 $workdir/eisvogel.latex $installdir/usr/share/eisvogel/eisvogel.tex
     install -Dm00755 $pkgfiles/eis $installdir/usr/bin/eis
     install -Dm00755 $pkgfiles/eis-new $installdir/usr/bin/eis-new
