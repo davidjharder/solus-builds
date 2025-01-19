@@ -1,0 +1,20 @@
+name       : python-pfzy
+version    : 0.3.4
+release    : 1
+source     :
+    - https://files.pythonhosted.org/packages/d9/5a/32b50c077c86bfccc7bed4881c5a2b823518f5450a30e639db5d3711952e/pfzy-0.3.4.tar.gz : 717ea765dd10b63618e7298b2d98efd819e0b30cd5905c9707223dceeb94b3f1
+homepage   : https://pypi.org/project/pfzy/
+license    : MIT
+component  : programming.python
+summary    : Python port of the fzy fuzzy string matching algorithm.
+description: |
+    Python port of the fzy fuzzy string matching algorithm.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-packaging
+    - python-wheel
+build      : |
+    %python3_setup
+install    : |
+    %python3_install

@@ -1,0 +1,24 @@
+name       : isd
+version    : 0.2.0
+release    : 1
+source     :
+    - https://github.com/isd-project/isd/archive/refs/tags/v0.2.0.tar.gz : c2fa8f62bbe8f70405c12b18b7c01107b4b0755391c475c43f85cccb51cd9238
+homepage   : https://isd-project.github.io/isd/
+license    : GPL-3.0-or-later
+component  : programming.python
+summary    : isd (interactive systemd) — a better way to work with systemd units
+description: |
+    Simplify systemd management with isd! isd is a TUI offering fuzzy search for units, auto-refreshing previews, smart sudo handling, and a fully customizable interface for power-users and newcomers alike.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-packaging
+    - python-wheel
+    - python-hatchling
+rundeps     :
+    - python-pfzy
+    - python-pydantic
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
