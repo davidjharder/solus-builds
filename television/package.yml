@@ -1,8 +1,8 @@
 name       : television
-version    : 0.10.0
-release    : 3
+version    : 0.10.2
+release    : 4
 source     :
-    - https://github.com/alexpasmantier/television/archive/refs/tags/0.10.0.tar.gz : 62dbc15b4109be90ef7bda6993523223aa6f89f39333ea8d35d515edc4ccb98d
+    - https://github.com/alexpasmantier/television/archive/refs/tags/0.10.2.tar.gz : fb85884a7684323872e895271969695dc4ddc3ef7550aad3cc76504fd9df21cd
 homepage   : https://github.com/alexpasmantier/television
 license    : MIT
 component  : programming.tools
