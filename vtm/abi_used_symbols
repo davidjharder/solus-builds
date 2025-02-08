@@ -80,6 +80,7 @@ libc.so.6:wmemset
 libc.so.6:write
 libgcc_s.so.1:_Unwind_Resume
 libm.so.6:ceilf
+libm.so.6:fedisableexcept
 libm.so.6:floorf
 libm.so.6:pow
 libm.so.6:powf
@@ -105,7 +106,6 @@ libstdc++.so.6:_ZNSi5seekgElSt12_Ios_Seekdir
 libstdc++.so.6:_ZNSi5tellgEv
 libstdc++.so.6:_ZNSo3putEc
 libstdc++.so.6:_ZNSo9_M_insertIPKvEERSoT_
-libstdc++.so.6:_ZNSo9_M_insertIbEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertIlEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertImEERSoT_
 libstdc++.so.6:_ZNSolsEi
@@ -211,7 +211,7 @@ libstdc++.so.6:_ZTVNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE
 libstdc++.so.6:_ZTVSt12bad_weak_ptr
 libstdc++.so.6:_ZTVSt12future_error
 libstdc++.so.6:_ZTVSt15basic_streambufIcSt11char_traitsIcEE
-libstdc++.so.6:_ZdlPv
+libstdc++.so.6:_ZdlPvm
 libstdc++.so.6:_Znwm
 libstdc++.so.6:__cxa_allocate_exception
 libstdc++.so.6:__cxa_begin_catch
