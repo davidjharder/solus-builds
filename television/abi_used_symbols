@@ -2,7 +2,6 @@ libc.so.6:__errno_location
 libc.so.6:__libc_current_sigrtmax
 libc.so.6:__libc_start_main
 libc.so.6:__memcpy_chk
-libc.so.6:__res_init
 libc.so.6:__snprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:__vsnprintf_chk
@@ -15,7 +14,6 @@ libc.so.6:chdir
 libc.so.6:clock_gettime
 libc.so.6:close
 libc.so.6:closedir
-libc.so.6:connect
 libc.so.6:dirfd
 libc.so.6:dl_iterate_phdr
 libc.so.6:dlsym
@@ -32,11 +30,8 @@ libc.so.6:exit
 libc.so.6:fcntl
 libc.so.6:fork
 libc.so.6:free
-libc.so.6:freeaddrinfo
 libc.so.6:fstat64
 libc.so.6:fstatat64
-libc.so.6:gai_strerror
-libc.so.6:getaddrinfo
 libc.so.6:getauxval
 libc.so.6:getcwd
 libc.so.6:getenv
@@ -48,6 +43,7 @@ libc.so.6:getuid
 libc.so.6:gnu_get_libc_version
 libc.so.6:ioctl
 libc.so.6:isatty
+libc.so.6:kill
 libc.so.6:lseek64
 libc.so.6:lstat64
 libc.so.6:malloc
@@ -87,8 +83,6 @@ libc.so.6:pthread_getattr_np
 libc.so.6:pthread_join
 libc.so.6:pthread_key_create
 libc.so.6:pthread_key_delete
-libc.so.6:pthread_mutex_lock
-libc.so.6:pthread_mutex_unlock
 libc.so.6:pthread_self
 libc.so.6:pthread_setname_np
 libc.so.6:pthread_setspecific
@@ -96,6 +90,7 @@ libc.so.6:raise
 libc.so.6:read
 libc.so.6:readdir64
 libc.so.6:readlink
+libc.so.6:readv
 libc.so.6:realloc
 libc.so.6:realpath
 libc.so.6:recv
@@ -113,7 +108,6 @@ libc.so.6:sigaddset
 libc.so.6:sigaltstack
 libc.so.6:sigemptyset
 libc.so.6:signal
-libc.so.6:socket
 libc.so.6:socketpair
 libc.so.6:stat64
 libc.so.6:strlen
@@ -137,7 +131,15 @@ libgcc_s.so.1:_Unwind_RaiseException
 libgcc_s.so.1:_Unwind_Resume
 libgcc_s.so.1:_Unwind_SetGR
 libgcc_s.so.1:_Unwind_SetIP
+libm.so.6:ceil
+libm.so.6:ceilf
+libm.so.6:exp2f
+libm.so.6:expf
+libm.so.6:floorf
 libm.so.6:fmod
 libm.so.6:ldexp
 libm.so.6:pow
 libm.so.6:round
+libm.so.6:roundf
+libm.so.6:sinf
+libm.so.6:truncf
