@@ -1,0 +1,22 @@
+name       : icann-rdap
+version    : 0.0.21
+release    : 1
+source     :
+    - https://github.com/icann/icann-rdap/archive/refs/tags/v0.0.21.tar.gz : 252b112776fae0160f539e20b70ff24b6f2bea7551c9476ccd6f7651c7b861d0
+homepage   : https://github.com/icann/icann-rdap
+license    :
+    - Apache-2.0
+    - MIT
+component  : system.utils
+summary    : ICANN implementation of the Registry Data Access Protocol (RDAP)
+description: |
+    ICANN implementation of the Registry Data Access Protocol (RDAP)
+networking : yes
+builddeps  :
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build
+install    : |
+    %cargo_install rdap rdap-test rdap-srv
