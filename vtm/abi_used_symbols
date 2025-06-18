@@ -31,6 +31,9 @@ libc.so.6:close
 libc.so.6:connect
 libc.so.6:cuserid
 libc.so.6:difftime
+libc.so.6:dlclose
+libc.so.6:dlopen
+libc.so.6:dlsym
 libc.so.6:dup2
 libc.so.6:environ
 libc.so.6:execvp
@@ -162,6 +165,7 @@ libm.so.6:sqrt
 libm.so.6:sqrtf
 libm.so.6:tan
 libstdc++.so.6:_ZNKRSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE3strEv
+libstdc++.so.6:_ZNKSt10filesystem7__cxx1118directory_iteratordeEv
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List13_Impl_deleterclEPNS2_5_ImplE
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List3endEv
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path7compareERKS1_
@@ -191,6 +195,8 @@ libstdc++.so.6:_ZNSt10filesystem6renameERKNS_7__cxx114pathES3_RSt10error_code
 libstdc++.so.6:_ZNSt10filesystem6statusERKNS_7__cxx114pathERSt10error_code
 libstdc++.so.6:_ZNSt10filesystem7__cxx1116filesystem_errorC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt10error_code
 libstdc++.so.6:_ZNSt10filesystem7__cxx1116filesystem_errorD1Ev
+libstdc++.so.6:_ZNSt10filesystem7__cxx1118directory_iteratorC2ERKNS0_4pathENS_17directory_optionsEPSt10error_code
+libstdc++.so.6:_ZNSt10filesystem7__cxx1118directory_iteratorppEv
 libstdc++.so.6:_ZNSt10filesystem7__cxx114path14_M_split_cmptsEv
 libstdc++.so.6:_ZNSt10filesystem7__cxx114path16replace_filenameERKS1_
 libstdc++.so.6:_ZNSt10filesystem7__cxx114path5_ListC1ERKS2_

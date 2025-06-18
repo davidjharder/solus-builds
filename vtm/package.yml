@@ -1,8 +1,8 @@
 name       : vtm
-version    : 2025.05.28
-release    : 35
+version    : 2025.06.18
+release    : 36
 source     :
-    - https://github.com/directvt/vtm/archive/refs/tags/v2025.05.28.tar.gz : 302eced60e7f2517fe8efbe5d658638f6c046e88dee9681204d0a2fb886e4cb3
+    - https://github.com/directvt/vtm/archive/refs/tags/v2025.06.18.tar.gz : f155cc88d4a295c18e34bc48ff6bc3f874fb075c9dc8fdd53c92a24c0a658dfb
 homepage   : https://github.com/netxs-group/vtm
 license    : MIT
 component  : system.utils
@@ -11,6 +11,8 @@ clang      : yes
 networking : yes
 description: |
     Terminal multiplexer with window manager and session sharing
+builddeps  :
+    - pkgconfig(libinput)
 setup      : |
     %cmake_ninja -DCMAKE_BUILD_TYPE=Release
 build      : |
