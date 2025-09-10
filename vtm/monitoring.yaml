@@ -1,0 +1,6 @@
+releases:
+  id: 383549
+  rss: https://github.com/directvt/vtm/tags.atom
+ # No known CPE, checked 2025-09-09
+security:
+  cpe: ~

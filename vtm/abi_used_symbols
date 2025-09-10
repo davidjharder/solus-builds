@@ -197,6 +197,7 @@ libstdc++.so.6:_ZNSi5seekgElSt12_Ios_Seekdir
 libstdc++.so.6:_ZNSi5tellgEv
 libstdc++.so.6:_ZNSo3putEc
 libstdc++.so.6:_ZNSo9_M_insertIPKvEERSoT_
+libstdc++.so.6:_ZNSo9_M_insertIbEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertIlEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertImEERSoT_
 libstdc++.so.6:_ZNSolsEi
@@ -261,6 +262,7 @@ libstdc++.so.6:_ZNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEC1Ev
 libstdc++.so.6:_ZNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev
 libstdc++.so.6:_ZNSt7codecvtIwc11__mbstate_tEC2Em
 libstdc++.so.6:_ZNSt8__detail15_List_node_base11_M_transferEPS0_S1_
+libstdc++.so.6:_ZNSt8__detail15_List_node_base4swapERS0_S1_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base7_M_hookEPS0_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base9_M_unhookEv
 libstdc++.so.6:_ZNSt8bad_castD2Ev

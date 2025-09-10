@@ -1,9 +1,9 @@
 name       : vtm
-version    : 2025.07.25
-release    : 37
+version    : 2025.09.08
+release    : 38
 source     :
-    - https://github.com/directvt/vtm/archive/refs/tags/v2025.07.25.tar.gz : d4bc397d6a3eea2be71b2e8de519e5abd815184845800dac546902b156a42510
-homepage   : https://github.com/netxs-group/vtm
+    - https://github.com/directvt/vtm/archive/refs/tags/v2025.09.08.tar.gz : 4c580e8a4f7367d43e3d4156c5fa51e61dc3a724dd56b0e02b68d87256bbe81b
+homepage   : https://github.com/directvt/vtm
 license    : MIT
 component  : system.utils
 summary    : Terminal multiplexer with window manager and session sharing
