@@ -1,0 +1,6 @@
+releases:
+  id: 17578
+  rss: https://github.com/zerotier/ZeroTierOne/tags.atom
+ # No known CPE, checked 2025-09-11
+security:
+  cpe: ~
