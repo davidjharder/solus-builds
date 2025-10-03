@@ -1,8 +1,8 @@
 name       : zola
-version    : 0.18.0
-release    : 2
+version    : 0.21.0
+release    : 3
 source     :
-    - https://github.com/getzola/zola/archive/refs/tags/v0.18.0.tar.gz : c0e1711a68bc005c2e0ecc76a468f3459739c9e54af34850cb725d04391e19b5
+    - https://github.com/getzola/zola/archive/refs/tags/v0.21.0.tar.gz : bbfbc0496cf6612b6030c6d97b0fd2567f5ec41e251f8874b6c9ccda4c8149d4
 license    : MIT
 homepage   : https://www.getzola.org/
 component  : programming
@@ -16,5 +16,5 @@ setup      : |
     %cargo_fetch
 build      : |
     %cargo_build
-install    : |
+install    : |-
     %cargo_install
