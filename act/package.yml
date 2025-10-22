@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : act
+version    : 0.2.82
+release    : 1
+source     :
+    - https://github.com/nektos/act/archive/refs/tags/v0.2.82.tar.gz : 9a346d558672a23822f5fbfc020547a2b96ed4945e6c36dc239d9ac545cd64a9
+homepage   : https://github.com/nektos/act
+license    : MIT
+component  : proramming.tools
+summary    : Run your GitHub Actions locally
+description: |
+    Run your GitHub Actions locally
+networking : true
+builddeps  :
+    - golang
+build      : |
+    go build -ldflags "-X main.version=$(VERSION)" -o act
+install    : |
+    install -Dm00755 act $installdir/usr/bin/act
