@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : pia-wg-config
+version    : 1.1.1
+release    : 1
+source     :
+    - https://github.com/kylegrantlucas/pia-wg-config/archive/refs/tags/v1.1.1.tar.gz : 4bcee50dd174740791f30ba917e4b68863fca113220ffe009c6e0a230a98e8b9
+homepage   : https://github.com/kylegrantlucas/pia-wg-config
+license    : MIT
+component  : network.clients
+summary    : A fast, portable Wireguard config generator for Private Internet Access (PIA) VPN.
+description: |
+    PA fast, portable Wireguard config generator for Private Internet Access (PIA) VPN.
+networking : true
+builddeps  :
+    - golang
+build      : |
+    go build -ldflags "-X main.version=$version" -o pia-wg-config
+install    : |
+    install -Dm00755 $workdir/pia-wg-config $installdir/usr/bin/pia-wg-config
