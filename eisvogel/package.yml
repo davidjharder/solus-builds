@@ -1,8 +1,8 @@
 name       : eisvogel
-version    : 3.2.1
-release    : 8
+version    : 3.3.0
+release    : 9
 source     :
-    - https://github.com/Wandmalfarbe/pandoc-latex-template/releases/download/v3.2.1/Eisvogel-3.2.1.tar.gz : 8e95113596fa672ab426b1c6cdca0255b08be94cde7c2eea010809d84085d177
+    - https://github.com/Wandmalfarbe/pandoc-latex-template/releases/download/v3.3.0/Eisvogel-3.3.0.tar.gz : 0eb287d299e73aa884d0b35fa27a28ae326afa04f51959e54f01cbbe76601489
 license    : BSD-3-Clause
 homepage   : https://github.com/Wandmalfarbe/pandoc-latex-template
 component  : office
