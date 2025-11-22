@@ -1,8 +1,8 @@
 name       : vtm
-version    : 2025.09.08
-release    : 38
+version    : 2025.11.13
+release    : 39
 source     :
-    - https://github.com/directvt/vtm/archive/refs/tags/v2025.09.08.tar.gz : 4c580e8a4f7367d43e3d4156c5fa51e61dc3a724dd56b0e02b68d87256bbe81b
+    - https://github.com/directvt/vtm/archive/refs/tags/v2025.11.13.tar.gz : 42b6fd6528aa7259b8cf8ec67c2a3e4a86719d452545aed2981f9c98800022a3
 homepage   : https://github.com/directvt/vtm
 license    : MIT
 component  : system.utils
