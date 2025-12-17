@@ -1,8 +1,8 @@
 name       : dillo
-version    : 3.1.1
-release    : 2
+version    : 3.2.0
+release    : 3
 source     :
-    - https://github.com/dillo-browser/dillo/archive/refs/tags/v3.1.1.tar.gz : dffc0bca7620117c42f045b972cffafffbe113927a698cdbd8970857e4b3d3ed
+    - https://codeberg.org/dillo/dillo/archive/v3.2.0.tar.gz : 38bfacab92277967b72325452d0d6b1f783ea5b110fa24fb3541c21a8b26ffdd
 homepage   : https://dillo-browser.github.io/
 license    : GPL-3.0-or-later
 component  : network.web.browser
@@ -23,3 +23,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
