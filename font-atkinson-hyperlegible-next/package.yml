@@ -1,0 +1,13 @@
+name       : font-atkinson-hyperligible-ttf
+version    : 2025.02.21
+release    : 1
+source     :
+    - https://github.com/googlefonts/atkinson-hyperlegible-next/archive/main.zip : f5dc4b80ba953d7d8c222091d47a36e4f9ea9f512b5eb701d173f1769f01e687
+homepage   : https://www.brailleinstitute.org/freefont/
+license    : OFL-1.1-RFN
+component  : desktop.font
+summary    : New (2024) second version of the Atkinson Hyperlegible fonts
+description: |
+    New (2024) second version of the Atkinson Hyperlegible fonts
+install    : |
+    install -Dm00644 fonts/otf/*.otf -t $installdir/usr/share/fonts/truetype/atkinsonhyperlegible-next/
