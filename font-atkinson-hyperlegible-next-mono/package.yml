@@ -1,0 +1,13 @@
+name       : font-atkinson-hyperligible-next-mono-ttf
+version    : 2024.11.20
+release    : 1
+source     :
+    - https://github.com/googlefonts/atkinson-hyperlegible-next-mono/archive/main.zip : a4f12bdb0a482a11cae275530c5d0fa79d99635aedeb7716ee35b6efd45a1fc4
+homepage   : https://www.brailleinstitute.org/freefont/
+license    : OFL-1.1-RFN
+component  : desktop.font
+summary    : Atkinson Hyperlegible is a new typeface, offering greater legibility and readability for low vision readers
+description: |
+    Atkinson Hyperlegible is a new typeface, offering greater legibility and readability for low vision readers
+install    : |
+    install -Dm00644 fonts/otf/*.otf -t $installdir/usr/share/fonts/truetype/atkinsonhyperlegible/
