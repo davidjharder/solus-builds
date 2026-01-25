@@ -1,0 +1,70 @@
+<PISI>
+    <Source>
+        <Name>win8de</Name>
+        <Homepage>https://github.com/er-bharat/Win8DE</Homepage>
+        <Packager>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>desktop.win</PartOf>
+        <Summary xml:lang="en">Windows 8 like DE for linux</Summary>
+        <Description xml:lang="en">Windows 8 like DE for linux
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>win8de</Name>
+        <Summary xml:lang="en">Windows 8 like DE for linux</Summary>
+        <Description xml:lang="en">Windows 8 like DE for linux
+</Description>
+        <PartOf>desktop.win</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/Win8Corner</Path>
+            <Path fileType="executable">/usr/bin/Win8Lock</Path>
+            <Path fileType="executable">/usr/bin/Win8OSD-client</Path>
+            <Path fileType="executable">/usr/bin/Win8OSD-server</Path>
+            <Path fileType="executable">/usr/bin/Win8Running</Path>
+            <Path fileType="executable">/usr/bin/Win8Settings</Path>
+            <Path fileType="executable">/usr/bin/Win8Start</Path>
+            <Path fileType="executable">/usr/bin/Win8Wall</Path>
+            <Path fileType="executable">/usr/bin/battery-daemon</Path>
+            <Path fileType="executable">/usr/bin/list-windows</Path>
+            <Path fileType="data">/usr/share/labwc3/README</Path>
+            <Path fileType="data">/usr/share/labwc3/autostart</Path>
+            <Path fileType="data">/usr/share/labwc3/environment</Path>
+            <Path fileType="data">/usr/share/labwc3/menu.xml</Path>
+            <Path fileType="data">/usr/share/labwc3/rc.xml</Path>
+            <Path fileType="data">/usr/share/labwc3/themerc</Path>
+            <Path fileType="data">/usr/share/labwc3/themerc-override</Path>
+            <Path fileType="data">/usr/share/licenses/win8de/LICENSE</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/LICENSE</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/VirtualKeyboard.qml</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/angle-down.png</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/keyw.png</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/labwc/README</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/labwc/autostart</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/labwc/rc.xml</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/main.qml</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/metadata.desktop</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/peoplew.png</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/preview.png</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/preview1.png</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/system-shutdown.svg</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/theme.conf</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/unlock.svg</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/vkey.svg</Path>
+            <Path fileType="data">/usr/share/sddm/themes/Win8Login/win.jpg</Path>
+            <Path fileType="data">/usr/share/wayland-sessions/labwc-win8.desktop</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-01-25</Date>
+            <Version>0.6.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Update>
+    </History>
+</PISI>

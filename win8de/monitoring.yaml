@@ -1,0 +1,6 @@
+releases:
+  id: ~ # Check https://release-monitoring.org/projects/search/
+  rss: https://github.com/er-bharat/Win8DE/tags.atom
+ # No known CPE, checked 2026-01-24
+security:
+  cpe: ~

@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : win8de
+version    : 0.6.0
+release    : 1
+source     :
+    - https://github.com/er-bharat/Win8DE/archive/refs/tags/v0.6.0.tar.gz : a52a40008f8a12dd9fd01521e5da085f6e779e555240a4bde04a4be9e6664191
+homepage   : https://github.com/er-bharat/Win8DE
+license    : GPL-2.0-or-later
+component  : desktop.win
+summary    : Windows 8 like DE for linux
+description: |
+    Windows 8 like DE for linux
+builddeps  :
+    - labwc
+    - layer-shell-qt-devel
+    - qt6-base-devel
+    - qt6-declarative-devel
+rundeps    :
+    - labwc
+setup      : |
+    patch -p1 -i $pkgfiles/0001-Fix-install-locations-for-ypkg.patch
+build      : |
+    bash install.sh
+install    : |
+    %install_license LICENSE

@@ -1,0 +1,77 @@
+From ffb48155f99caaa1f86dd01c0ed755c2dfcd3502 Mon Sep 17 00:00:00 2001
+From: David Harder <david@davidjharder.ca>
+Date: Sun, 25 Jan 2026 08:42:32 -0600
+Subject: [PATCH] Fix install locations for ypkg
+
+---
+ install.sh | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/install.sh b/install.sh
+index 918ad55..99af44e 100755
+--- a/install.sh
++++ b/install.sh
+@@ -3,16 +3,16 @@ set -e
+ 
+ ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ BIN_SRC="$ROOT_DIR/build/bin"
+-BIN_DST="/usr/bin"
++BIN_DST="$installdir/usr/bin"
+ 
+ ASSET_SRC="$ROOT_DIR/assets/labwc3"
+-CONFIG_DST="/usr/share/labwc3"
++CONFIG_DST="$installdir/usr/share/labwc3"
+ 
+ SDDM_SRC="$ROOT_DIR/assets/SDDM/Win8Login"
+-SDDM_DST="/usr/share/sddm/themes/Win8Login"
++SDDM_DST="$installdir/usr/share/sddm/themes/Win8Login"
+ 
+ WAYLAND_SESSION_SRC="$ROOT_DIR/assets/wayland-sessions/labwc-win8.desktop"
+-WAYLAND_SESSION_DST="/usr/share/wayland-sessions/labwc-win8.desktop"
++WAYLAND_SESSION_DST="$installdir/usr/share/wayland-sessions/labwc-win8.desktop"
+ 
+ echo "🔨 Building projects first"
+ "$ROOT_DIR/build.sh"
+@@ -65,7 +65,7 @@ for bin in "$BIN_SRC"/*; do
+     if [ -f "$bin" ] && [ -x "$bin" ]; then
+         name="$(basename "$bin")"
+         echo "➡️  Installing $name"
+-        sudo install -v -m 0755 "$bin" "$BIN_DST/$name"
++        sudo install -Dm0755 "$bin" "$BIN_DST/$name"
+     fi
+ done
+ 
+@@ -81,8 +81,8 @@ if [ ! -d "$ASSET_SRC" ]; then
+     exit 1
+ fi
+ 
+-sudo mkdir -p "$CONFIG_DST"
+-sudo cp -a "$ASSET_SRC/." "$CONFIG_DST/"
++install -dm0644 "$CONFIG_DST"
++cp -a "$ASSET_SRC/." "$CONFIG_DST/"
+ 
+ 
+ # ------------------------------------------------------------
+@@ -97,8 +97,8 @@ if [ ! -d "$SDDM_SRC" ]; then
+     exit 1
+ fi
+ 
+-sudo mkdir -p "$SDDM_DST"
+-sudo cp -a "$SDDM_SRC/." "$SDDM_DST/"
++install -dm0644 "$SDDM_DST"
++cp -a "$SDDM_SRC/." "$SDDM_DST/"
+ 
+ # ------------------------------------------------------------
+ # Install Wayland session
+@@ -112,7 +112,7 @@ if [ ! -f "$WAYLAND_SESSION_SRC" ]; then
+     exit 1
+ fi
+ 
+-sudo install -v -m 0644 \
++install -Dm 0644 \
+     "$WAYLAND_SESSION_SRC" \
+     "$WAYLAND_SESSION_DST"
+ 
+-- 
+2.52.0
+
