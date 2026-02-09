@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : hyfetch
+version    : 2.0.5
+release    : 1
+source     :
+    - https://github.com/hykilpikonna/hyfetch/archive/refs/tags/2.0.5.tar.gz : 32942e558288f7939ae4ff1cc2ceccd9dcc9112074afc598b230c03b13c7bfca
+homepage   : https://github.com/hykilpikonna/hyfetch
+license    : MIT
+component  : system.utils
+summary    : neofetch with pride flags <3
+description: |
+    neofetch with pride flags <3
+networking : true
+replaces   : neofetch
+builddeps  :
+    - rust
+rundeps    :
+    - fastfetch
+    - w3m #For original neofetch
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build
+install    : |
+    %cargo_install
+    %install_license LICENSE.md
+    install -Dm00755 -t $installdir/usr/bin $workdir/neofetch
