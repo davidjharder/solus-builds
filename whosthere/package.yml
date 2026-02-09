@@ -1,16 +1,16 @@
 # yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : whosthere
-version    : 0.2.0
-release    : 1
+version    : 0.5.1
+release    : 2
 source     :
-    - https://github.com/ramonvermeulen/whosthere/archive/refs/tags/v0.2.0.tar.gz : ec0914822b4bfe0c4999a60578d62ad42406119dc45565aefa849e41ce1f07ba
+    - https://github.com/ramonvermeulen/whosthere/archive/refs/tags/v0.5.1.tar.gz : 4cac844f7e43bd397b2d3145448aa90a0a11ffee5488e75197b3e082fea86ee1
 homepage   : https://github.com/ramonvermeulen/whosthere
 license    : Apache-2.0
 component  : network.util
 summary    : Local Area Network discovery tool with a modern Terminal User Interface
 description: |
     Local Area Network discovery tool with a modern Terminal User Interface (TUI) written in Go. Discover, explore, and understand your LAN in an intuitive way.
-networking: true
+networking : true
 builddeps  :
     - pkgconfig(x11)
     - golang
