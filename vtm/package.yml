@@ -1,8 +1,8 @@
 name       : vtm
-version    : 2025.11.13
-release    : 39
+version    : 2026.03.07
+release    : 40
 source     :
-    - https://github.com/directvt/vtm/archive/refs/tags/v2025.11.13.tar.gz : 42b6fd6528aa7259b8cf8ec67c2a3e4a86719d452545aed2981f9c98800022a3
+    - https://github.com/directvt/vtm/archive/refs/tags/v2026.03.07.tar.gz : 4e19a3b4eceb2e001b91774012a6918c2a01ad2ed5341fc9509b2104d7ab5ec6
 homepage   : https://github.com/directvt/vtm
 license    : MIT
 component  : system.utils
@@ -12,6 +12,9 @@ networking : yes
 description: |
     Terminal multiplexer with window manager and session sharing
 builddeps  :
+    - pkgconfig(freetype2)
+    - pkgconfig(harfbuzz)
+    - pkgconfig(lua-5.4)
     - pkgconfig(libinput)
 setup      : |
     %cmake_ninja -DCMAKE_BUILD_TYPE=Release
