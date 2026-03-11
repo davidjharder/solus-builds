@@ -1,9 +1,9 @@
 # yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : act
-version    : 0.2.82
-release    : 1
+version    : 0.2.84
+release    : 2
 source     :
-    - https://github.com/nektos/act/archive/refs/tags/v0.2.82.tar.gz : 9a346d558672a23822f5fbfc020547a2b96ed4945e6c36dc239d9ac545cd64a9
+    - https://github.com/nektos/act/archive/refs/tags/v0.2.84.tar.gz : da58b74d03b2cd21df81aeb054c2792054d6cf9d4c3171e98440fde9becb01fa
 homepage   : https://github.com/nektos/act
 license    : MIT
 component  : proramming.tools
