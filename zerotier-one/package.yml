@@ -15,6 +15,9 @@ build      : |
     ./zerotier-selftest
 install    : |
     %make_install
-    install -D -m 00644 $workdir/debian/zerotier-one.service $installdir/usr/lib/systemd/system/zerotier-one.service
+
+    # Install and enable systemd service
+    install -Dm00644 -t $installdir/usr/lib/systemd/system/ $workdir/debian/zerotier-one.service
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/20-zerotier-one.preset
 
 # SSO reguires cargo, rust, networking libssl?. Don't care about SSO.
