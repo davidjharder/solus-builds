@@ -1,0 +1,6 @@
+releases:
+  id: 14585
+  rss: https://github.com/so-fancy/diff-so-fancy/tags.atom
+ # No known CPE, checked 2026-03-17
+security:
+  cpe: ~
