@@ -1,9 +1,9 @@
 # yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : whosthere
-version    : 0.6.1
-release    : 3
+version    : 0.7.0
+release    : 4
 source     :
-    - https://github.com/ramonvermeulen/whosthere/archive/refs/tags/v0.6.1.tar.gz : fafb6a69cf64593818c2944055b7a55572715f6136aa0b97767843b68c3556f7
+    - https://github.com/ramonvermeulen/whosthere/archive/refs/tags/v0.7.0.tar.gz : 73a7dfc2b31c74ae1fc0cf56d68fbcd6dfe47be53adfdafa5b00be17da7477d2
 homepage   : https://github.com/ramonvermeulen/whosthere
 license    : Apache-2.0
 component  : network.util
