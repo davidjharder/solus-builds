@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : dune3d
+version    : '1.4.0'
+release    : 1
+source     :
+    - https://github.com/dune3d/dune3d/archive/refs/tags/v1.4.0.tar.gz : 1465cd1d30ff00a82cadb0243065049af35149b0ed37679076ff805ffafd6d62
+homepage   : https://dune3d.org/
+license    : GPL-3.0-or-later
+component  : office
+summary    : 3D CAD application
+description: |
+    Dune 3D is a parametric 3D CAD application that supports STEP import/export, fillets and chamfers
+clang      : true
+builddeps  :
+    - pkgconfig(cairomm-1.0)
+    - pkgconfig(eigen3)
+    - pkgconfig(epoxy)
+    - pkgconfig(glm)
+    - pkgconfig(gtk4)
+    - pkgconfig(gtkmm-4.0)
+    - pkgconfig(uuid)
+    - librsvg-devel
+    - opencascade-devel
+    - python3
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
