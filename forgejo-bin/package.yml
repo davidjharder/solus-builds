@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : forgejo-bin
+version    : 15.0.0
+release    : 1
+source     :
+    - https://codeberg.org/forgejo/forgejo/releases/download/v15.0.0/forgejo-15.0.0-linux-amd64 : 3919f10a7845f3b71bacc2c7a3bfa2cd71aed58a0b8be6ab5e95f2e150b4ded7
+homepage   : https://forgejo.org
+license    : GPL-3.0-or-later
+component  : programming.tools
+summary    : Git forge
+description: |
+    Git forge
+conflicts: forgejo
+builddeps:
+    - wget
+rundeps:
+    - git-lfs
+    - sqlite3
+extract    : false
+networking: true
+install    : |
+    install -Dm00755 $sources/forgejo-%version%-linux-amd64 $installdir/usr/bin/forgejo
+
+    # Create a user "git"
+    
+    # Empty directories for use at first run
+    install -dm0644 $installdir/var/lib/forgejo
+    install -dm0644 $installdir/etc/forgejo
+
+    # Install a systemd servier
+    sudo wget -O $workdir/forgejo.service https://codeberg.org/forgejo/forgejo/raw/branch/forgejo/contrib/systemd/forgejo.service
+    install -Dm0644 $workdir/forgejo.service $installdir/etc/systemd/system/forgejo.service

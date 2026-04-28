@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : forgejo
+version    : 15.0.0
+release    : 1
+source     :
+    - https://codeberg.org/forgejo/forgejo/archive/v15.0.0.tar.gz : 9a7a66e9aefab71bfbb4e02aa6774094e6a5069aeb7aa7b3c5233586184fa053
+homepage   : https://forgejo.org/releases/
+license    : GPL-3.0-or-later
+component  : programming.tools
+summary    : Git forge
+description: |
+    Git forge
+conflicts: forgego-git
+networking : true
+builddeps  :
+    - golang
+    - nodejs
+build      : |
+    echo %version% > VERSION
+    %make
+install    : |
+    %make_install

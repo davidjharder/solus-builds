@@ -1,0 +1,8 @@
+releases:
+  id: 370527
+  rss: https://codeberg.org/forgejo/forgejo/tags.atom
+# Verify successful cpe hits by visiting https://cve.circl.lu/search?vendor=$VENDOR&product=$PRODUCT
+security:
+  cpe:
+  - vendor: forgejo
+    product: forgejo
