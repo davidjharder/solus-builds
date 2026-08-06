@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : lazyjournal
+version    : 0.8.6
+release    : 1
+source     :
+    - https://github.com/Lifailon/lazyjournal/archive/refs/tags/0.8.6.tar.gz : 5798b65c98ec00f32cf43e79b31568896084881adb3afc9e7cda3482baad3183
+homepage   : https://github.com/Lifailon/lazyjournal
+license    : MIT
+component  : system.utils
+summary    : TUI for viewing logs from journald, auditd, file system, Docker and Podman containers, Compose stacks and Kubernetes pods with support for log highlighting and several filtering modes.
+description: |
+    TUI for viewing logs from journald, auditd, file system, Docker and Podman containers, Compose stacks and Kubernetes pods with support for log highlighting and several filtering modes.
+networking: true
+builddeps  :
+    - golang
+build      : |
+    CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o lazyjournal
+install    : |
+    %install_exe lazyjournal -t ${installdir}/usr/bin/
+    %install_license LICENSE

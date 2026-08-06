@@ -1,0 +1,6 @@
+releases:
+  id: 387895
+  rss: https://github.com/Lifailon/lazyjournal/tags.atom
+ # No known CPE, checked 2026-08-06
+security:
+  cpe: ~
