@@ -1,6 +1,0 @@
-releases:
-  id: 242660
-  rss: https://github.com/nektos/act/tags.atom
-# Blah blah blah
-security:
-  cpe: ~
