@@ -1,0 +1,6 @@
+releases:
+  id: ~ # Check https://release-monitoring.org/projects/search/
+  rss: https://github.com/AprilNEA/OpenLogi/tags.atom
+ # No known CPE, checked 2026-08-19
+security:
+  cpe: ~

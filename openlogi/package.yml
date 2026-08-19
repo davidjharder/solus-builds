@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : openlogi
+version    : 0.7.1
+release    : 1
+source     :
+    - https://github.com/AprilNEA/OpenLogi/archive/refs/tags/v0.7.1.tar.gz : b2ade1263d2ef8fec7da1e7b48943194e11dda4bac01dfb0b073195ac1c3cea4
+homepage   : https://openlogi.org/
+license    :
+    - 0BSD
+    - Apache-2.0
+    - MIT
+component  : office
+summary    : A native, local-first alternative to Logitech Options
+description: |
+    A native, local-first alternative to Logitech Options
+networking: true
+builddeps  :
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build
+install    : |
+    %cargo_install
