@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : vale
+version    : 3.22.0
+release    : 1
+source     :
+    - https://github.com/vale-cli/vale/archive/refs/tags/v3.22.0.tar.gz : 3ae991e82eec889f54ee64a1c013d1f2bdc0f95d4a03ac7ff44228516606e737
+homepage   : https://github.com/vale-cli/vale
+license    : MIT
+component  : programming.devel
+summary    : A markup-aware linter for prose built with speed and extensibility in mind
+description: |
+    A markup-aware linter for prose built with speed and extensibility in mind
+networking : true
+builddeps  :
+    - golang
+build      : |
+    go build -ldflags "-s -X main.version=${version}" -o bin/vale ./cmd/vale
+install    : |
+    %install_bin bin/vale
+    %install_license LICENSE
