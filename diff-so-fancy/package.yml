@@ -1,8 +1,8 @@
 name       : diff-so-fancy
-version    : 1.4.12
-release    : 4
+version    : 1.4.14
+release    : 5
 source     :
-    - https://github.com/so-fancy/diff-so-fancy/archive/refs/tags/v1.4.12.tar.gz : 438cccf785cc8ac1575a81ca606afdbb8a4de8f860136d9f26a1807b00903f5d
+    - https://github.com/so-fancy/diff-so-fancy/archive/refs/tags/v1.4.14.tar.gz : 7ebdaaac4aade23a9b5296f560484e42a864331903febe92314b530380a34734
 homepage   : https://github.com/so-fancy/diff-so-fancy
 license    : MIT
 component  : programming.tools
