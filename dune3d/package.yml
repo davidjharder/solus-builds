@@ -21,6 +21,7 @@ builddeps  :
     - pkgconfig(uuid)
     - librsvg-devel
     - opencascade-devel
+    - python-gobject
     - python3
 setup      : |
     %meson_configure
