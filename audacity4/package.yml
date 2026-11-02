@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : audacity
+version    : 4.0.2
+release    : 54
+source     :
+    - https://github.com/audacity/audacity/releases/download/Audacity-4.0.2/audacity-sources-4.0.2.tar.xz : 4799c2ce2deabacf2be8d6d6b3c5a5621bcd3aacf7c1c38bd0a3f2598f1034c0
+homepage   : https://www.audacityteam.org/
+license    :
+    - CC-BY-SA-3.0
+    - GPL-2.0-or-later
+component  : multimedia.audio
+summary    : A Free, Cross-Platform Digital Audio Editor
+description: |
+    Audacity is free, open source, cross-platform audio software for multi-track recording and editing.
+builddeps  :
+    - pkgconfig(RapidJSON)
+    - pkgconfig(alsa)
+    - pkgconfig(expat)
+    - pkgconfig(flac)
+    - pkgconfig(gstreamer-base-1.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(id3tag)
+    - pkgconfig(jack)
+    - pkgconfig(libavcodec)
+    - pkgconfig(libmpg123)
+    - pkgconfig(lilv-0)
+    - pkgconfig(mad)
+    - pkgconfig(opusfile)
+    - pkgconfig(portaudio-2.0)
+    - pkgconfig(portmidi)
+    - pkgconfig(sndfile)
+    - pkgconfig(soundtouch)
+    - pkgconfig(soxr)
+    - pkgconfig(sqlite3)
+    - pkgconfig(suil-0)
+    - pkgconfig(twolame)
+    - pkgconfig(vamp)
+    - pkgconfig(vorbis)
+    - pkgconfig(wavpack)
+    - git
+    - lame-devel
+    - wxwidgets-devel
+rundeps    :
+    - alsa-plugins
+environment: |
+    export CFLAGS="${CFLAGS} -std=gnu17"
+setup      : |
+    %cmake_ninja \
+        -Daudacity_conan_enabled=Off \
+        -Daudacity_has_networking=Off \
+        -Daudacity_has_crashreports=Off \
+        -Daudacity_has_updates_check=Off \
+        -Daudacity_has_sentry_reporting=Off \
+        -Daudacity_has_vst3=Off \
+        -Daudacity_lib_preference=system \
+        -Daudacity_obey_system_dependencies=On \
+        -Daudacity_use_portsmf=local \
+        -Daudacity_use_sbsms=local
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %install_license LICENSE.txt
