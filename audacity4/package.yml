@@ -12,51 +12,42 @@ component  : multimedia.audio
 summary    : A Free, Cross-Platform Digital Audio Editor
 description: |
     Audacity is free, open source, cross-platform audio software for multi-track recording and editing.
+extract: false
 builddeps  :
-    - pkgconfig(RapidJSON)
-    - pkgconfig(alsa)
-    - pkgconfig(expat)
-    - pkgconfig(flac)
-    - pkgconfig(gstreamer-base-1.0)
-    - pkgconfig(gtk+-3.0)
-    - pkgconfig(id3tag)
-    - pkgconfig(jack)
-    - pkgconfig(libavcodec)
-    - pkgconfig(libmpg123)
-    - pkgconfig(lilv-0)
-    - pkgconfig(mad)
-    - pkgconfig(opusfile)
-    - pkgconfig(portaudio-2.0)
-    - pkgconfig(portmidi)
+    - qt6-base-private-devel
+    - pkgconfig(Qt6Qml)
     - pkgconfig(sndfile)
-    - pkgconfig(soundtouch)
-    - pkgconfig(soxr)
-    - pkgconfig(sqlite3)
+    - pkgconfig(libpng)
+    - pkgconfig(Qt6Svg)
+    - pkgconfig(lilv-0)
     - pkgconfig(suil-0)
-    - pkgconfig(twolame)
-    - pkgconfig(vamp)
-    - pkgconfig(vorbis)
     - pkgconfig(wavpack)
-    - git
-    - lame-devel
     - wxwidgets-devel
+    - pkgconfig(portaudio-2.0)
+    -  pkgconfig(id3tag)
+    - pkgconfig(Qt6ShaderTools)
+    - pkgconfig(id3tag)
+    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(Qt6NetworkAuth)
+    - pkgconfig(Qt6Linguist)
+    - pkgconfig(ogg)
+    - pkgconfig(vorbis)
+    - pkgconfig(flac)
+    - pkgconfig(opusfile)
+    - lame-devel
+    - pkgconfig(libmpg123)
 rundeps    :
     - alsa-plugins
-environment: |
-    export CFLAGS="${CFLAGS} -std=gnu17"
 setup      : |
-    %cmake_ninja \
-        -Daudacity_conan_enabled=Off \
-        -Daudacity_has_networking=Off \
-        -Daudacity_has_crashreports=Off \
-        -Daudacity_has_updates_check=Off \
-        -Daudacity_has_sentry_reporting=Off \
-        -Daudacity_has_vst3=Off \
-        -Daudacity_lib_preference=system \
-        -Daudacity_obey_system_dependencies=On \
-        -Daudacity_use_portsmf=local \
-        -Daudacity_use_sbsms=local
-build      : |
+   # manually extract to work around https://github.com/getsolus/solbuild/issues/126
+    tar --strip-components=1 -xf $sources/audacity-sources-%version%.tar.xz
+   
+    # Fix soname for libid3tag
+    %patch -p1 -i ${pkgfiles}/muse_deps-PR-56.patch
+    
+   %cmake_ninja \
+        -DEXTDEPS_OVERRIDE_ALL=SYSTEM
+uild      : |
     %ninja_build
 install    : |
     %ninja_install

@@ -1,0 +1,42 @@
+--- vst3sdk-3.8.0_build_66/pluginterfaces/base/fstrdefs.h.orig	2025-10-20 10:55:23.000000000 -0600
++++ vst3sdk-3.8.0_build_66/pluginterfaces/base/fstrdefs.h	2025-11-22 14:16:53.665832662 -0700
+@@ -48,8 +48,13 @@
+ #define FORMAT_UINT64A "I64u"
+ 
+ #elif SMTG_OS_MACOS || SMTG_OS_LINUX
++#if __WORDSIZE == 64
++#define FORMAT_INT64A  "ld"
++#define FORMAT_UINT64A "lu"
++#else
+ #define FORMAT_INT64A  "lld"
+ #define FORMAT_UINT64A "llu"
++#endif
+ #define stricmp		strcasecmp
+ #define strnicmp	strncasecmp
+ #endif
+--- vst3sdk-3.8.0_build_66/pluginterfaces/base/ustring.cpp.orig	2025-10-20 10:55:23.000000000 -0600
++++ vst3sdk-3.8.0_build_66/pluginterfaces/base/ustring.cpp	2025-11-22 14:20:30.967786495 -0700
+@@ -225,7 +225,11 @@ bool UString::scanInt (int64& value) con
+ 
+ #elif SMTG_OS_LINUX
+ 	auto str = converter ().to_bytes (thisBuffer);
++#if __WORDSIZE == 64
++	return sscanf (str.data (), "%ld", &value) == 1;
++#else
+ 	return sscanf (str.data (), "%lld", &value) == 1;
++#endif
+ 
+ #else
+ #warning Implement me
+@@ -253,7 +257,11 @@ bool UString::printInt (int64 value)
+ 	return false;
+ #elif SMTG_OS_LINUX
+ 	auto utf8Buffer = reinterpret_cast<char*> (thisBuffer);
++#if __WORDSIZE == 64
++	auto len = snprintf (utf8Buffer, thisSize, "%ld", value);
++#else
+ 	auto len = snprintf (utf8Buffer, thisSize, "%lld", value);
++#endif
+ 	if (len > 0)
+ 	{
+ 		auto utf16Buffer = reinterpret_cast<char16*> (thisBuffer);

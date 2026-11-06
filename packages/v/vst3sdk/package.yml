@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : vst3sdk
+version    : 3.8.1
+release    : 1
+source     :
+    - git|https://github.com/steinbergmedia/vst3sdk.git : v3.8.1_build_84
+homepage   : https://github.com/steinbergmedia/vst3sdk
+license    : MIT
+component  : multimedia.audio
+summary    : VST 3 Plug-In SDK
+description: |
+    VST 3 Plug-In SDK
+builddeps  :
+    - git
+    # - pkgconfig(x11)
+    # - pkgconfig(gtkmm-3.0)
+    # - pkgconfig(sqlite3)
+    # - pkgconfig(freetype2)
+    # - pkgconfig(xcb-util)
+    # - pkgconfig(xcb-cursor)
+    # - pkgconfig(pangocairo)
+    # - pkgconfig(xcb-keysyms)
+    # - pkgconfig(xkbcommon)
+setup      : |
+    %patch -p1 -i ${pkgfiles}/vst3sdk-format.patch
+    %patch -p1 -i ${pkgfiles}/vst3sdk-shared.patch
+    
+    %cmake_ninja \
+        -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+        -DCMAKE_SKIP_RPATH:BOOL=ON \
+        -DSMTG_ENABLE_VST3_HOSTING_EXAMPLES:BOOL=OFF \
+        -DSMTG_ENABLE_VST3_PLUGIN_EXAMPLES:BOOL=OFF \
+        -DSMTG_ENABLE_VSTGUI_SUPPORT:BOOL=OFF
+build      : |
+    %cmake_build
+install    : |
+    %cmake_install
+    %install_license LICENSE.txt
