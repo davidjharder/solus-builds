@@ -1,0 +1,6 @@
+releases:
+  id: ~ # Check https://release-monitoring.org/projects/search/
+  rss: https://github.com/browsh-org/browsh/releases.atom
+ # No known CPE, checked 2026-11-16
+security:
+  cpe: ~

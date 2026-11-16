@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : browsh-bin
+version    : 1.8.2
+release    : 1
+source     :
+    - https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_linux_amd64 : a20aeaad841e41634d5a4ca43845e9bf81a4fd3e8123efcc870668e2091ccb1f
+homepage   : https://github.com/browsh-org/browsh
+license    : LGPL-2.1-or-later
+component  : network.clients
+summary    : A fully-modern text-based browser, rendering to TTY and browsers
+description: |
+    A fully-modern text-based browser, rendering to TTY and browsers
+extract    : false
+install    : |
+    %install_exe ${sources}/browsh_${version}_linux_amd64 ${installdir}/usr/bin/browsh
